@@ -1,0 +1,15 @@
+object DMGUI: TDMGUI
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Left = 389
+  Top = 239
+  Height = 150
+  Width = 215
+  object ApplActive: TTimer
+    Enabled = False
+    Interval = 250
+    Left = 30
+    Top = 18
+  end
+end

@@ -1,0 +1,9 @@
+object DMDBEER: TDMDBEER
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Left = 421
+  Top = 260
+  Height = 150
+  Width = 215
+end

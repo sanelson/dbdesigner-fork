@@ -1,0 +1,9 @@
+object DMEER: TDMEER
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Left = 502
+  Top = 364
+  Height = 150
+  Width = 214
+end

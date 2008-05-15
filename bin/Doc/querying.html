@@ -1,0 +1,177 @@
+<html>
+
+<head>
+<title>Querying</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+<script src="std_js.js" type="text/javascript">
+</script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+Querying
+</h2>
+<p class="Body">
+Before starting to query the database the Query Mode has to be selected. To change the current Work Mode
+click the Work Mode icon in the Toolbar or the Tools Palette or select Query Mode from the Display Main Menu.
+</p>
+<h3 class="Heading2">
+<a name="buildselects">Building selects</a>
+</h3>
+<p class="Body">
+SQL selects can be easily build by drag'n'drop commands. Make shure the current worktool 
+is set to a Pointer Tool before starting.
+</p>
+<h4 class="Heading3">
+<a name="buildsimpleselect">Building a simple SQL SELECT</a>
+</h4>
+<p class="Body">
+To build a SQL select from one table simply click on a table with the left mousebutton and keep holding the button.
+Now move the mouse cursor down. The Drag Menu is displayed.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/querymode/querymodedragdrop.gif" width="327" height="224"><br>
+The Drag Menu
+</p>
+<br>
+<p class="Body">
+Keep holding the left mouse button and move the mouse cursor to the SELECT button. Release the mouse button.
+The SELECT statement will be build and displayed in the SQL Command Editor.
+</p>
+
+<p class="Body">
+If the table which has to be queried is not visible in the
+current visible area of the model, click somewhere on the model to set the focus to the model. 
+Now press the [Space] key and drag the model till the table becomes visible.
+</p>
+<h4 class="Heading3">
+<a name="jointables">Joining tables</a>
+</h4>
+<p class="Body">
+To join another table with this table click on the table to join. Start draging like before and release the mouse button
+over the JOIN Tables(s) Button. The two tables will be joined based on the relations between the tables.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/querymode/querymodejoin2tablessql.gif" width="271" height="81"><br>
+Two tables joined
+</p>
+<br>
+<p class="Body">
+Another possibility is to select all tables that have to be joined by holding the Ctrl Key and clicking on the tables. 
+Then start dragging and release the mouse button over the JOIN Tables(s) button. All tables will be joined based on the
+relations between them.
+</p>
+
+<h5 class="Heading4">
+<a name="edittable">Add tables without joining</a>
+</h5>
+<p class="Body">
+To add one or more tables to a query without performing a join drag the table(s) on the Add Table(s) button. They will be
+added to the SQL command.
+</p>
+
+<h4 class="Heading3">
+<a name="seltablecolumns">Selecting table columns</a>
+</h4>
+<p class="Body">
+When a SQL command is built using the Drag Menu all columns of the table(s) are selected using the SELECT * clause. 
+</p>
+<p class="Body">
+To select specific table columns choose the SELECT Clause Tool from the Toolbar or press Ctrl + S. The mouse cursor will
+change to the SELECT Clause cursor. Now move the mouse over the table and watch the columns be highlighted. Move the mouse
+cursor to the column you want to select and press the left mouse button.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/querymode/querymodeselectfield.gif" width="191" height="198"><br>
+Selecting a table's column
+</p>
+<br>
+<p class="Body">
+To column will be added to the SELECT Statement.
+</p>
+<h5 class="Heading4">
+<a name="edittable">Add columns to other clauses</a>
+</h5>
+<p class="Body">
+Use the different Clause Tools from the Toolbar to add table columns to the SQL command.
+</p>
+
+<table border=0 cellpadding=0 cellspacing=8 align="center">
+  <tr>
+    <td class="SmallTable"><b>Tool</b></td>
+    <td class="SmallTable"><b>Key</b></td>
+    <td class="SmallTable"><b>Position</b></td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + S</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT [column] FROM ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">FROM Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + F</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT * FROM table_a LEFT OUTER JOIN table_b ON [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">WHERE Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + W</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT * FROM table_a WHERE [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">GROUP Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + G</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT * FROM table_a GROUP BY [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">HAVING Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + H</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT * FROM table_a GROUP BY col1 HAVING [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">ORDER Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + O</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SELECT * FROM table_a ORDER BY [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">SET Clause Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + E</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">UPDATE table_a SET [column] ...</td>
+  </tr>
+  <tr>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Pointer Tool</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">Ctrl + Q</td>
+    <td style="border-top: 1px solid #666666" nowrap class="SmallTable">-</td>
+  </tr>
+</table>
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

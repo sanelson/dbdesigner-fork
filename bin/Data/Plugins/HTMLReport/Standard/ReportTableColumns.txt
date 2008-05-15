@@ -1,0 +1,10 @@
+        <tr>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=ColumnName?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=DataType?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=PrimaryKey?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=NotNull?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=Flags?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=DefaultValue?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=Comment?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=AutoInc?></td>
+        </tr>

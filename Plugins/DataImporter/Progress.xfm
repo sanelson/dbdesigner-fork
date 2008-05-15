@@ -1,0 +1,112 @@
+object ProgressForm: TProgressForm
+  Left = 509
+  Top = 436
+  AutoScroll = False
+  BorderIcons = []
+  BorderStyle = fbsDialog
+  Caption = 'Progress'
+  ClientHeight = 164
+  ClientWidth = 352
+  Color = clBackground
+  Position = poMainFormCenter
+  Scaled = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  object MainPanel: TPanel
+    Left = 22
+    Top = 22
+    Width = 305
+    Height = 117
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 12
+      Top = 12
+      Width = 279
+      Height = 21
+      AutoSize = False
+      BorderStyle = bsSunkenPanel
+      Caption = 'File:'
+    end
+    object FileLbl: TLabel
+      Left = 78
+      Top = 15
+      Width = 203
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'FileLbl'
+    end
+    object Label2: TLabel
+      Left = 12
+      Top = 42
+      Width = 135
+      Height = 21
+      AutoSize = False
+      BorderStyle = bsSunkenPanel
+      Caption = 'Current line:'
+    end
+    object CurrentLinesLbl: TLabel
+      Left = 78
+      Top = 45
+      Width = 61
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+    end
+    object Label3: TLabel
+      Left = 12
+      Top = 74
+      Width = 135
+      Height = 21
+      AutoSize = False
+      BorderStyle = bsSunkenPanel
+      Caption = 'Total lines:'
+    end
+    object TotalLinesLbl: TLabel
+      Left = 78
+      Top = 77
+      Width = 61
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+    end
+    object Label5: TLabel
+      Left = 156
+      Top = 74
+      Width = 135
+      Height = 21
+      AutoSize = False
+      BorderStyle = bsSunkenPanel
+      Caption = 'Errors:'
+    end
+    object ErrorsLbl: TLabel
+      Left = 222
+      Top = 77
+      Width = 61
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0'
+    end
+    object Label4: TLabel
+      Left = 156
+      Top = 42
+      Width = 135
+      Height = 21
+      AutoSize = False
+      BorderStyle = bsSunkenPanel
+      Caption = 'Current file:'
+    end
+    object CurrentFileLbl: TLabel
+      Left = 222
+      Top = 45
+      Width = 61
+      Height = 13
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '1 / 1'
+    end
+  end
+end

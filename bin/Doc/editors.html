@@ -1,0 +1,558 @@
+<html>
+
+<head>
+<title>Editors</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+<script src="std_js.js" type="text/javascript">
+</script>
+</head>
+
+<body>
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+Editors
+</h2>
+<p class="Body">
+Editors are used to specify and modify parameters of objects, datatypes, ...
+</p>
+<p class="Body">
+An object's editor is usually called by doubleclicking on the object.
+</p>
+
+<h3 class="Heading2">
+<a name="table">Table Editor</a>
+</h3>
+<p class="Body">
+Call the Table Editor by doubleclicking on a table or selecting [Edit Object] from the table's 
+popup menu. You can also doubleclick the tables name in the DB-Model Palette or use the right
+mousebutton to call the popup menu there.
+</p>
+<h4 class="Heading3">
+<a name="how">How to use the Table Editor</a>
+</h4>
+<p class="Body">
+To use the Table Editor the most efficient way use the following procedure.
+</p>
+<p class="Body">
+I.) Create a new table in the model. Doubleclick on the table to call the Table Editor.
+The Table Name is focused so enter the table name. Press [Return].
+</p>
+<p class="Body">
+II.) The focus will be set to the first line of the Table Columns. The
+first column will be named <code>id+tablename</code> automatically. If the first column has to have
+a different name enter the column's name. Then press [Return].
+</p>
+<p class="Body">
+III.) Enter the next column name and press [Return]. Repeat this for all columns. Ignore the
+datatypes of the columns at this time, all columns' datatypes are set to the default datatype initially.
+</p>
+<p class="Body">
+IV.) After the last column has been entered, press [Esc] to abort the column edit mode.
+</p>
+<p class="Body">
+V.) To assign the datatypes to the columns start by dragging the first column's datatype from the 
+Datatype palette onto the first column. Enter the datatype's parameters if the Parameter Editor pops up, 
+e.g. VARCHAR(___)<br>
+Repeat this for all column types.
+</p>
+<p class="Body">
+VI.) To define the primary key click on the columns' icon (left to the column name) to add or remove
+the column from the primary key.
+</p>
+<p class="Body">
+VII.) Optionally define additional indices, the table options, the standard inserts and the table comments.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortable.gif" width="626" height="526"><br>
+The Table Editor
+</p>
+<br>
+
+<h4 class="Heading3">
+<a name="settings">Table Settings</a>
+</h4>
+<h4 class="Heading4">
+Table Name
+</h4>
+<p class="Body">
+Table Name displays the current name of the table. By pressing Return or leafing the edit field
+the Table Name is checked against the reserved word list. If the Table Name equals a reserved word
+it is changed automatically.
+</p>
+<h4 class="Heading4">
+Table Prefix
+</h4>
+<p class="Body">
+In MySQL the Table Prefix can specify the database (<CODE>db_name.tbl_name</CODE>). Use this 
+function if you want to administrate several databases in only one model. The Table Prefixes
+are defined in the Model Options.
+</p>
+
+<h4 class="Heading4">
+Table Type
+</h4>
+<p class="Body">
+MySQL supports several different Table Types. The most common types are MyISAM which is the 
+default type and InnoDB which supports transaction-safe tables with row locking.
+</p>
+
+<h4 class="Heading4">
+Weak entity
+</h4>
+<p class="Body">
+Check the [is n:m Table] checkbox if this table is a n:m Table.
+</p>
+
+
+<h4 class="Heading3">
+<a name="columns">Table Columns</a>
+</h4>
+
+<p class="Body">
+The cursor keys can be used to move the Cursor between the Column Name, Datatype
+and the Default value and the table columns. Press enter to change the focused 
+value.
+</p>
+<p class="Body">
+Use the mouse to dray an new datatype from the Datatype Palette onto the column.
+Doubleclick the datatype to change the datatype's parameters.
+</p>
+<p class="Body">
+Click on the Table Column's row to change the NOT NULL Flag, the Column Options and
+the Autoincrement Flag.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortablecolumns.gif" width="480" height="141"><br>
+The Table Columns
+</p>
+<br>
+
+<p class="Body">
+To enter a new column click on any column name an press the Page Down Key. The Cursor
+is placed below the last column. Add the new column by entering the column name.
+</p>
+<p class="Body">
+If you want to enter several new columns press return. The Curor is moved to the
+next row and the next column name can be entered.
+</p>
+<p class="Body">
+Drag the appropriate datatype from the Datatype Palette onto the new column. Enter
+the datatype's parameters if needed.
+</p>
+<p class="Body">
+Set the Column's NOT NULL Flag, the Column Options and the Autoincrement Flag if 
+nessesary.
+</p>
+
+<h4 class="Heading3">
+<a name="indices">Table Indices</a>
+</h4>
+<p class="Body">
+An unlimited number of indices can be defined for each table. The PRIMARY
+index is defined automatically and cannot be deleted.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortableindexlist.gif" width="330" height="178"><br>
+The Indices List
+</p>
+<br>
+
+<p class="Body">
+To add a new index click the plus button and enter the index name. Select the Index Type.
+You cannot select the primary type manually because there can only be one primary index.
+</p>
+
+<p class="Body">
+To delete an index select it in the index list and click the rubber button.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortableindex.gif" width="375" height="125"><br>
+An Index
+</p>
+<br>
+
+<p class="Body">
+To add columns to the index drag the appropriate Table Columns down to the Index Columns
+listbox. You can reorder the index's columns by drag'n'drop in the Index Columns listbox.
+</p>
+
+<p class="Body">
+To delete a column from the index select the column in the Index Columns listbox and click
+the rubber button to the right.
+</p>
+
+<h4 class="Heading3">
+<a name="inserts">Standard Inserts</a>
+</h4>
+<p class="Body">
+Every table can have it's Standard Inserts. They provide initial data for the tables.
+</p>
+<p class="Body">
+When the SQL Creates are exported or the database is created by the syncronise function 
+the Standard Inserts can be exported or executed as well.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortablestdinserts.gif" width="345" height="117"><br>
+The Standard Inserts
+</p>
+<br>
+<p class="Body">
+To add a SQL INSERT command click the right mouse button and select Paste SQL Insert from 
+the Standard Inserts memo's popup menu.
+</p>
+<p class="Body">
+To clear the Standard Inserts click on the rubber button right to the Standard Inserts memo.
+</p>
+
+
+<h4 class="Heading3">
+<a name="options">Table Options</a>
+</h4>
+<p class="Body">
+The Table Options provide access to the MySQL specific table options. Please refere to the 
+MySQL documentation to understand the functionality of the several Table Options.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortableoptions.gif" width="444" height="147"><br>
+The Table Options
+</p>
+<br>
+
+<h4 class="Heading3">
+<a name="advoptions">Advanced Table Options</a>
+</h4>
+<p class="Body">
+Like the Table Options the Advanced Table Options provide access to the MySQL specific 
+table options. Please refere to the MySQL documentation to understand the functionality 
+of the several Table Options.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortableadvoptions.gif" width="443" height="120"><br>
+The Advanced Table Options
+</p>
+<br>
+<h4 class="Heading3">
+<a name="tblcomments">Comments</a>
+</h4>
+<p class="Body">
+To store additional information about the table select the Comments and
+enter the information.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editortablecomments.gif" width="236" height="102"><br>
+Table Comments
+</p>
+<br>
+
+
+<h3 class="Heading2">
+<a name="relation">Relation Editor</a>
+</h3>
+<p class="Body">
+The Relation Editor allows you to change the Kind of the relation, the Foreign Keys fields mapping and
+the Relation Reference Definition.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editorrelation.gif" width="396" height="403"><br>
+The Relation Editor
+</p>
+<br>
+<h5 class="Heading4">
+Relation Name
+</h5>
+<p class="Body">
+Change this value to rename the relation.
+</p>
+<h5 class="Heading4">
+Relation Kind
+</h5>
+<p class="Body">
+A relation can be one of the following kinds.
+</p>
+<table border="0" cellspacing="8" cellpadding="0">
+  <tr>
+    <td class="SmallTable"><b>Kind</b></td>
+    <td class="SmallTable"><b>Caption</b><td>
+    <td class="SmallTable"><b>Explanation</b></td>
+    <td class="SmallTable"><b>Example</b></td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">1:1</td>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">one - to - one relation<td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">One row in the source table matches one row in the destination table.</td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">A relation between a [customer] table and an [address] table. One customer has one address.</td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">1:n</td>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">one - to - many relation<td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">One row in the source table matches many rows in the destination table.</td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">A relation between an [order] table and a [orderproduct] table. One order can have many products and
+      a product in the [orderproduct] table is only part of one order.</td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">1:n (Non Identifying)</td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">one - to - many relation, FK not in PK<td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">One row in the source table matches many rows in the destination table but the Foreign Key in the
+      destination table is not in the Primary Key Index.</td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">A relation between a [payment] table and an [order] table. Each row in the [order] table as a
+      [payment] assigned to. Only [idorder] is the Primary Key field in the [order] table.</td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">n:m</td>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">many - to - many relation<td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">A n:m relation is always broken down into two 1:n relations.</td>
+    <td style="border-top: 1px solid #666666" class="SmallTable">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">1:1 (Generalisation)</td>
+    <td valign="top" style="border-top: 1px solid #666666" nowrap class="SmallTable">one - to - one relation<td>
+    <td valign="top" style="border-top: 1px solid #666666" class="SmallTable">This relation is treated like a normal 1:1 relation within DBDesigner 4.
+      Some plugins make use of this type of relation.</td>
+    <td style="border-top: 1px solid #666666" class="SmallTable">&nbsp;</td>
+  </tr>  
+</table>
+<h5 class="Heading4">
+Invisible
+</h5>
+<p class="Body">
+Use this option to hide the relation. To make the relation visible again select the source table or the 
+destination table in the Model Palette, expand the relations and doubleclick the invisible relation.
+In the Relation Editor disable this option.
+</p>
+<h5 class="Heading4">
+Foreign Keys
+</h5>
+<p class="Body">
+Use the Foreign Key table to change the fieldnames of Foreign Keys in the destination table and to
+add additional comments to the fields.<br>
+<br>
+Doubleclick a value to change it.
+</p>
+<h5 class="Heading4">
+Reference Definitions
+</h5>
+<p class="Body">
+Select the Create Reference Definition checkbox to activate the Reference Definitions. Use the
+comboboxes to select the appropriate actions for delete and update events.<br>
+<br>
+Please note that native MySQL tables do not support Foreign Key Reference Definitions. Use InnoDB if 
+Foreign Key Reference Definitions are needed.
+</p>
+<h5 class="Heading4">
+Optional Relation
+</h5>
+<p class="Body">
+To make the relation optional on one side check the appropriate option.
+</p>
+<h5 class="Heading4">
+Comments
+</h5>
+<p class="Body">
+Use the Comments Memo to enter additional information about the relation.
+</p>
+<h3 class="Heading2">
+<a name="region">Region Editor</a>
+</h3>
+<p class="Body">
+Call the Region Editor from the region's popup menu. The Region Editor allows you to define
+default table settings for all tables positioned on the region.<br>
+<br>
+To activate set default settings selected the wanted options and enable the checkbox next to that option. 
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editorregion.gif" width="376" height="354"><br>
+The Region Editor
+</p>
+<br>
+<h5 class="Heading4">
+Regionname
+</h5>
+<p class="Body">
+Change this value to rename the region.
+</p>
+<h5 class="Heading4">
+Color
+</h5>
+<p class="Body">
+Each region is painted in an individual color. Choose from the list to specify the region's color.
+</p>
+<h5 class="Heading4">
+Overwrite Table Settings
+</h5>
+<p class="Body">
+Select the appropriate settings and check the overwrite checkbox to activate them.
+</p>
+<h5 class="Heading4">
+Comments
+</h5>
+<p class="Body">
+The comments memo can be used to store informations about the region.
+</p>
+
+<h3 class="Heading2">
+<a name="note">Note Editor</a>
+</h3>
+<p class="Body">
+Doubleclick on a new created note to enter call the Note Editor and enter the note's text.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editornote.gif" width="304" height="184"><br>
+The Note Editor
+</p>
+<br>
+
+<h3 class="Heading2">
+<a name="imageed">Image Editor</a>
+</h3>
+<p class="Body">
+Doubleclick on a image to call the Image Editor.
+</p>
+
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editorimage.gif" width="465" height="142"><br>
+The Image Editor
+</p>
+<br>
+
+<h4 class="Heading4">
+Load New Image
+</h4>
+<p class="Body">
+To replace this image with an updated version of the image or a different image click the
+Image Folder button. A file browser is shown and you can select the image.
+</p>
+<p class="Body">
+Currently only the PNG and BMP image formats are supported.
+</p>
+<h4 class="Heading4">
+Strech Image
+</h4>
+<p class="Body">
+When the Strech Image option is selected you are able to resize the image.
+</p>
+<h4 class="Heading4">
+Restore Size
+</h4>
+<p class="Body">
+To restore the original size of the image after it has be rescaled press the Restore Size 
+button.
+</p>
+<h4 class="Heading4">
+Restore Aspect Ratio
+</h4>
+<p class="Body">
+When the image has been resized and the aspect ratio was changed press the Restore Aspect 
+Ration button to change the height of the image according to the aspect ration.
+</p>
+<h4 class="Heading4">
+Clear Image
+</h4>
+<p class="Body">
+Press the Clear Image button to remove the bitmap.
+</p>
+
+<h3 class="Heading2">
+<a name="datatypeed">Datatype Editor</a>
+</h3>
+<p class="Body">
+Doubleclick on a datatype in the Datatype Palette to call the Datatype Editor.
+</p>
+
+<h3 class="Heading2">
+<a name="queryed">Query Editor</a>
+</h3>
+<p class="Body">
+To call the Query Editor from Design Mode right-click on the table and select 
+Edit Table Data from the popup menu.
+</p>
+<p class="Body">
+When DBDesigner 4 is Query Mode a docked Query Editor is shown at the bottom of the main window.
+To open another editor double-click on the appropriate table.
+</p>
+<p class="Body">
+If there is no active database connection the Database Connection Dialog will be shown. Create a new
+or select an existing database connection and click connect.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/editors/editorquery.gif"><br>
+The Query Editor
+</p>
+<br>
+<h5 class="Heading4">
+Main areas
+</h5>
+<p class="Body">
+The Query Editor can be divided into two main areas, the SQL Command Editor and the Data Grid.
+</p>
+<p class="Body">
+The SQL Command Editor is used to specify a SQL Command. The Data Grid will display the result returned from
+the Database.
+</p>
+<p class="Body">
+The SQL Command Editor is extended by the SQL Command Storage Tree. The SQL Command Storage Tree is used to 
+store SQL commands permanently with the model and to keep a command history.
+</p>
+<p class="Body">
+The Data Grid is extended by the BLOB Editor. BLOB Editor is used to 
+modify, load and save data from or to BLOB fields.
+</p>
+<h5 class="Heading4">
+Viewing and hiding the areas.
+</h5>
+<p class="Body">
+When the Query Editor is opened from Design Mode or by double-clicking a table in Query Mode, only the
+Data Grid is visible. To display the SQL Command Editor click the SQL button at the right.
+</p>
+<p class="Body">
+To display the SQL Command Storage Tree click on the tree icon right to the SQL Command Editor.
+</p>
+<p class="Body">
+To edit the content of a BLOB Field click on the BLOB button at the right.
+</p>
+
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

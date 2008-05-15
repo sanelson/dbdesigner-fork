@@ -1,0 +1,13 @@
+http://sourceforge.net/projects/jcl
+http://homepages.borland.com/jedi/issuetracker/
+
+http://homepages.borland.com/jedi/issuetracker/my_view_page.php
+
+//changed:
+  ExceptDlg.pas
+  JclDebug.pas
+  JclHookExcept.pas
+  jcl.inc
+
+  jclApiHook.pas - NEW
+  ********************

@@ -1,0 +1,1146 @@
+object OptionsForm: TOptionsForm
+  Left = 210
+  Top = 220
+  ActiveControl = PageControl
+  AutoScroll = False
+  BorderStyle = fbsToolWindow
+  Caption = 'DBDesigner Options'
+  ClientHeight = 342
+  ClientWidth = 744
+  Color = clBackground
+  FormStyle = fsStayOnTop
+  Position = poMainFormCenter
+  Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  object PageControlTitleShape: TShape
+    Left = 169
+    Top = 14
+    Width = 555
+    Height = 23
+    Brush.Color = clBackground
+    Brush.Style = bsClear
+  end
+  object PageControl: TPageControl
+    Left = 164
+    Top = 40
+    Width = 563
+    Height = 263
+    ActivePage = DBOptionsSheet
+    Style = tsNoTabs
+    TabOrder = 0
+    OnChange = PageControlChange
+    object GenOptSheet: TTabSheet
+      Caption = 'GenOptSheet'
+      object GroupBox4: TGroupBox
+        Left = 2
+        Top = 0
+        Width = 223
+        Height = 107
+        Caption = 'Startup'
+        TabOrder = 0
+        object Label2: TLabel
+          Left = 21
+          Top = 26
+          Width = 102
+          Height = 13
+          Alignment = taRightJustify
+          Caption = 'Splash Screen Delay:'
+        end
+        object SplashScreenDelayEd: TEdit
+          Left = 128
+          Top = 22
+          Width = 61
+          Height = 21
+          TabOrder = 1
+        end
+        object Label3: TLabel
+          Left = 194
+          Top = 26
+          Width = 13
+          Height = 13
+          Caption = 'ms'
+        end
+        object ReopenLastFileCBox: TCheckBox
+          Left = 22
+          Top = 75
+          Width = 191
+          Height = 21
+          Caption = 'Reopen Last File'
+          TabOrder = 3
+        end
+        object ShowTipsOnStartupCBox: TCheckBox
+          Left = 22
+          Top = 49
+          Width = 191
+          Height = 21
+          Caption = 'Show tips on startup'
+          TabOrder = 4
+        end
+      end
+      object Various: TGroupBox
+        Left = 242
+        Top = 0
+        Width = 313
+        Height = 255
+        Caption = 'Various'
+        TabOrder = 1
+        object LimitUndoCBox: TCheckBox
+          Left = 22
+          Top = 21
+          Width = 199
+          Height = 21
+          Caption = 'Limit the number of Undo Actions to'
+          TabOrder = 0
+        end
+        object UndoLimitEd: TEdit
+          Left = 216
+          Top = 21
+          Width = 45
+          Height = 21
+          TabOrder = 1
+          Text = '99'
+        end
+        object EditorsFloatOnTopCBox: TCheckBox
+          Left = 22
+          Top = 50
+          Width = 269
+          Height = 21
+          Caption = 'Normalize Editors when Application loses the Focus'
+          TabOrder = 2
+        end
+        object MinimizeOnCtrlShiftCCBox: TCheckBox
+          Left = 22
+          Top = 78
+          Width = 269
+          Height = 21
+          Caption = 'Minimize on [Ctrl+Shift+C] Copy Command'
+          TabOrder = 3
+        end
+        object HTMLBrowserCBox: TCheckBox
+          Left = 22
+          Top = 108
+          Width = 153
+          Height = 21
+          Hint = 'Enable this option to user a Browser different to IE/Konquerior'
+          Caption = 'Use other HTML Browser:'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          OnClick = HTMLBrowserCBoxClick
+        end
+        object HTMLBrowserEd: TEdit
+          Left = 176
+          Top = 108
+          Width = 119
+          Height = 21
+          Hint = 
+            'Enter the browsers filename. When this file is not in the Path, ' +
+            'include the Path Information also.'
+          Enabled = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+        end
+        object UseSQLSyntaxHighlightingCBox: TCheckBox
+          Left = 22
+          Top = 138
+          Width = 267
+          Height = 21
+          Hint = 'This option enables syntax Highlighting in the Query Mode'
+          Caption = 'Use SQL Syntax Highlighting'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 6
+          OnClick = HTMLBrowserCBoxClick
+        end
+        object IgnoreSQLHistoryChangeCBox: TCheckBox
+          Left = 22
+          Top = 168
+          Width = 277
+          Height = 21
+          Hint = 
+            'If you don'#39't want to be asked to save your model after SQL Execu' +
+            'te commands activate this option'
+          Caption = 'New SQL History entry causes model to be changed'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 7
+          OnClick = HTMLBrowserCBoxClick
+        end
+        object ActivateNewXMLParserCBox: TCheckBox
+          Left = 22
+          Top = 196
+          Width = 277
+          Height = 21
+          Hint = 'Deactivate this option if you have troubles opening old models.'
+          Caption = 'Activate new XML Parser'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 8
+          OnClick = HTMLBrowserCBoxClick
+        end
+        object OutputLinuxStyleLineBreaksCBox: TCheckBox
+          Left = 22
+          Top = 224
+          Width = 277
+          Height = 21
+          Hint = 'Used when exporting SQL Scripts'
+          Caption = 'Use Linux style linebreaks'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 9
+          OnClick = HTMLBrowserCBoxClick
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 2
+        Top = 116
+        Width = 223
+        Height = 59
+        Caption = 'Program Language'
+        TabOrder = 2
+        object Label12: TLabel
+          Left = 14
+          Top = 26
+          Width = 51
+          Height = 13
+          Caption = 'Language:'
+        end
+        object LanguageCBox: TComboBox
+          Left = 72
+          Top = 22
+          Width = 131
+          Height = 21
+          Style = csDropDownList
+          ItemHeight = 15
+          TabOrder = 1
+          OnCloseUp = LanguageCBoxCloseUp
+        end
+      end
+      object GroupBox8: TGroupBox
+        Left = 2
+        Top = 184
+        Width = 223
+        Height = 59
+        Caption = 'Settings'
+        TabOrder = 3
+        object ResetPersonalSettingsBtn: TBitBtn
+          Left = 16
+          Top = 22
+          Width = 187
+          Height = 22
+          Hint = 
+            'Use this function to reset your local personal settings to the d' +
+            'efaults.'
+          Caption = 'Reset Personal Settings'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          OnClick = ResetPersonalSettingsBtnClick
+        end
+      end
+    end
+    object VisualOptSheet: TTabSheet
+      Caption = 'VisualOptSheet'
+      ImageIndex = 1
+      object SelectFontBtn: TSpeedButton
+        Left = 210
+        Top = 8
+        Width = 17
+        Height = 21
+        Caption = '...'
+        OnClick = SelectFontBtnClick
+      end
+      object Label1: TLabel
+        Left = 290
+        Top = 6
+        Width = 106
+        Height = 13
+        Caption = 'Default Region Colors:'
+      end
+      object RegionColorsMemo: TMemo
+        Left = 290
+        Top = 20
+        Width = 247
+        Height = 95
+        ScrollBars = ssVertical
+        TabOrder = 1
+      end
+      object Label4: TLabel
+        Left = 290
+        Top = 116
+        Width = 153
+        Height = 13
+        Caption = '(Format: Colorname=#RRGGBB)'
+        Color = clBackground
+        Font.Color = clGray
+        Font.Height = 11
+        Font.Name = 'MS Shell Dlg'
+        Font.Pitch = fpVariable
+        Font.Style = []
+        Font.Weight = 40
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label13: TLabel
+        Left = 4
+        Top = 12
+        Width = 79
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Application Font:'
+      end
+      object FontEdit: TEdit
+        Left = 88
+        Top = 8
+        Width = 121
+        Height = 21
+        TabOrder = 4
+      end
+      object GroupBox7: TGroupBox
+        Left = 2
+        Top = 40
+        Width = 263
+        Height = 139
+        Caption = 'Table Headers'
+        TabOrder = 5
+        object TblHeaderPreviewPnl: TPanel
+          Left = 18
+          Top = 68
+          Width = 221
+          Height = 53
+          BevelOuter = bvLowered
+          Color = clWhite
+          TabOrder = 0
+          object TblBorderPnl: TPanel
+            Left = 15
+            Top = 13
+            Width = 187
+            Height = 40
+            BevelOuter = bvNone
+            Color = clGray
+            TabOrder = 1
+            object TblColumnsPnl: TPanel
+              Left = 1
+              Top = 26
+              Width = 185
+              Height = 20
+              BevelOuter = bvNone
+              Color = clWhite
+              TabOrder = 0
+            end
+          end
+          object TblHeaderBGPnl: TPanel
+            Left = 16
+            Top = 14
+            Width = 185
+            Height = 24
+            BevelOuter = bvNone
+            Color = clSilver
+            TabOrder = 0
+            object TblHeaderBGImg: TImage
+              Left = 134
+              Top = 0
+              Width = 51
+              Height = 24
+              Align = alRight
+              AutoSize = True
+            end
+          end
+          object TblShadowPnl: TPanel
+            Left = 202
+            Top = 15
+            Width = 2
+            Height = 41
+            BevelOuter = bvNone
+            Bitmap.Data = {
+              EA010000424DE60100000000000036000000280000000C0000000C0000000100
+              180000000000B0010000120B0000120B00000000000000000000FFFFFF848484
+              FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF8484848484
+              84FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FF
+              FFFFFFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484
+              FFFFFF848484848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF8484
+              84FFFFFF848484FFFFFFFFFFFF848484FFFFFF848484FFFFFF848484FFFFFF84
+              8484FFFFFF848484FFFFFF848484848484FFFFFF848484FFFFFF848484FFFFFF
+              848484FFFFFF848484FFFFFF848484FFFFFFFFFFFF848484FFFFFF848484FFFF
+              FF848484FFFFFF848484FFFFFF848484FFFFFF848484848484FFFFFF848484FF
+              FFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFFFFFFFF848484
+              FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF8484848484
+              84FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FF
+              FFFFFFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF848484
+              FFFFFF848484848484FFFFFF848484FFFFFF848484FFFFFF848484FFFFFF8484
+              84FFFFFF848484FFFFFF}
+            TabOrder = 2
+          end
+        end
+        object Label6: TLabel
+          Left = 18
+          Top = 54
+          Width = 76
+          Height = 13
+          Caption = 'Header Preview'
+        end
+        object Label5: TLabel
+          Left = 70
+          Top = 28
+          Width = 26
+          Height = 13
+          Alignment = taRightJustify
+          Caption = 'Style:'
+        end
+        object TblHeaderLU: TComboBox
+          Left = 100
+          Top = 24
+          Width = 140
+          Height = 21
+          Style = csDropDownList
+          ItemHeight = 15
+          TabOrder = 3
+          OnChange = TblHeaderLUChange
+        end
+      end
+    end
+    object DBOptionsSheet: TTabSheet
+      Caption = 'DBOptionsSheet'
+      ImageIndex = 3
+      object Label7: TLabel
+        Left = 2
+        Top = 212
+        Width = 113
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Default Database Type:'
+        Visible = False
+      end
+      object DefDatabaseTypeCBox: TComboBox
+        Left = 120
+        Top = 208
+        Width = 193
+        Height = 21
+        Style = csDropDownList
+        Color = clBackground
+        ItemHeight = 15
+        TabOrder = 1
+        Visible = False
+        OnChange = DefDatabaseTypeCBoxChange
+      end
+      object ReservedWordsMemo: TMemo
+        Left = 120
+        Top = 8
+        Width = 191
+        Height = 191
+        ScrollBars = ssVertical
+        TabOrder = 2
+      end
+      object Label10: TLabel
+        Left = 32
+        Top = 10
+        Width = 83
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Reserved Words:'
+      end
+      object GroupBox6: TGroupBox
+        Left = 326
+        Top = 2
+        Width = 223
+        Height = 199
+        Caption = 'Various'
+        TabOrder = 4
+        object Label11: TLabel
+          Left = 15
+          Top = 145
+          Width = 87
+          Height = 13
+          Alignment = taRightJustify
+          Caption = 'Font for SQL Text:'
+        end
+        object FontCBox: TComboBox
+          Left = 16
+          Top = 161
+          Width = 141
+          Height = 21
+          DropDownCount = 16
+          ItemHeight = 15
+          TabOrder = 1
+          Text = 'FontCBox'
+        end
+        object SQLFontSizeCBox: TComboBox
+          Left = 166
+          Top = 161
+          Width = 41
+          Height = 21
+          Style = csDropDownList
+          ItemHeight = 15
+          Items.Strings = (
+            '7'
+            '8'
+            '9'
+            '10'
+            '11'
+            '12'
+            '13'
+            '14')
+          ItemIndex = 1
+          TabOrder = 2
+          Text = '8'
+        end
+        object RenameReservedWordsCBox: TCheckBox
+          Left = 14
+          Top = 20
+          Width = 197
+          Height = 17
+          Caption = 'Rename Reserved Words'
+          TabOrder = 3
+        end
+        object EncloseNamesCBox: TCheckBox
+          Left = 14
+          Top = 44
+          Width = 195
+          Height = 17
+          Caption = 'Enclose names by quote character'
+          TabOrder = 4
+        end
+        object DonotuseRelNameCbox: TCheckBox
+          Left = 14
+          Top = 70
+          Width = 203
+          Height = 17
+          Caption = 'Do not use Relation Name in Ref.Def.'
+          TabOrder = 5
+        end
+        object SyncDatatypesOfForeignKeysCBox: TCheckBox
+          Left = 14
+          Top = 96
+          Width = 203
+          Height = 17
+          Caption = 'Sync Datatypes of FKs with PKs'
+          TabOrder = 6
+        end
+        object AddQuotesToDefValsCBox: TCheckBox
+          Left = 14
+          Top = 122
+          Width = 203
+          Height = 17
+          Caption = 'Add quotes to Default Values'
+          TabOrder = 7
+        end
+      end
+    end
+    object DefEditingOptionsSheet: TTabSheet
+      Caption = 'DefEditingOptionsSheet'
+      ImageIndex = 2
+      object GroupBox2: TGroupBox
+        Left = 2
+        Top = 2
+        Width = 359
+        Height = 55
+        Caption = 'Default Table Settings'
+        TabOrder = 0
+        object Label18: TLabel
+          Left = 21
+          Top = 24
+          Width = 94
+          Height = 13
+          Caption = 'Default Table Type:'
+        end
+        object DefaultTableTypeCBox: TComboBox
+          Left = 123
+          Top = 20
+          Width = 214
+          Height = 21
+          Style = csDropDownList
+          ItemHeight = 15
+          Items.Strings = (
+            'MYISAM  (Standard)'
+            'InnoDB  (Transaction-safe tables with row locking)'
+            'HEAP  (The data for this table is only stored in memory)'
+            'BDB  (Transaction-safe tables with page locking)'
+            'ISAM  (The original (old) table handler)'
+            'MERGE  (A collection of MyISAM tables used as one table)')
+          ItemIndex = 0
+          TabOrder = 1
+          Text = 'MYISAM  (Standard)'
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 2
+        Top = 68
+        Width = 359
+        Height = 143
+        Caption = 'Default Relation Settings / Foreign Keys Settings'
+        TabOrder = 1
+        object Label19: TLabel
+          Left = 41
+          Top = 64
+          Width = 297
+          Height = 13
+          Caption = 
+            'if Reference Definition is activated for the Relation (for InnoD' +
+            'B)'
+        end
+        object TableNameInRefsCBox: TCheckBox
+          Left = 22
+          Top = 85
+          Width = 309
+          Height = 19
+          Hint = 
+            'The name of the soure table will be included in the foreign key ' +
+            'columns'#39' name'
+          Caption = 'Add Source Table Name to Foreign Key Columns'#39' Names'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+        object Label23: TLabel
+          Left = 22
+          Top = 113
+          Width = 88
+          Height = 13
+          Caption = 'Foreign Key Prefix:'
+        end
+        object FKPrefixEd: TEdit
+          Left = 114
+          Top = 109
+          Width = 43
+          Height = 21
+          Hint = 'Prefix that will be added to all foreign key columns'#39' name'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+        end
+        object Label24: TLabel
+          Left = 171
+          Top = 113
+          Width = 93
+          Height = 13
+          Caption = 'Foreign Key Postfix:'
+        end
+        object FKPostfixEd: TEdit
+          Left = 268
+          Top = 109
+          Width = 43
+          Height = 21
+          Hint = 'Postfix that will be added to all foreign key columns'#39' name'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+        end
+        object CreateFKRefDefIndexCBox: TCheckBox
+          Left = 22
+          Top = 47
+          Width = 317
+          Height = 19
+          Hint = 
+            'The Reference Definition will be turned on by default for new Re' +
+            'lations'
+          Caption = 'Automatically create Index on FK Fields in Destination Table'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+        end
+        object ActivateRefDefForNewRelationsCBox: TCheckBox
+          Left = 22
+          Top = 21
+          Width = 289
+          Height = 19
+          Hint = 
+            'The Reference Definition will be turned on by default for new Re' +
+            'lations'
+          Caption = 'Activate Reference Definitions for all new Relations'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 6
+        end
+      end
+      object GroupBox1: TGroupBox
+        Left = 380
+        Top = 2
+        Width = 159
+        Height = 83
+        Caption = ' '
+        TabOrder = 3
+        object GridWidthLbl: TLabel
+          Left = 17
+          Top = 24
+          Width = 50
+          Height = 13
+          Alignment = taRightJustify
+          Caption = 'Grid width:'
+        end
+        object GridXEd: TEdit
+          Left = 72
+          Top = 20
+          Width = 39
+          Height = 21
+          TabOrder = 1
+        end
+        object GridHeightLbl: TLabel
+          Left = 13
+          Top = 52
+          Width = 54
+          Height = 13
+          Alignment = taRightJustify
+          Caption = 'Grid height:'
+        end
+        object GridYEd: TEdit
+          Left = 72
+          Top = 48
+          Width = 39
+          Height = 21
+          TabOrder = 3
+        end
+        object GridWidthUnitsLbl: TLabel
+          Left = 116
+          Top = 24
+          Width = 24
+          Height = 13
+          Caption = 'Units'
+        end
+        object GridHeightUnitsLbl: TLabel
+          Left = 116
+          Top = 52
+          Width = 24
+          Height = 13
+          Caption = 'Units'
+        end
+      end
+      object UsePosGridCBox: TCheckBox
+        Left = 390
+        Top = -1
+        Width = 121
+        Height = 19
+        Caption = 'Enable Snap to Grid'
+        TabOrder = 2
+        OnClick = UsePosGridCBoxClick
+      end
+      object EditOptionsTipPanel: TPanel
+        Left = 380
+        Top = 97
+        Width = 159
+        Height = 114
+        Color = clInfoBk
+        TabOrder = 4
+        Visible = False
+        object Label8: TLabel
+          Left = 8
+          Top = 4
+          Width = 143
+          Height = 39
+          AutoSize = False
+          Caption = 
+            'These parameters are the default settings when a new model is cr' +
+            'eated.'
+          WordWrap = True
+        end
+        object Label9: TLabel
+          Left = 8
+          Top = 48
+          Width = 145
+          Height = 53
+          AutoSize = False
+          Caption = 
+            'They can be turned on/off for each model individually using the ' +
+            'Model Options Dialog.'
+          WordWrap = True
+        end
+      end
+    end
+  end
+  object BottomPnl: TPanel
+    Left = 0
+    Top = 307
+    Width = 744
+    Height = 35
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    object AbortBtn: TSpeedButton
+      Left = 702
+      Top = 0
+      Width = 23
+      Height = 22
+      Enabled = False
+      Flat = True
+      Glyph.Data = {
+        3A0C0000424D360C000000000000360000002800000040000000100000000100
+        180000000000000C0000120B0000120B00000000000000000000E9EBEBE9EBEB
+        E0E2E2C6C8C8BABCBCD0D2D2E5E7E7E9EBEBE9EBEBE8EAEADDDFDFC4C6C6BCBE
+        BED3D5D5E6E8E8E9EBEBE9EBEBE9EBEBE6E8E8DFE1E1DBDDDDE2E4E4E8EAEAE9
+        EBEBE9EBEBE9EBEBE5E7E7DEE0E0DCDEDEE3E5E5E8EAEAE9EBEBE9EBEBE9EBEB
+        E0E2E2C6C8C8BABCBCD0D2D2E5E7E7E9EBEBE9EBEBE8EAEADDDFDFC4C6C6BCBE
+        BED3D5D5E6E8E8E9EBEBE9EBEBE9EBEBE0E2E2C6C8C8BABCBCD0D2D2E5E7E7E9
+        EBEBE9EBEBE8EAEADDDFDFC4C6C6BCBEBED3D5D5E6E8E8E9EBEBE9EBEBE0E2E2
+        B9BBBB6C6E6E4F5050858686CFD1D1E5E7E7E8EAEADDDFDFB1B2B26768685253
+        538D8E8ED2D4D4E6E8E8E9EBEBE6E8E8D9DBDBA6A8A8878888B3B4B4E2E4E4E8
+        EAEAE9EBEBE5E7E7D2D4D4A1A2A28B8C8CB9BABAE3E5E5E8EAEAE9EBEBE0E2E2
+        B9BBBB6C6E6E4F5050858686CFD1D1E5E7E7E8EAEADDDFDFB1B2B26768685253
+        538D8E8ED2D4D4E6E8E8E9EBEBE0E2E2B9BBBB6C6E6E4F5050858686CFD1D1E5
+        E7E7E8EAEADDDFDFB1B2B26768685253538D8E8ED2D4D4E6E8E8E5E7E7C3C5C5
+        48494901010905054A0000007E7F7FCECFCFD9DBDBB1B2B23535350000130000
+        41000000929292DBDDDDE8EAEADCDDDD6E6F6F0404041D1D1D010101AAACACE1
+        E3E3E4E6E6D2D4D4575858070707161616010101B7B9B9E5E7E7E5E7E7C3C5C5
+        48494901010905054A0000007E7F7FCECFCFD9DBDBB1B2B23535350000130000
+        41000000929292DBDDDDE5E7E7C3C5C548494901010905054A0000007E7F7FCE
+        CFCFD9DBDBB1B2B2353535000013000041000000929292DBDDDDDFE1E1656666
+        0101091414BD1818F908085D000000797A7A9E9F9F3535350101130303CC0202
+        F600004A010101B9BABAE3E5E57778780505054D4D4D636363242424010101A9
+        AAAACDCFCF575858080808474747535353191919010101C4C5C5DFE1E1656666
+        0101091414BD1818F908085D000000797A7A9E9F9F3535350101130303CC0202
+        F600004A010101B9BABADFE1E16566660101091414BD1818F908085D00000079
+        7A7A9E9F9F3535350101130303CC0202F600004A010101B9BABABCBDBD03030A
+        1E1EBE2424FE2020FE1C1CF909095D0000001717170101130A0ACC0A0AFF0707
+        FF0505F60202474E4E4EBDBFBF0505055353536C6C6C6A6A6A66666625252501
+        01012E2E2E0808084B4B4B5B5B5B5A5A5A5555551919194F5050BCBDBD03030A
+        1E1EBE2424FE2020FE1C1CF909095D0000001717170101130A0ACC0A0AFF0707
+        FF0505F60202474E4E4EBCBDBD03030A1E1EBE2424FE2020FE1C1CF909095D00
+        00001717170101130A0ACC0A0AFF0707FF0505F60202474E4E4EDDDFDF8384BF
+        3333FC2D2DFE2929FE2525FE2020F90B0B5D0202131212CB1414FF1111FF0E0E
+        FF0B0BFF3334E3C6C8C8DDDFDF9899997676767272727070706D6D6D69696927
+        27270909095050506262626060605E5E5E5C5C5C6F6F6FC6C8C8DDDFDF8384BF
+        3333FC2D2DFE2929FE2525FE2020F90B0B5D0202131212CB1414FF1111FF0E0E
+        FF0B0BFF3334E3C6C8C8DDDFDF8384BF3333FC2D2DFE2929FE2525FE2020F90B
+        0B5D0202131212CB1414FF1111FF0E0EFF0B0BFF3334E3C6C8C8E9EBEBE9EBEB
+        A7A8EF3939FD3232FE2E2EFE2A2AFE2525F91E1ED91F1FFE1B1BFE1818FE1515
+        FE4747F8E1E3ECE9EBEBE9EBEBE9EBEBC0C2C27A7A7A7676767373737070706C
+        6C6C5C5C5C696969676767656565626262828383E4E6E6E9EBEBE9EBEBE9EBEB
+        A7A8EF3939FD3232FE2E2EFE2A2AFE2525F91E1ED91F1FFE1B1BFE1818FE1515
+        FE4747F8E1E3ECE9EBEBE9EBEBE9EBEBA7A8EF3939FD3232FE2E2EFE2A2AFE25
+        25F91E1ED91F1FFE1B1BFE1818FE1515FE4747F8E1E3ECE9EBEBE9EBEBE9EBEB
+        E8EAEAA1A2E73D3DFC3737FE3333FE2F2FFE2C2CFE2828FE2424FE2020FE4848
+        F0DEE0E8E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBBFC0C07E7E7E79797976767674
+        74747171716F6F6F6C6C6C6A6A6A868787E3E5E5E9EBEBE9EBEBE9EBEBE9EBEB
+        E8EAEAA1A2E73D3DFC3737FE3333FE2F2FFE2C2CFE2828FE2424FE2020FE4848
+        F0DEE0E8E9EBEBE9EBEBE9EBEBE9EBEBE8EAEAA1A2E73D3DFC3737FE3333FE2F
+        2FFE2C2CFE2828FE2424FE2020FE4848F0DEE0E8E9EBEBE9EBEBE9EBEBE8EAEA
+        DDDFDFB7B8B86767AA4141FA3D3DFE3939FE3535FE3131FE2D2DFE3838D69799
+        A0CFD1D1E5E7E7E9EBEBE9EBEBE9EBEBE5E7E7DADCDCAFB0B08080807C7C7C7A
+        7A7A777777757575727272858585CED0D0E2E4E4E8EAEAE9EBEBE9EBEBE8EAEA
+        DDDFDFB7B8B86767AA4141FA3D3DFE3939FE3535FE3131FE2D2DFE3838D69799
+        A0CFD1D1E5E7E7E9EBEBE9EBEBE8EAEADDDFDFB7B8B86767AA4141FA3D3DFE39
+        39FE3535FE3131FE2D2DFE3838D69799A0CFD1D1E5E7E7E9EBEBE8EAEADDDFDF
+        B1B2B21D1E1E0606134141DA4646FD4242FD3E3EFE3A3AFE3636FE1515670000
+        007B7C7CCFD1D1E5E7E7E9EBEBE5E7E7D2D4D43031310B0B0B76767683838380
+        80807D7D7D7B7B7B787878323232010101A6A8A8E2E4E4E8EAEAE8EAEADDDFDF
+        B1B2B21D1E1E0606134141DA4646FD4242FD3E3EFE3A3AFE3636FE1515670000
+        007B7C7CCFD1D1E5E7E7E8EAEADDDFDFB1B2B21D1E1E0606134141DA4646FD42
+        42FD3E3EFE3A3AFE3636FE1515670000007B7C7CCFD1D1E5E7E7E5E7E7BDBEBE
+        3839390707134646CA5353FD4F4FFD4B4BFD4747FD4343FD3F3FFD3A3AF91414
+        5D000000868888D9DBDBE8EAEAD6D8D85858580C0C0C7272728B8B8B89898986
+        86868383838181817E7E7E7A7A7A2D2D2D010101ADAFAFE4E6E6E5E7E7BDBEBE
+        3839390707134646CA5353FD4F4FFD4B4BFD4747FD4343FD3F3FFD3A3AF91414
+        5D000000868888D9DBDBE5E7E7BDBEBE3839390707134646CA5353FD4F4FFD4B
+        4BFD4747FD4343FD3F3FFD3A3AF914145D000000868888D9DBDBDBDDDD505151
+        0808134F4FCA5F5FFD5C5CFD5858FD5454FD5050FD4D4DFD4949FD4545FD4040
+        F816165D010101ADAFAFDFE1E15E5F5F0C0C0C7777779393939191918E8E8E8C
+        8C8C8989898787878484848282827D7D7D2E2E2E010101B9BABADBDDDD505151
+        0808134F4FCA5F5FFD5C5CFD5858FD5454FD5050FD4D4DFD4949FD4545FD4040
+        F816165D010101ADAFAFDBDDDD5051510808134F4FCA5F5FFD5C5CFD5858FD54
+        54FD5050FD4D4DFD4949FD4545FD4040F816165D010101ADAFAFB3B5B5090914
+        5757CA6A6AFC6767FD6464FD6161FD7E7FF6ADAEF05858FC5252FD4E4EFD4A4A
+        FD4545F819195D373737B5B7B70D0D0D7D7D7D9A9A9A989898969696949494A7
+        A8A8C4C6C68F8F8F8A8A8A8888888585858080802F2F2F383838B3B5B5090914
+        5757CA6A6AFC6767FD6464FD6161FD7E7FF6ADAEF05858FC5252FD4E4EFD4A4A
+        FD4545F819195D373737B3B5B50909145757CA6A6AFC6767FD6464FD6161FD7E
+        7FF6ADAEF05858FC5252FD4E4EFD4A4AFD4545F819195D373737E9EBEBA3A4C8
+        7575FA7171FC6E6EFC6B6BFC8787F5E4E6ECE9EBEBB4B5EF5D5DFC5757FD5353
+        FD4F4FFD6666E7D0D2D2E9EBEBB1B2B2A1A2A29F9F9F9D9D9D9B9B9BADADADE6
+        E8E8E9EBEBC9CACA9292928E8E8E8B8B8B898989929292D0D2D2E9EBEBA3A4C8
+        7575FA7171FC6E6EFC6B6BFC8787F5E4E6ECE9EBEBB4B5EF5D5DFC5757FD5353
+        FD4F4FFD6666E7D0D2D2E9EBEBA3A4C87575FA7171FC6E6EFC6B6BFC8787F5E4
+        E6ECE9EBEBB4B5EF5D5DFC5757FD5353FD4F4FFD6666E7D0D2D2E9EBEBE9EBEB
+        C0C1EE7979FB7575FC8E8FF6E5E7ECE9EBEBE9EBEBE9EBEBB6B7EF6161FC5C5C
+        FD7B7BF6E4E6ECE9EBEBE9EBEBE9EBEBD1D2D2A4A4A4A1A1A1B1B2B2E6E8E8E9
+        EBEBE9EBEBE9EBEBCACBCB959595919191A4A5A5E6E8E8E9EBEBE9EBEBE9EBEB
+        C0C1EE7979FB7575FC8E8FF6E5E7ECE9EBEBE9EBEBE9EBEBB6B7EF6161FC5C5C
+        FD7B7BF6E4E6ECE9EBEBE9EBEBE9EBEBC0C1EE7979FB7575FC8E8FF6E5E7ECE9
+        EBEBE9EBEBE9EBEBB6B7EF6161FC5C5CFD7B7BF6E4E6ECE9EBEBE9EBEBE9EBEB
+        E9EBEBC3C4F19899F7E4E6EBE5E7E7E5E7E7E8EAEAE9EBEBE9EBEBBABBF28989
+        F8E4E6ECE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBD2D3D3B7B7B7E7E8E8E9EBEBE9
+        EBEBE8EAEAE5E7E7E5E7E7CBCCCCADADADE6E8E8E9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBC3C4F19899F7E5E7ECE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBB9BAF18788
+        F7E0E2E8E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBC3C4F19899F7E5E7ECE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBBABBF28989F8E4E6ECE8EAEAE5E7E7}
+      Margin = 3
+      NumGlyphs = 4
+      Transparent = False
+      OnClick = AbortBtnClick
+      OnMouseEnter = SubmitBtnMouseEnter
+      OnMouseLeave = SubmitBtnMouseLeave
+    end
+    object SubmitBtn: TSpeedButton
+      Left = 674
+      Top = 0
+      Width = 23
+      Height = 22
+      Enabled = False
+      Flat = True
+      Glyph.Data = {
+        7A0E0000424D760E00000000000036000000280000004C000000100000000100
+        180000000000400E0000120B0000120B00000000000000000000E9EBEBE9EBEB
+        E9EBEBE9EBEBE8EAEADBDDDDC4C6C6C2C3C3D9DADAE8EAEAE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8
+        EAEADBDDDDC4C6C6C2C3C3D9DADAE8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDC4C6
+        C6C2C3C3D9DADAE8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDC4C6C6C2C3C3D9DADA
+        E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB6869696263639FA0A0D8D9D9E8EAEAE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E8EAEADBDDDDA9ABAB6869696263639FA0A0D8D9D9E8EAEAE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9
+        ABAB6869696263639FA0A0D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB6869696263
+        639FA0A0D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB2829291C0901250D021616169E9F9F
+        D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE8EAEADBDDDDA9ABAB2829290A0A0A0E0E0E1616169E9F9FD8D9D9E8EAEAE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDD
+        A9ABAB2829291C0901250D021616169E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB2829291C
+        0901250D021616169E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB2829291C0901D54A0DEC55132A10
+        041414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE8EAEADBDDDDA9ABAB2829290A0A0A5050505D5D5D1111111414149E9F9F
+        D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDD
+        DDA9ABAB2829291C0901D54A0DEC55132A10041414149E9F9FD8D9D9E8EAEAE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB282929
+        1C0901D54A0DEC55132A10041414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB2829291C0901D54A0DFF5C14FF
+        5F18EC5B1B2A11061414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE8EAEADBDDDDA9ABAB2829290A0A0A5050506363636767676262621212
+        121414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADB
+        DDDDA9ABAB2829291C0901D54A0DFF5C14FF5F18EC5B1B2A11061414149E9F9F
+        D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE8EAEADBDDDDA9ABAB2829
+        291C0901D54A0DFF5C14FF5F18EC5B1B2A11061414149E9F9FD8D9D9E8EAEAE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE2E4E4B2B4B4292A2A1C0901D54A0DFF5C13
+        FF5F18FF621DFF6522EC61242A12071414149E9F9FD8D9D9E8EAEAE9EBEBE9EB
+        EBE9EBEBE9EBEBE2E4E4B2B4B4292A2A0A0A0A5050506363636666666A6A6A6D
+        6D6D6969691313131414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEB
+        E2E4E4B2B4B4292A2A1C0901D54A0DFF5C13FF5F18FF621DFF6522EC61242A12
+        071414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBE2E4E4B2B4B429
+        2A2A1C0901D54A0DFF5C13FF5F18FF621DFF6522EC61242A12071414149E9F9F
+        D8D9D9E8EAEAE9EBEBE9EBEBE9EBEBE9EBEBD2D4D43B3B3B1C0901D54A0DFF5B
+        13FF5E18FF621CFF6521FF6926FF6C2CEC682D2A13091414149E9F9FD8D9D9E8
+        EAEAE9EBEBE9EBEBE9EBEBD2D4D43B3B3B0A0A0A5050506363636666666A6A6A
+        6D6D6D7171717575756F6F6F1414141414149E9F9FD8D9D9E8EAEAE9EBEBE9EB
+        EBE9EBEBD2D4D43B3B3B1C0901D54A0DFF5B13FF5E18FF621CFF6521FF6926FF
+        6C2CEC682D2A13091414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEBD2D4D4
+        3B3B3B1C0901D54A0DFF5B13FF5E18FF621CFF6521FF6926FF6C2CEC682D2A13
+        091414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBE9EBEB9293931D0A02D54A0DFF
+        5B13FF5E17FF621CFC6D2FFB753AFF6C2BFF7031FF7436EC6E372A140B141414
+        9E9F9FD8D9D9E8EAEAE9EBEBE9EBEB9293930B0B0B5050506363636666666969
+        697575757C7D7D7474747878787C7C7C7676761616161414149E9F9FD8D9D9E8
+        EAEAE9EBEBE9EBEB9293931D0A02D54A0DFF5B13FF5E17FF621CFC6D2FFB753A
+        FF6C2BFF7031FF7436EC6E372A140B1414149E9F9FD8D9D9E8EAEAE9EBEBE9EB
+        EB9293931D0A02D54A0DFF5B13FF5E17FF621CFC6D2FFB753AFF6C2BFF7031FF
+        7436EC6E372A140B1414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBCFD1D1C97B58
+        FF5B13FF5E17FF611CFC6E2FECCDBEEBDCD5FB7C43FF7336FF773BFF7B40EC75
+        412A150C1414149E9F9FD8D9D9E8EAEAE9EBEBCFD1D17D7E7E62626266666669
+        6969757575CDCECEDBDDDD8383837C7C7C8080808383837D7D7D171717141414
+        9E9F9FD8D9D9E8EAEAE9EBEBCFD1D1C97B58FF5B13FF5E17FF611CFC6E2FECCD
+        BEEBDCD5FB7C43FF7336FF773BFF7B40EC75412A150C1414149E9F9FD8D9D9E8
+        EAEAE9EBEBCFD1D1C97B58FF5B13FF5E17FF611CFC6E2FECCDBEEBDCD5FB7C43
+        FF7336FF773BFF7B40EC75412A150C1414149E9F9FD8D9D9E8EAEAE9EBEBE9EB
+        EBE9EBEBF39971FF611BFD6D2EECCDBEE9EBEBE9EBEBEBDDD6FB824CFF7A40FF
+        7E45FF824AEC7B492A170E1414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEB9C9D9D
+        696969757575CDCECEE9EBEBE9EBEBDCDEDE8989898383838787878B8B8B8383
+        831818181414149E9F9FD8D9D9E8EAEAE9EBEBE9EBEBF39971FF611BFD6D2EEC
+        CDBEE9EBEBE9EBEBEBDDD6FB824CFF7A40FF7E45FF824AEC7B492A170E141414
+        9E9F9FD8D9D9E8EAEAE9EBEBE9EBEBF39971FF611BFD6D2EECCDBEE9EBEBE9EB
+        EBEBDDD6FB824CFF7A40FF7E45FF824AEC7B492A170E1414149E9F9FD8D9D9E8
+        EAEAE9EBEBE9EBEBE9EBEBF5A480EECEC0E9EBEBE9EBEBE9EBEBE9EBEBEBDED7
+        FB8856FF824AFF854FFF8854EC82522A180F141414A5A7A7E0E2E2E9EBEBE9EB
+        EBE9EBEBA7A8A8CED0D0E9EBEBE9EBEBE9EBEBE9EBEBDDDFDF9090908A8A8A8E
+        8E8E9292928A8A8A191919141414A5A7A7E0E2E2E9EBEBE9EBEBE9EBEBF5A480
+        EECEC0E9EBEBE9EBEBE9EBEBE9EBEBEBDED7FB8856FF824AFF854FFF8854EC82
+        522A180F141414A5A7A7E0E2E2E9EBEBE9EBEBE9EBEBF5A480EECEC0E9EBEBE9
+        EBEBE9EBEBE9EBEBEBDED7FB8856FF824AFF854FFF8854EC82522A180F141414
+        A5A7A7E0E2E2E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBEBDED8FB8F5EFF8854FF8C58FF8F5DEC875A2A18111D1D1DC8CACAE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBDEDFDF
+        9697979191919595959898988F8F8F1A1A1A1D1D1DC8CACAE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBDED8FB8F5EFF8854FF
+        8C58FF8F5DEC875A2A18111D1D1DC8CACAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBDED8FB8F5EFF8854FF8C58FF8F5DEC87
+        5A2A18111D1D1DC8CACAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBEBDFD9FB9466FF8E5DFF9161FF9465EC8C602B1A12
+        787979E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBDEE0E09D9D9D9898989B9B9B9E9E9E9494941C1C1C787979E9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBDFD9
+        FB9466FF8E5DFF9161FF9465EC8C602B1A12787979E9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBDFD9FB9466FF8E5DFF
+        9161FF9465EC8C602B1A12787979E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBE0DAFB996EFF9464FF9668FF99
+        6BD49B81C8CACAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBDFE1E1A2A2A29E9E9EA0A0A0A3A3A3A0A1A1C8CACA
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBEBE0DAFB996EFF9464FF9668FF996BD49B81C8CACAE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBE0DA
+        FB996EFF9464FF9668FF996BD49B81C8CACAE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBE1DBFC9E76FF
+        996BF5B497E9E9E9E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE0E2E2A7A7A7A2A2A2BABABAE8EA
+        EAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBEBE1DBFC9E76FF996BF5B497E9E9E9E9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBEBE1DBFC9E76FF996BF5B497E9E9E9E9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        EBE2DDF5BDA4E9E9E9E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE1E3E3C2C3C3E8
+        EAEAE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEB
+        E9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBEBE2DDF5BDA4E9E9E9E9EBEBE9EB
+        EBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9EBEBE9
+        EBEBE9EBEBE9EBEBE9EBEBEBE2DDF5BDA4E9E9E9E9EBEBE9EBEB}
+      NumGlyphs = 4
+      Transparent = False
+      OnClick = SubmitBtnClick
+      OnMouseEnter = SubmitBtnMouseEnter
+      OnMouseLeave = SubmitBtnMouseLeave
+    end
+  end
+  object PageControlTreeView: TTreeView
+    Left = 17
+    Top = 15
+    Width = 142
+    Height = 284
+    Columns = <
+      item
+        AllowClick = False
+        AllowResize = False
+        MaxWidth = 125
+        MinWidth = 125
+        Tag = 0
+        Width = 125
+      end>
+    Items.Data = {
+      0400000028000000FFFFFFFFFFFFFFFF7805AF09000000000000000000000000
+      0F47656E6572616C204F7074696F6E7327000000FFFFFFFFFFFFFFFF7805AF09
+      0000000000000000000000000E56697375616C204F7074696F6E7329000000FF
+      FFFFFFFFFFFFFF7805AF09000000000000000000000000104461746162617365
+      204F7074696F6E732E000000FFFFFFFFFFFFFFFF7805AF090000000000000000
+      000000001544656661756C74204D6F64656C204F7074696F6E73}
+    ReadOnly = True
+    TabOrder = 2
+    OnChange = PageControlTreeViewChange
+  end
+  object PageControlTitlePnl: TPanel
+    Left = 170
+    Top = 15
+    Width = 553
+    Height = 21
+    BevelOuter = bvNone
+    Bitmap.Data = {
+      1A0C0000424D160C000000000000360000002800000032000000140000000100
+      180000000000E00B0000120B0000120B00000000000000000000FCFCF9FCFCF9
+      FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFC
+      F9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FC
+      FCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9
+      FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF9FCFC
+      F9FCFCF9FCFCF9FCFCF9FCFCF9FCFCF90000FCFCFCFCFCFCFCFCFCFCFCFCFCFC
+      FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFC
+      FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFC
+      FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFC
+      FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFC
+      FCFCFCFCFCFCFCFC0000FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FA
+      F9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9
+      FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9
+      F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FA
+      F9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9FAF9F9
+      0000F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7
+      F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6
+      F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7
+      F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7
+      F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F7F7F6F70000F5F2F2F5F2F2
+      F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2
+      F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5
+      F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2
+      F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2
+      F2F5F2F2F5F2F2F5F2F2F5F2F2F5F2F20000F0EFEDF0EFEDF0EFEDF0EFEDF0EF
+      EDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0
+      EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFED
+      F0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EF
+      EDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0EFEDF0
+      EFEDF0EFEDF0EFED0000F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0
+      EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9
+      F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EA
+      E9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0
+      EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9F0EAE9
+      0000EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5
+      EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7
+      E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EE
+      E7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5
+      EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E5EEE7E50000EAE5E3EAE5E3
+      EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5
+      E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EA
+      E5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3
+      EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5
+      E3EAE5E3EAE5E3EAE5E3EAE5E3EAE5E30000E9E0DFE9E0DFE9E0DFE9E0DFE9E0
+      DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9
+      E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DF
+      E9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0
+      DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9E0DFE9
+      E0DFE9E0DFE9E0DF0000E7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7
+      DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDD
+      E7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DF
+      DDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7
+      DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDDE7DFDD
+      0000E7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDB
+      E7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DD
+      DBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7
+      DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDB
+      E7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDBE7DDDB0000E5D9D9E5D9D9
+      E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9
+      D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5
+      D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9
+      E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9
+      D9E5D9D9E5D9D9E5D9D9E5D9D9E5D9D90000E2D6D6E2D6D6E2D6D6E2D6D6E2D6
+      D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2
+      D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6
+      E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6
+      D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2D6D6E2
+      D6D6E2D6D6E2D6D60000EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      0000EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E00000EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E00000EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0
+      EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1
+      E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EAE1E0EA
+      E1E0EAE1E0EAE1E00000F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9
+      F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3
+      F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4
+      F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9
+      F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3F9F4F3
+      0000FDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFA
+      FDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFB
+      FAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFD
+      FBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFA
+      FDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFAFDFBFA0000}
+    Color = clDark
+    TabOrder = 3
+    object PageControlTitleLbl: TLabel
+      Left = 6
+      Top = 4
+      Width = 76
+      Height = 13
+      Caption = 'General Options'
+      Masked = True
+      Transparent = True
+    end
+  end
+end

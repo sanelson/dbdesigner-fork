@@ -1,0 +1,734 @@
+<html>
+
+<head>
+<title>Database Creation and Maintenance</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+<script src="std_js.js" type="text/javascript">
+</script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+Database Creation and Maintenance
+</h2>
+<h4 class="Heading3">
+<a name="tradsqlexport">Traditional SQL Export</a>
+</h4>
+<p class="Body">
+Like any other database modelling tool DBDesigner 4 can export the model as a SQL script file
+which can be executed by any database maintenance tool, like the MySql command line tool.<br>
+<br>
+All SQL CREATE TABLE statements and the Standard Inserts can be written to the SQL script file
+depending on user settings.<br>
+<br>
+It is also possible to output all SQL DROP TABLE statements.
+</p>
+<h4 class="Heading3">
+<a name="whatisdbsync">What is Database Synchronisation?</a>
+</h4>
+<p class="Body">
+With DBDesigner 4 you can simplify the task of creating and maintaining your database.
+DBDesigner 4 offers the ability to connect to a MySQL server and to create and
+synchronize a database with the designed model.<br>
+<br>
+Synchronisation means that DBDesigner 4 scans all tables in the existing database and checkes
+for differences. If a table is present in the model but not in the database, the according
+SQL CREATE TABLE statement is executed.<br>
+If the table is not present in the model but in the database it can be deleted depending on
+user settings.<br>
+If the table exists in the model and the database as well, all fields are compared and if there is
+a difference, the appropriate SQL ALTER TABLE statements are executed.
+</p>
+<h4 class="Heading3">
+<a name="whatisreverse">What is Reverse Engineering?</a>
+</h4>
+<p class="Body">
+To reverse engineer a database means to connect to a database server, take an existing database
+and automatically build a database model based on the meta information in the database.<br>
+<br>
+Within DBDesigner 4 all table information is extracted from the meta information and relation between
+the tables are rendered based on table and field names. The tables are placed on the model in alphabetical order 
+following a grid scheme defined by the user.
+<br>
+The process of reverse engineering is possible with MySQL, Oracle and any database
+which is accessable by ODBC.<br>
+<br>
+The extraction of all table information is only possible using a MySQL database. All other databases are limited
+to the bottleneck of ODBC.
+</p>
+
+
+
+<h3 class="Heading2">
+<a name="sqlexport">Export SQL Creates</a>
+</h3>
+<p class="Body">
+To export a SQL create script based on you current database model select File-Export-SQL Create Script ...
+The Export SQL script dialog appears.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/exportsqlscript.gif" width="422" height="331"><br>
+Export SQL Creates dialog
+</p>
+<br>
+<p class="Body">
+To export the SQL Creates to a file, press the [Save script to file] button. You will be promted
+for the file's name and destination. Press [Save] to write the script to disk.<br>
+<br>
+When a sql shell is open, it can be useful to copy the script to the clipboard and execute it directly
+from the sql shell. To copy the SQL script to the clipboard press the [Copy Script to Clipboard] button.
+</p>
+<h4 class="Heading3">
+<a name="sqlexportoptions">SQL Create Options</a>
+</h4>
+<p class="Body">
+The output can be customised using the following General Settings and the SQL Creates Settings.
+</p>
+<h5 class="Heading4">
+Export selected tables only
+</h5>
+<p class="Body">
+Check this flag to export the selected tables only. All other tables will not be created by the script file.
+</p>
+<h5 class="Heading4">
+Order Tables by Foreign Keys
+</h5>
+<p class="Body">
+Use this flag to change the creation order. By default the tables are created in alphabetical order.
+When you are using foreign keys it is necessary to change the order the tables are created.<br>
+<br>
+Tables with no relations pointing to them have to be created first. Every other table can only be 
+created when all source tables already exist.<br>
+If there is a collection of cyclic relations, the tables cannot be created. An error message is displayed.
+Note that you still can export the tables in alphabetical order.
+</p>
+<h5 class="Heading4">
+Define Primary Keys
+</h5>
+<p class="Body">
+Check this flag if you want to enable the creation of primary keys.
+</p>
+<h5 class="Heading4">
+Create Indices
+</h5>
+<p class="Body">
+Check this flag if you want to enable the creation of indices. This does not include the primary keys. 
+Check the Define Primary Keys flag to create primary keys.
+</p>
+<h5 class="Heading4">
+Define Foreign Key Reference
+</h5>
+<p class="Body">
+Use this option to enable the foreign key reference in the SQL CREATE TABLE statements. Note that you have
+to enable the Order Tables by Foreign Keys option to make the SQL script work.
+</p>
+<h5 class="Heading4">
+Output Table Options
+</h5>
+<p class="Body">
+Use this option to enable the table options in the SQL CREATE TABLE statements. This is only necessary if you
+have specified Table Options for a table in the model.
+</p>
+<h5 class="Heading4">
+Output Standard Inserts
+</h5>
+<p class="Body">
+Use this option to export the Standard Inserts within the SQL create script. This is only necessary if you
+have specified Standard Inserts for a table in the model.
+</p>
+
+
+
+<h3 class="Heading2">
+<a name="sqlexportdrops">Export SQL Drops</a>
+</h3>
+<p class="Body">
+To export a SQL drop script based on you current database model select File-Export-SQL Drop Script ...
+The Export SQL script dialog appears.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/exportsqlscriptdrops.gif" width="422" height="206"><br>
+Export SQL Drops dialog
+</p>
+<br>
+<p class="Body">
+To export the SQL Drops to a file, press the [Save script to file] button. You will be promted
+for the file's name and destination. Press [Save] to write the script to disk.<br>
+<br>
+When a sql shell is open, it can be useful to copy the script to the clipboard and execute it directly
+from the sql shell. To copy the SQL script to the clipboard press the [Copy Script to Clipboard] button.
+</p>
+<h4 class="Heading3">
+<a name="sqlexportoptionsdrops">SQL Drop Options</a>
+</h4>
+<p class="Body">
+The output can be customised using the following General Settings and the SQL Creates Settings.
+</p>
+<h5 class="Heading4">
+Export selected tables only
+</h5>
+<p class="Body">
+Check this flag to export the selected tables only. All other tables will not be dropped by the script file.
+</p>
+<h5 class="Heading4">
+Order Tables by Foreign Keys
+</h5>
+<p class="Body">
+Use this flag to change the creation order. By default the tables are dropped in alphabetical order.
+When you are using foreign keys it is necessary to change the order the tables are dropped.<br>
+<br>
+The tables will be dropped the reversed order they have been created.<br>
+If there is a collection of cyclic relations, the tables cannot be created. An error message is displayed.
+Note that you still can export the tables in alphabetical order.
+</p>
+
+
+
+<h3 class="Heading2">
+<a name="dbconn">Database Connections</a>
+</h3>
+<p class="Body">
+Several functions in DBDesigner 4 use Database Connections. They are used to establish a connection
+to a database by selecting the appropriate server and database.
+</p>
+<h5 class="Heading4">
+Create a new Database Connection
+</h5>
+<p class="Body">
+A new Database Connection is created in the Database Connection Dialog.
+</p>
+<p class="Body">
+To create a new Database Connection, click the New Database Connection button. The Connection Parameter Dialog is shown.
+Specify all needed information an click OK to add the connection to the connection list.
+</p>
+<h5 class="Heading4">
+Connect to a database
+</h5>
+<p class="Body">
+Like creating a new Database Connection, the Database Connection Dialog is used to connect to a database.
+</p>
+<p class="Body">
+Select the appropriate connection from the connection list. Enter a username and the password and press the 
+Connect button to establish the connection.
+</p>
+<h5 class="Heading4">
+Please notice
+</h5>
+<p class="Body">
+To make changes to meta information in a database it is necessary to connect as an user with the required rights.
+Within MySQL the database administrator is called root. He has got all rights and is allowed to create a new database 
+or make changes to any database. Every other user is allowed to access and modify only the tables he has got the
+appropriate rights for.<br>
+<br>
+To avoid problems while synchronizing or quering a database make sure the user which is used to build the connection
+to the database has the required rights.
+</p>
+<h4 class="Heading3">
+<a name="dbconndlg">The Database Connection Dialog</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/dbconndlg.gif" width="754" height="334"><br>
+Database Connection Dialog
+</p>
+<br>
+<p class="Body">
+The Database Connection Dialog is seperated into three areas, the Network Hosts Tree, the Connection List and 
+the User/Password Section.
+</p>
+<h4 class="Heading3">
+<a name="dbconnhosts">Network Hosts Tree</a>
+</h4>
+<p class="Body">
+The Network Hosts Tree displays all entered hosts and their databases. It is used to filter the displayed connections 
+and to create new connections to a host's databases.<br>
+<br>
+When the first node named [All Connecions] is selected, all entered connections are displayed in the Connection List.<br>
+<br>
+To display all connections to the local MySQL host select [MySQL]-[Local Host].<br>
+<br>
+To display all connections to MySQL host located on the network select [MySQL]-[Network Hosts].<br>
+<br>
+To display all connections to a specific MySQL network host select the hosts name beneath the [MySQL]-[Network Hosts] node.<br>
+<br>
+Connections to Oracle or ODBC databases can be filtered like the MySQL connections.
+</p>
+<h5 class="Heading4">
+Display a Host's databases
+</h5>
+<p class="Body">
+To display the databases of a entered Host click on the [+] icon left to the Host's name. DBDesigner 4 prompts for the
+user's name and password which will be used to log in. Note that the specified user has to have the appropriated rights
+to execute a SQL SHOW DATABASES command.
+</p>
+<h5 class="Heading4">
+<a name="dbconnnewhost">Enter a new Host</a>
+</h5>
+<p class="Body">
+After the installation of DBDesigner 4 it is possible only to connect to the local MySQL host. To add a new network 
+host obey the following.<br>
+<br>
+To enter a new Host, click onto the [...] node listed beneath the [Network Hosts] node beneath of the wanted database type.
+The Add new Host Dialog will apear.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/dbconnaddnewhost.gif" width="463" height="93"><br>
+Add new Host Dialog
+</p>
+<br>
+<p class="Body">
+Enter the node's name followed by a slash and it's IP address. In place of the IP address the host's network name can be
+specified also, e.g. webserver or www.theserver.com.<br>
+<br>
+Press return to create the append the new Host to the Network Hosts Tree.
+</p>
+<h5 class="Heading4">
+Change Host parameters
+</h5>
+<p class="Body">
+To change a Hosts name or IP address right click on a Host. The Host's popup menu will be displayed.<br>
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/dbconnhostpopup.gif" width="289" height="313"><br>
+Host popup menu
+</p>
+<br>
+<p class="Body">
+Select the desired function from the menu.<br>
+</p>
+<h5 class="Heading4">
+Remove a Host
+</h5>
+<p class="Body">
+To delete a Host select [Delete Host] from the popup menu.
+</p>
+<h5 class="Heading4">
+Create a new database
+</h5>
+<p class="Body">
+It is possible to create a new database from within the Database Connection Dialog. To create a new database
+display the Host's databases like descibed above. Click the last node below the Host's node which is labeled [...].
+The New Database Dialog will apear. Enter the database name and press return. The database will be created.
+</p>
+<h5 class="Heading4">
+Drop a database
+</h5>
+<p class="Body">
+It is possible to drop a database from within the Database Connection Dialog. To drop a database
+show the Host's databases like descibed above. Click the database's node with the right mouse button to
+display the popup menu. Select [Drop Database].<br>
+<br>
+Be aware that once a database is dropped it cannot be restored. A database backup has to be restored instead.
+</p>
+<h4 class="Heading3">
+<a name="dbconnlist">Connection List</a>
+</h4>
+<p class="Body">
+The Connection List displays the connections selected in the Network Hosts Tree. Click on the wanted connection
+to set the connection in the User Section.<br>
+</p>
+<h5 class="Heading4">
+Creating a new connection
+</h5>
+<p class="Body">
+To create a new connection select the Host to connect to in the Network Hosts Tree. Display the Host's databases.
+Now drag the database to connect to onto the Connection List. A new connection is created.<br>
+<br>
+Instead of dragging the database you can select the database with the left mouse button and press the 
+[New Connecion to selected Database] button.
+<br>
+</p>
+<h5 class="Heading4">
+The list's columns
+</h5>
+<p class="Body">
+The list has got six columns. The connecion name displays the name of the connection. Double click on the name to
+change it.<br>
+<br>
+The type displays the type of database the connection is refering to. Doubleclick the type to change it.<br>
+<br>
+Click on the [...] button to display the connection parameters.
+</p>
+<h4 class="Heading3">
+<a name="dbconnuser">The User Section</a>
+</h4>
+<p class="Body">
+When a database connection is selected in the Connection List the connection's name is displayed in the
+User Section and DBDesigner 4 prompts for the user's password. The password is never stored with the 
+database connection because of security issues.<br>
+<br>
+Press enter or click the [Connect] button to establish the database connection. If the connection was 
+successfully build the connection dialog is closed. If an error occured, e.g. the password was wrong, 
+a the error message is displayed.
+</p>
+<h4 class="Heading3">
+<a name="dbconnparamdlg">Connection Parameter Dialog</a>
+</h4>
+<p class="Body">
+The Connection Parameter Dialog is used to change.<br>
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/dbconnparams.gif" width="482" height="470"><br>
+Connection Parameter Dialog
+</p>
+<br>
+
+<h5 class="Heading4">
+Connection Name
+</h5>
+<p class="Body">
+Each Database Connection is identified by a unique name.
+</p>
+
+<h5 class="Heading4">
+Host Caption
+</h5>
+<p class="Body">
+Enter a caption for the database server. Only needed for MySQL connections.
+</p>
+
+<h5 class="Heading4">
+Host IP
+</h5>
+<p class="Body">
+Enter the database server's IP address or network name. Only needed for MySQL connections.
+</p>
+
+<h5 class="Heading4">
+Database name
+</h5>
+<p class="Body">
+Enter the name of the database. When using the MySQL Driver this is the name which was used in the CREATE DATABASE SQL statement.
+</p>
+<p class="Body">
+When the ODBC Driver is selected enter the ODBC Data Source Name (DNS).
+</p>
+<p class="Body">
+When using the Oracle Driver enter the connection name.
+</p>
+
+<h5 class="Heading4">
+Driver
+</h5>
+<p class="Body">
+Select a database driver from the dropdown list. When a new database driver is selected all values are set to their initial state.
+</p>
+
+<h5 class="Heading4">
+Username
+</h5>
+<p class="Body">
+Specify the username used to connect to the database.
+</p>
+
+<h5 class="Heading4">
+Password
+</h5>
+<p class="Body">
+Specify the password used to connect to the database.
+</p>
+
+<h5 class="Heading4">
+Description
+</h5>
+<p class="Body">
+Enter a description with a short information about the database connection.
+</p>
+
+
+<h5 class="Heading4">
+Advanced Tab
+</h5>
+<p class="Body">
+Beware. Only modify the advanced connection parameters if you know what you are doing.
+The [Reset to Defaults] can be used to reset the connection parameters to their defaults.
+To add or delete a parameter use the according buttons.
+</p>
+<p class="Body">
+The default parameters can be modified by editing the file DBDesigner4_DBDefaultSettings.ini located
+in the DBDesigner 4 data directory.
+</p>
+<p class="Body">
+The host column displayes the entered IP or network name of the host. Double click on the host's IP/network name to
+change it.
+</p>
+<p class="Body">
+The database column displays the database the connection is build to. It can be changed using a double click.
+</p>
+<p class="Body">
+The description column displays additional information about the connection. It can be changed using a double click.
+</p>
+
+
+
+<h3 class="Heading2">
+<a name="dbsync">Database Synchronisation</a>
+</h3>
+<p class="Body">
+To synchronise the model with a database select [Database]->[Database Syncronsiation] from the main menu.
+The synchronisation can also be called by pressing the [Sync] button in the Tools palette. Note that
+an empty model cannot be synchronised.<br>
+<br>
+The Database Connection Dialog will be shown. Select the connection to the database which should
+be synchronised. Enter the user's password and press [Connect] to establish the connection.
+</p>
+<h5 class="Heading4">
+Synchronise with a new database
+</h5>
+<p class="Body">
+The synchronise function can be run against an empty database. All tables will be created and the 
+Standard Inserts will be inserted into the tables.<br>
+<br>
+To synchronise the model with a new database call the Database Synchronisation. The Database Connection Dialog is
+displayed. To create a new database display the Host's databases and click the node labeled [...] like explained 
+above. Name the database an create a new connection by dragging the database's node onto the Connection List.
+Connect to the new database.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/dbsync.gif" width="403" height="533"><br>
+Database Synchronisation
+<br>
+<h4 class="Heading3">
+<a name="dbsyncoptions">Synchronisation options</a>
+</h4>
+<p class="Body">
+When the connection to the database is established successfully the Database Synchronisation Dialog
+is displayed.<br>
+</p>
+<h5 class="Heading4">
+Database Connection
+</h5>
+<p class="Body">
+The name of the database connection is displayed at the top. To connect to a different database click the
+button right to the connection's name. The Database Connection Dialog is displayed again and a different 
+connection can be selected.
+</p>
+<h5 class="Heading4">
+Apply changes to Database
+</h5>
+<p class="Body">
+This option is seleted by default. The database will be modified to reflect the changes made to the model.
+The model will be unchanged when the synchronising function is executed.
+</p>
+<h5 class="Heading4">
+Apply changes to Model
+</h5>
+<p class="Body">
+To modify the model instead of the database select this option. The database will be unchanged when the
+synchronising function is executed.<br>
+<br>
+This function will be enabled in upcoming versions of DBDesigner 4. At the moment use the Reverse Engineering 
+functions instead.
+</p>
+<h5 class="Heading4">
+Don't delete exisiting Tables
+</h5>
+<p class="Body">
+Check this option to keep tables in the database which are not present in the model. If this option
+is not checked these tables will be dropped.
+</p>
+<h5 class="Heading4">
+Execute Standard Inserts when Creating New Tables
+</h5>
+<p class="Body">
+If this option is activated the Standard Inserts will be inserted into the new created table. This option
+is selected by default. 
+</p>
+<h5 class="Heading4">
+Synchronise Standard Inserts
+</h5>
+<p class="Body">
+Activate this option when changes to the Standard Inserts of a table have been made. The rows will be
+compared using the primary key fields. If a row in the database matches with a row in the Standard Inserts
+all the values entered in the Standard Inserts will be compared. Values not present in the Standard Inserts
+will be ignored. Appropriate changes are made to the database table rows.<br>
+<br>
+Database table rows with a primary key value which is not matched by and primary key value in the 
+Standard Inserts are kept unchanged. Because of that manually entered rows will stay in the table even
+when this option is used. If a Standard Insert is deleted in the model the it has to be removed from the
+according row in the database table has to be deleted manually.
+</p>
+<h4 class="Heading3">
+<a name="dbsyncexec">Executing the synchronisation</a>
+</h4>
+<p class="Body">
+The synchronisation cannot be undone. Before executing check all selected options. Check the
+Progress List which will display the connection info and the number of tables in the database and the model.
+The connection info will be printed like this [user@database], e.g. [root@webshop].<br>
+<br>
+To execute the synchronisation press the [Execute] button at the bottom of the dialog.<br>
+<br>
+The execution can be monitored through the Progress List. All checks and changes are listed.
+</p>
+
+
+
+<h3 class="Heading2">
+<a name="reveng">Reverse Engineering</a>
+</h3>
+<p class="Body">
+To call the Reverse Engineering function select [Database]->[Reverse Engineering] from the main menu.
+The function can also be called by clicking the [Rev.] button in the Tools Palette.<br>
+<br>
+Normally the Reverse Engineering function is called with an empty model. It is also possible
+to add the tables to an existing model. If the database tables should be created within a new model
+select [File]->[New] from the main menu before calling the function.<br>
+<br>
+The Database Connection Dialog will be show. Select or create a new connection to the database which should be
+reverse engineered and establish the connection.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/db/reverseeng.gif" width="401" height="699"><br>
+Reverse Engineering Dialog
+</p>
+<br>
+<p class="Body">
+When the connection to the database is established successfully the Reverse Engineering Dialog
+is displayed.<br>
+</p>
+<h5 class="Heading4">
+Database Connection
+</h5>
+<p class="Body">
+The name of the database connection is displayed at the top. To connect to a different database click the
+button right to the connection's name. The Database Connection Dialog is displayed again and a different 
+connection can be selected.
+</p>
+<h5 class="Heading4">
+Tables
+</h5>
+<p class="Body">
+Select all database tables which should be created in the model. All tables are selected by default.
+To select all tables when some of them have been deselected press the [Select all Tables] button. To 
+deselect all tables press the [Deselect all Tables] button.
+</p>
+<p class="Body">
+When an MS Access Database is selected the MS Access' system tables are deselected automatically.
+</p>
+
+<h4 class="Heading3">
+<a name="revoptions">General Options</a>
+</h4>
+<h5 class="Heading4">
+Use MySQL specific functions
+</h5>
+<p class="Body">
+Check this option when a MySQL database is reverse engineered. MySQL specific functions like DESCRIBE TABLE
+will be used to generate the most accurate copy of the table's structure. Do not use this option with any other
+database.
+</p>
+<h5 class="Heading4">
+Use general functions
+</h5>
+<p class="Body">
+Use this option when any other than a MySQL database is reverse engineered.
+</p>
+<h5 class="Heading4">
+Number of tabels in a row
+</h5>
+<p class="Body">
+When the database is reverse engineered all the selected database tabels are placed in a grid on the models
+canvas. This option specifies the number of tables in a row.
+</p>
+
+<h4 class="Heading3">
+<a name="revoptrel">Build Relations</a>
+</h4>
+<p class="Body">
+Use these options to let DBDesigner 4 create the relations between the tables automatically. Please note that
+this may lead to incorrect results. So always check the relations after the database has been reverse engineered.
+</p>
+<h5 class="Heading4">
+Build Relations based on Primary Keys
+</h5>
+<p class="Body">
+Check this option to build relations between the tables in the model automatically. The relation will be build
+upon the table primary key fields. When the PK fields of a table are present in another table a 1:n relation is
+created.
+</p>
+<h5 class="Heading4">
+Build Relations based on Tablenames
+</h5>
+<p class="Body">
+Check this option to build relations between the tables in the model automatically. The relation will be build
+upon the table's and primary key field's names. The following naming principle is assumed. The primary key of
+a table is named ID + Tablename. If the primary key name is present in a different table a one-to-many between the
+two tables is created.
+</p>
+
+<h4 class="Heading3">
+<a name="revoptsubst">Use Datatype substitution</a>
+</h4>
+<p class="Body">
+Check this option if you want to change some datatypes' names. This option can be used to map different datatypes
+between different databases.<br>
+<br>
+By default the Datatype Substitution [MySQL Standard] is selected. This substitution will replace MySQL's
+abbreviations [int] and [dec] with the [INTEGER] and [DECIMAL] datatypes.
+<br>
+<br>
+To change a datatype's name enable this option, change the Datatype Substitution to [User defined] and 
+add a line to the Datatype Substitution List. Use the following format. 
+[OldDataypeName=NewDatatypeName], e.g. [int=INTEGER] will replace all [int] datatypes with [INTEGER] datatypes.
+</p>
+<h4 class="Heading3">
+<a name="revexec">Executing the function</a>
+</h4>
+<p class="Body">
+To execute the function press the [Execute] button at the bottom of the dialog.<br>
+</p>
+
+<h4 class="Heading3">
+<a name="revoptstdins">Create Standard Inserts from table data</a>
+</h4>
+<p class="Body">
+This option can be used to automatically create Standard Inserts for the created tables.
+The Standard Inserts will be built from the table's data stored in the database.
+<h5 class="Heading4">
+Limit number of records to...
+</h5>
+<p class="Body">
+The number of created Standard Inserts can be limited to a maximum number by using this option.
+This can be useful if there are many rows stored in the table but only a few records are needed for
+testing purposes.<br>
+</p>
+
+<br>
+<br>
+
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

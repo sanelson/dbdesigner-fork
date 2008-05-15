@@ -1,0 +1,65 @@
+How to compile DBDesigner4
+Version 4.0.2.92
+
+
+Windows:
+-------------------------------------------------------------------
+
+You will need:
+• DBDesigner4 Sources (DBDesigner4.0.2.91_CLXsource.zip)
+• DBDesigner4 Binary distribution (DBDesigner4.0.2.91_Setup.exe or 
+    DBDesigner4.0.2.91.zip)
+• Delphi7 (Professional or Enterprise) 
+
+Before you start compiling DBD4, download the latest 
+binary release and install it to any directory (e.g.
+c:\Program Files\DBDesigner4)
+
+After you have extracted the source files (e.g. to 
+c:\Documents and Settings\Mike\Personal Files\DBDesigner4\Source)
+start Delphi and open a project. Select the DBDesigner4.dpr
+from the source directory.
+
+Choose Project > Options from the Menu. The Project Options Dialog
+will appear. Select the Directories/Conditionals Tab.
+
+Browse the Output directory and select the directory the binary release
+was installed to (e.g. c:\Program Files\DBDesigner4)
+
+Browse the Unit output directory and select a temporary directory (e.g.
+c:\Windows\Temp). Copy this directory to the BPL output directory and
+to the DCP output directory.
+
+Click OK an select Project > Build all Projects from the Menu. 
+DBDesigner4 will be compiled. Hit F9 to run DBDesigner4.
+
+
+Linux:
+-------------------------------------------------------------------
+
+You will need:
+• DBDesigner4 Sources (DBDesigner4.0.2.91_CLXsource.zip)
+• DBDesigner4 Binary distribution (DBDesigner4.0.2.91.tar.gz)
+• Kylix3 (Professional or Enterprise) 
+
+Before you start compiling DBD4, download the latest 
+binary release and install it to any directory (e.g.
+~/DBDesigner4)
+
+After you have extracted the source files (e.g. to 
+~/fabFORCE/DBDesigner4/Source)
+start Kylix and open a project. Select the DBDesigner4.dpr
+from the source directory.
+
+Choose Project > Options from the Menu. The Project Options Dialog
+will appear. Select the Directories/Conditionals Tab.
+
+Browse the Output directory and select the directory the binary release
+was installed to (e.g. ~/DBDesigner4)
+
+Browse the Unit output directory and select a temporary directory (e.g.
+~/Temp). Copy this directory to the BPL output directory and
+to the DCP output directory.
+
+Click OK an select Project > Build all Projects from the Menu. 
+DBDesigner4 will be compiled. Hit F9 to run DBDesigner4.

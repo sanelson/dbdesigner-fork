@@ -1,0 +1,59 @@
+object EditorTableFieldParamForm: TEditorTableFieldParamForm
+  Left = 570
+  Top = 459
+  ActiveControl = ParamMaskEdit
+  AutoScroll = False
+  BorderStyle = fbsNone
+  Caption = 'Edit Datatype Params'
+  ClientHeight = 69
+  ClientWidth = 149
+  Color = clBackground
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  Position = poDefault
+  Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object MainPnl: TPanel
+    Left = 0
+    Top = 0
+    Width = 129
+    Height = 31
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 56
+      Top = 1
+      Width = 72
+      Height = 29
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object ParamMaskEdit: TMaskEdit
+        Left = 4
+        Top = 4
+        Width = 53
+        Height = 21
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        Left = 61
+        Top = 6
+        Width = 3
+        Height = 13
+        Caption = ')'
+      end
+    end
+    object DatatypeLbl: TLabel
+      Left = 4
+      Top = 8
+      Width = 51
+      Height = 13
+      Caption = 'INTEGER('
+    end
+  end
+end

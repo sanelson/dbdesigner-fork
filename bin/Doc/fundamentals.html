@@ -1,0 +1,183 @@
+<html>
+
+<head>
+<title>Fundamentals</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+<script src="std_js.js" type="text/javascript">
+</script>
+</head>
+
+<body>
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+Fundamentals
+</h2>
+<p class="Body">
+The key to successfully using DBDesigner 4 is understanding database 
+fundamentals.
+</p>
+<p class="Body">
+Read through the topics summarized below - these are the features, techniques, 
+and workflows that are fundamental for working with DBDesigner 4. 
+</p>
+
+<h3 class="Heading2">
+<a name="models">Models and Databases</a>
+</h3>
+<p class="Body">
+In DBDesigner 4, you always work within a model. A model is a visualization of the meta-information stored 
+in a database (e.g. Tables and Indices, Relations, ...). Although it is possible to store initial data for 
+each table directly in the model, it only represents the meta-information, not the data itself.
+</p>
+<p class="Body">
+You can create and maintain as many models as needed, containing a unlimited 
+number of objects. An object can be a database table with columns and indices, 
+a relation between two tables, a note, ...</p>
+<p class="Body">
+Models can be designed by placing these objects onto the model's canvas or can be retrieved from
+existing databases using the reverse engineering function.
+</p>
+<p class="Body">
+To create the according database the model can be exported as an SQL Creates 
+Script or be created directly from within DBDesigner 4 using the synchronize function.
+The synchronize function is also used to alter the database automatically when the model has changed.
+</p>
+<p class="Body">
+When DBDesigner 4 is switched to Query Mode the model can be used to build complex SQL querys and
+edit the tables' data.
+</p>
+<p class="Body">
+The models are saved to XML-files or can be directly stored within the database 
+enabling distributed access to the model.
+</p>
+
+<h3 class="Heading2">
+<a name="ui">The User Interface</a>
+</h3>
+<p class="Body">
+The user interface has been based on industry standard layouting software. 
+This makes creating your database models very easy.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/fundamentals/gui.gif" width="422" height="317"><br>
+DBDesigner GUI
+</p>
+<br>
+<p class="Body">
+Beside the familiar window-menus, scrollbars and status-bar DBDesigner 4 provides several 
+palettes (floating windows) which can be used to access frequently used functions more quickly.
+</p>
+<p class="Body">
+DBDesigner 4 makes extensive use of standard windows functions like popup-menus 
+which are accessed by a right mouse click. They provide context sensitive functions 
+for the objects. Drag-n-Drop is used to assigning datatypes to table columns or 
+building table indices.</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/fundamentals/popupmenutable.gif" width="439" height="378"><br>
+The Table Popup Menu
+</p>
+<br>
+<p class="Body">
+DBDesigner 4 supports the Multible Document Interface (MDI) which allows you to open an unlimited
+number of models at the same time. You can switch between the models and use standard copy
+and paste commands to exchange objects between the models.
+</p>
+
+<h3 class="Heading2">
+<a name="modelling">Modelling</a>
+</h3>
+<p class="Body">
+The database model is created by placing several objects on the canvas, specify their attributes and
+relations.
+</p>
+<p class="Body">
+To place an object you have to select the appropriate tool from the Tools-Bar. 
+Beside the most important objects like
+Tables and Relations (1:1, 1:1 generalization, 1:n, 1:n non identifying, n:m) 
+you can use Notes, Images and Regions which help to &quot;understand&quot; the model's 
+structure.</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/fundamentals/modelwhatis.gif" width="398" height="312"><br>
+The Objects
+</p>
+<br>
+<p class="Heading3">
+Tables
+</p>
+<p class="Body">
+Tables represent database-tables. The table is displayed in a window-like manner. 
+The Table's name is displayed in the titlebar, the table columns are printed 
+below and are indicated by an icon. A key icon means this column is in the table's primary key.
+</p>
+<p class="Heading4">
+Primary Key
+</p>
+<p class="Body">
+Usually one or more columns are defined as the table's Primary Key (PK). These columns must not contain two or 
+more data values which are equal. That makes it possible to clearly identify each record in the table 
+by the Primary Key (e.q. productnumber).
+</p>
+<p class="Heading4">
+Indices
+</p>
+<p class="Body">
+To make the database find a specific record in the database more quickly, it is possible to define an index on
+one or more columns. Indices are also used to improve speed when two or more 
+tables are joined together.</p>
+<p class="Heading3">
+Relations
+</p>
+<p class="Body">
+Relations can only be placed between two tables. They define the relationship between the tables and can create a
+Foreign Key reference. Tables can be connected by a one-to-one (e.g. person - address), one-to-many (productgroup - product) or
+many-to-many (e.g. employee - meeting) relation.
+</p>
+<p class="Heading3">
+Notes
+</p>
+<p class="Body">
+Notes are simple text boxes containing information about a table or structure. 
+They can be placed anywhere on the model providing information where needed.</p>
+<p class="Heading3">
+Images
+</p>
+<p class="Body">
+Images can be placed on the model to visualize additional information.</p>
+<p class="Heading3">
+Regions
+</p>
+<p class="Body">
+Regions provide space for tables with the same attributes. The attributes are set for the region
+and apply to all tables placed on the region automatically. Furthermore they can 
+be used by plugins to apply specific functions to a group of tables.</p>
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+object PrinterSettingsForm: TPrinterSettingsForm
+  Left = 468
+  Top = 309
+  Width = 369
+  Height = 272
+  VertScrollBar.Range = 117
+  HorzScrollBar.Range = 208
+  BorderStyle = fbsDialog
+  Caption = 'Printer Settings'
+  Color = clBackground
+  FormStyle = fsStayOnTop
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object PrintersCBox: TComboBox
+    Left = 68
+    Top = 20
+    Width = 140
+    Height = 21
+    Style = csDropDownList
+    ItemHeight = 15
+    TabOrder = 0
+    OnCloseUp = PrintersCBoxCloseUp
+  end
+  object Label1: TLabel
+    Left = 30
+    Top = 24
+    Width = 33
+    Height = 13
+    Caption = 'Printer:'
+  end
+  object XSizeEd: TEdit
+    Left = 92
+    Top = 70
+    Width = 101
+    Height = 21
+    TabOrder = 2
+  end
+  object YSizeEd: TEdit
+    Left = 92
+    Top = 96
+    Width = 101
+    Height = 21
+    TabOrder = 3
+  end
+end

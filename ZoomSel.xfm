@@ -1,0 +1,47 @@
+object ZoomSelForm: TZoomSelForm
+  Left = 563
+  Top = 327
+  ActiveControl = ZoomLBox
+  AutoScroll = False
+  BorderStyle = fbsNone
+  Caption = 'ZoomSelForm'
+  ClientHeight = 229
+  ClientWidth = 162
+  Color = clBackground
+  KeyPreview = True
+  Scaled = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  object ZoomPnl: TPanel
+    Left = 0
+    Top = 0
+    Width = 87
+    Height = 165
+    BevelOuter = bvLowered
+    Color = clButton
+    TabOrder = 0
+    object ZoomLBox: TListBox
+      Left = 2
+      Top = 2
+      Width = 83
+      Height = 161
+      BorderStyle = bsNone
+      Items.Strings = (
+        '23,73 %'
+        '31,64 %'
+        '42,19 %'
+        '56,26 %'
+        '75 %'
+        '100 %'
+        '150 %'
+        '200 %'
+        '300 %'
+        '400 %')
+      Rows = 10
+      TabOrder = 0
+      OnClick = ZoomLBoxDblClick
+      OnDblClick = ZoomLBoxDblClick
+    end
+  end
+end

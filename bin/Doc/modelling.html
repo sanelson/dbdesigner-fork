@@ -1,0 +1,236 @@
+<html>
+
+<head>
+<title>Modelling</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+<script src="std_js.js" type="text/javascript">
+</script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+Modelling
+</h2>
+<p class="Body">
+Before starting to model the database the Design Mode has to be selected. To change the current Work Mode
+click the Work Mode icon in the Tools Palette.
+</p>
+<h3 class="Heading2">
+<a name="tablesandrel">Tables and Relations</a>
+</h3>
+<p class="Body">
+Tables and relations are the core components of each database model. Tables consist of the tablename,
+the columns and indices and various table options. Relations connect different tables with each
+other to form one-to-one or one-to-many relations.
+</p>
+<h4 class="Heading3">
+<a name="newtable">Place a new table</a>
+</h4>
+<p class="Body">
+To place a new table onto the model select the Table Tool from the Toolbar or press [T] on the keyboard.<br>
+The mouse cursow will change to refect the currently selected tool.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/select_table_tool.gif" width="81" height="158"><br>
+Selecting the Table Tool
+</p>
+<br>
+<p class="Body">
+To place the table click left on the model. A new table will be created. It will be named [table_XX].
+The table's left upper corner will be at the position the mouse was clicked. <br>
+<br>
+After the table was placed the selected tool will change back to the Pointer Tool. The mouse cursor will be  
+changed also.
+</p>
+<h4 class="Heading3">
+<a name="edittable">Edit a table</a>
+</h4>
+<p class="Body">
+To edit an existing table make shure the Pointer Tool is selected. Double click on the table with the
+left mouse button. The Table Editor will be showen.<br>
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/edit_table.gif" width="439" height="266"><br>
+Calling the table editor
+</p>
+<br>
+<h5 class="Heading4">
+Defining the table's name and columns
+</h5>
+<p class="Body">
+Enter the table's name (e.g. product) and press the return key. The focus will change to the first column.
+It will be named id+tablename by default. To accept this name press return or overwrite the column's name first.
+</p>
+<p class="Body">
+Now the focus has changed to the second column. Again enter the columns name and repeat for all the table's columns.
+</p>
+<p class="Body">
+Press the Esc key after the last column was named.
+</p>
+<p class="Body">
+Columns can be reorderd by draq'n'drop. Left click on a column's name, hold the mouse button and drag onto another column.
+Release the mouse button and the column will be inserted before the column it was dragged on.
+</p>
+<h5 class="Heading4">
+<a name="edittable">Assigning the columns' datatypes</a>
+</h5>
+<p class="Body">
+Press the Esc key after the last column was named.
+</p>
+<h5 class="Heading4">
+Assigning datatypes
+</h5>
+<p class="Body">
+All columns will be created with the default datatype (use Options > Model Options to 
+change the default datatype).
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/assign_datatypes.gif" width="483" height="302"><br>
+Assigning datatypes
+</p>
+<br>
+<p class="Body">
+To change the datatype of a column goto the Datatypes Palette and drag the appropriate datatype
+onto the column in the Table Editor. If the assigned datatype has parametes (e.g. VARCHAR(xxx))
+enter the wanted value. Press Return to apply the changes or Esc to discard. Repeat this for all table columns.
+</p>
+<p class="Body">
+To change a datatypes parameters doubleclick on the datatype and enter the new value.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/setting_datatype_params.gif" width="329" height="106"><br>
+Setting datatype parameters
+</p>
+<h5 class="Heading4">
+Primary key, AutoInc and Flags
+</h5>
+<br>
+<p class="Body">
+The first column has automatically been defined as primary key of the table indicated by a Key Icon
+left to the columns name. To remove a column from the primary key click the Key Icon. To add a column
+to the primary key click onto the Column Icon.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/set_autoinc.gif" width="329" height="106"><br>
+Setting the AutoIncrement property
+</p>
+<br>
+<p class="Body">
+To make a column automatically incrementing after each insert click the columns row in the AI column.
+</p>
+<p class="Body">
+Each datatype has specific flags. They can be activated and deactivated by clicking.
+</p>
+<h5 class="Heading4">
+Default Values and Comments
+</h5>
+<p class="Body">
+To set the default value of a column doubleclick in the Default Value column and enter the value.
+Press Return to apply the changes.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/flags_defaultval.gif" width="304" height="152"><br>
+Setting Default Values
+</p>
+<br>
+<p class="Body">
+To display the columns' Comments click the icon right to the Default Value column's caption. To edit a
+comment doubleclick in the Comments column.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/column_comments.gif" width="162" height="132"><br>
+Edit the columns' comments
+</p>
+<br>
+<h4 class="Heading3">
+<a name="tableindices">Create Table Indices</a>
+</h4>
+<p class="Body">
+Change to the Indices Tab and click the Plus Icon to add a new index. A String Input dialog will appear.
+Enter the index's name and press return. The new index is displayed. Now choose the type of the index.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/create_table_index.gif" width="234" height="122"><br>
+Create a new table index
+</p>
+<br>
+<p class="Body">
+To add a column to the index start dragging the column down to the Columns Listbox and drop it. You can reorder
+the columns by dragging a column onto another. To delete a column press the Delete button.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/add_column_to_index.gif" width="313" height="270"><br>
+Adding columns to the index
+</p>
+<br>
+<h4 class="Heading3">
+<a name="makearelation">Make a relation</a>
+</h4>
+<p class="Body">
+Add another table to the model using the Table Tool (e.g. productgroup) and define the table's columns.
+Now select the 1:n Relation Tool (Non-Identifying Relation) from the Toolbar.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/select_rel_1n_tool.gif" width="474" height="230"><br>
+Selecting the 1:n Relation Tool (Non-Identifying Relation)
+</p>
+<br>
+<p class="Body">
+Click on the first table (productgroup) then on the second table (product) to establish the relation.
+Note that the second table (product) now has a foreign key column identified by (FK) right to the datatype.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/1n_rel.gif" width="474" height="205"><br>
+Tables connected by a relation.
+</p>
+<br>
+<p class="Body">
+Doubleclick on the relation to enter the relation's name. Close the Relation Editor to apply the changes
+to the model.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/designmode/rel_name.gif" width="306" height="175"><br>
+Tables connected by a relation.
+</p>
+<br>
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+        <tr>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0" valign="top"><?=IndexName?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0" valign="top"><?=IndexType?></td>
+          <td class="fontS" style="border-bottom: 1px solid #C0C0C0"><?=Columns?></td>
+        </tr>

@@ -1,0 +1,541 @@
+<html>
+
+<head>
+<title>Version History</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+
+<script src="std_js.js" type="text/javascript">
+</script>
+
+</head>
+
+<body>
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+DBDesigner 4 - Version History
+</h2>
+<h3 class="Heading2">
+Source Releases
+</h3>
+<table border=0 cellpadding=0 cellspacing=8 style="border-top: 1 solid #000000" width="100%">
+  <tr>
+    <td width="120px"><b>Version</b></td>
+    <td><b>Changes</b></td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.5.5</td>
+    <td>
+      • Bugfix: Added option to deactivate quotes around default values.<br>
+      • Bugfix: Added bug when fetching standard inserts from oracle.<br> 
+      • Bugfix: Fixed mouse cursor problem.<br> 
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.5.4</td>
+    <td>
+      • Bugfix: The last placed table was not printed or displayed on the Navigator when placed on a region.<br>
+      • Bugfix: A "List index out of bounds" error in the Relationship Editor.<br> 
+      • Bugfix: Enlarged Open/Save dialogs for Chinese and Korean Windows.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.5.3</td>
+    <td>
+      • Bugfix: Installer was missing midas.dll.<br>
+      • Bugfix: Refresh was missing after drag'n'drop of datatype onto a column of a table on the canvas.<br> 
+      • New: Option to export Linux style linebreaks.<br>
+      • New: Option to switch off datatype sync between FKs and PKs.<br>
+      • New: When resizing the table editor the Comment column gets resized, too.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.5.2</td>
+    <td>
+      • Bugfix: Crow's Foot 1:1 Notation.<br> 
+      • Bugfix: Multibyte Language Reading Error.<br>
+      • Bugfix: Region color is restored after discarding changes in the Region Editor.<br>
+      • Bugfix: Improvment of the focus bug in Table Editor.<br>
+      • New: Popup Menu entries in the Table Editor Column Grid to move columns up and down.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.5.1</td>
+    <td>
+      • Bugfix: Improvement of the focus bug in Table Editor.<br> 
+      • New: When using the a relationship tool the right mouse button can be used to choose a column as the
+        Foreign Fey. This works only when there is only ONE Primary Key in the source table.<br>
+      • New: Tables can be reordered in the Model Palette. New functions to sort tables by name and regions have
+        been added.<br>
+      • New: AutoIncrement is now turned on for Primary Keys by default.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.9</td>
+    <td>
+      • Bugfix: Using the Eraser tool caused AVs. fixed.<br> 
+      • Bugfix: Linux: Several libraries are now included with the distribution.<br>
+&nbsp;&nbsp;&nbsp;The following libraries have been added:<br>
+&nbsp;&nbsp;&nbsp;libpng.so.2.1.0.12<br>
+&nbsp;&nbsp;&nbsp;liblcms.so.1.0.9<br> 
+&nbsp;&nbsp;&nbsp;libstdc++.so.5.0.0<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.8</td>
+    <td>
+      • Bugfix: Fixes the focus bug in Table Editor. After entering the last columns name the focus was to set back to the Column Grid. fixed.<br>
+      • Bugfix: The Open/Save Dialogs should work on Win98 again.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.7</td>
+    <td>
+      • New: The Model Canvas Size can be edited in the Model Options Dialog.<br>
+      • New: In Query Mode the Result Dataset can be printed to a PDF Document.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.6</td>
+    <td>
+      • Bugfix: When a column name or datatype is edited in the Table Editor and the
+        Editor is closed before the change is submitted the new value is lost. fixed.<br>
+      • Bugfix: Float values where not synchronised correctly. fixed.<br>
+      • New: When deleting the selected Objects the names of the Objects are displayed before deletion.<br>
+      • New: The Insert Key inserts a column in the Table Editor.<br>
+      • New: The Splitter position in the Table Editor is now saved.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.5</td>
+    <td>
+     • Bugfix: When placing a model, the error message "Cannot focus a disabled or invisible window"
+       was displayed. fixed.<br>
+     • Bugfix: Tips were displayed in wrong language some time. Fixed.<br>
+     • Bugfix: Some corrections of wrong assigned language texts.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.4</td>
+    <td>
+     • Bugfix: Setting path was not set so it was not able to change settings. fixed.<br>
+     • Bugfix: Font issues finally addressed. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.3</td>
+    <td>
+     • Bugfix: Linux: When DBD4 was started the very first time, the directory ~/.DBDesigner4 was not present
+       which caused DBD4 not to start. fixed.<br>
+     • Bugfix: The Page &amp; Printer Setup Dialog could not be displayed. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.2</td>
+    <td>
+     • New: Added new version of the SimpleWebFront Plugin 0.6.4.5<br>
+     • New: Linux: linked against newer libqt.so.2.3.2 which enables smooth fonts
+       on Linux.<br>
+     • New: Export of SQL Optimize Tables Script and SQL Repair Tables Script.<br>
+     • New: Several libraries have been removed from the Linux distribution because
+       they are no longer needed.<br>
+     • Bugfix: Table comments were not loaded from Model files. fixed.<br>
+     • Bugfix: The Undo command after object(s) have been deleted was doing nothing. fixed.<br>
+     • Bugfix: Modelfont was not saved. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.4.1</td>
+    <td>
+     • New: Objects can be linked from other Models and can be automatically refreshed.<br>
+     • New: A new XML Parser is introduced to improve speed.<br>
+     • New: Info text for Models stored in Databases.<br>
+     • New: French translation by Alain Ségalou.<br>
+     • Bugfix: Deleting a relation could lead to AV. fixed.<br>
+     • Bugfix: After an update the existing DBConnections were not read and overwritten. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.29</td>
+    <td>
+     • Bugfix: Special Characters used in a Datatype's name or Description would cause
+       a model not to open.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.28</td>
+    <td>
+     • Bugfix: Improved Cursor Key handling. Selected Objects were moved even when
+       an editor was active.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.27</td>
+    <td>
+     • New: Cursor Keys move selected Objects. Shift+Ctrl move objects faster.<br>
+     • New: 1:1 Non-Identifying added.<br>
+     • New: Crow-Foot Notation.<br>
+     • New: Region can be selected by click on Object Name.<br>
+     • Bugfix: When a Table was connected to itself by a identifying Relation an unlimited
+     number of recursive PKs were edit. Now only non-identifying Relations are allowed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.26</td>
+    <td>
+     • New: Native MSSQL Reverse Engineering / Connectivity under Windows.<br>
+     • New: Automatically collapse Tables while Reverse Engineering to save Canvas space.<br>
+     • New: Improved Reverse Engineering Dialog.<br>
+     • Bugfix: Oracle Relations missed PK - FK Mapping. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.25</td>
+    <td>
+     • Bugfix: When the language information was not set, the default was not set to english. fixed.<br>
+     • Bugfix: When more than 10 files are opened these files cannot be added to the 
+       Recent Files Menu. fixed.<br>
+     • Bugfix: The distribution did not contain the latest version of SWF. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.24</td>
+    <td>
+     • New: Added new version of the SimpleWebFront Plugin 0.6.2.<br>
+     • New: Close All menu item in the file menu.<br>
+     • Bugfix: Several Bugfixes in the Database Synchronation function.<br>
+     • Bugfix: Options in the Reverse Engineering dialog now disabled when not selected.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.23</td>
+    <td>
+     • Bugfix: Quotation Character was not used when reverse engineering a MySQL database. fixed.<br>
+     • Bugfix: When storing a model in a database running on Linux, the ' characters were removed. fixed.<br>
+     • Bugfix: Double-clicking in the DB Model Palette was only working with tables. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.22</td>
+    <td>
+     • Bugfix: Reference Definition for InnoDB Tables were not created because of different syntax.
+       This can now be adjusted in the Options Dialog.<br>
+     • New: Application Font can be changed.<br>
+     • New: Tables can be collapsed.<br>
+     • New: Shortcut for exporting SQL Script (CTRL+SHIFT+S).<br>
+     • New: When exporting a SQL Script, Regions can be selected.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.21</td>
+    <td>
+     • New: Message asking the user to save the model after a plugin was called.<br>
+     • New: New Menu Entry in the Column Popup Menu in the Table Editor to add column(s) to the current index.<br>
+     • New: Improved table shadows under Linux.<br>
+     • Bugfix: Drag'n'Drop of columns onto the index column list in the Table Editor may cause 
+       an Index out of Bounds error on some machines. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.20</td>
+    <td>
+     • Bugfix: When using the DBSync function all columns were modified. fixed.<br>
+     • Bugfix: Improved DataImporter DBConn handling.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.19</td>
+    <td>
+     • Bugfix: Fixed filelist in the Setup.ini.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.18</td>
+    <td>
+     • New: Physical Column Mapping to enable a e.g. Datatype named GUID which is automatically changed to BIGINT when exported/synchronized.<br>
+     • New: Default Datatype substitution for ODBC Databases in the Reverse Engineering Dialog.<br>
+     • New: Option to disable Model-Change state after a SQL Command is executed and a SQL History Entry is made.<br>
+     • Bugfix: There was not space between tablename and ( in the SQL Create/Insert command causing SQLErrors when using function names as tablenames. fixed.<br>
+     • Bugfix: Hostname / Hostcaption mixup fixed.<br>
+     • Bugfix: Reverse Engineering an Oracle Database causes an AV when there is more then one relation in the database. Fixed.<br>
+     • New: Icon for Geographic Datatypes.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.17</td>
+    <td>
+     • New: Added Column Prefix / Postfix functions to the Table Column's Popup Menu in the Table Editor.<br>
+     • New: When several Table Columns are selected in the Table Editor and a datatype with no parameters required 
+       is dragged onto the Column Grid, the datatype is assigned to all selected columns.<br>
+     • Bugfix: When printing, column icons were painted at the wrong place if Show Foreign Keys was turned off. fixed.<br>
+     • Bugfix: Using a real n:m relation may lead to AV when automatic index generation for FK
+       fields is turned on. fixed.<br>
+     • Bugfix: When selecting several Table Columns in the Table Editor and pressing the right mousebutton, only one
+       Column was selected. fixed.<br>
+     • Bugfix: When removing a Relation, the Foreign Key was not removed from user defined indices causing AVs
+       when exporting SQL Scripts. fixed.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.16</td>
+    <td>
+     • New: SQL Syntax Highlighting.<br>
+     • New: Second SQL Query Layout.<br>
+     • New: 8 Temporary SQLCommand Drop Targets.<br>
+     • Bugfix: Impropper DateTime values may lead to infinite error message loop. Improved.<br>
+     • Bugfix: Linux: When closing the program unassigned ActiveControl may lead to AV. fixed.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.15</td>
+    <td>
+     • New: Scaling of the Index tab in the Table editor when the whole editor is resized.<br>
+     • New: Oracle 8 compatibility when reverse engineering a Oracle database.<br>
+     • Bugfix: Recursive relations on a table itself caused various AVs and strange behaviour. fixed.<br>
+     • Bugfix: When DBDesigner4 was launched the very first time the DBDesigner4_Translations.txt wasn't copied to the 
+       personal files directory. This caused a warning. fixed.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.14</td>
+    <td>
+     • New: Translation features were reprogrammed and enabled.<br>
+     • Bugfix: Infinite Loop could cause a Stack Overflow error when two tables were connected by a relation and
+         were moved to a special position to each other.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.13</td>
+    <td>
+     • New: Geographic DataTypes added.<br>
+     • New: When a object is copied to / pasted from the clipboard, the Status Bar displays a corresponding message.<br>
+     • Bugfix: Deleting a table in the Tables Tab did not remove the table from the list. That may lead to an AV. fixed<br>
+     • Bugfix: Copying object(s), Saveing the model in the database caused the model's save path to be changed. fixed.<br>
+     • Bugfix: QApplication_postEvent caused AVs because of improper use. fixed.<br>
+     • Bugfix: When a model was opened from database the stored model was added to the current model. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.12</td>
+    <td>• New: Oracle Reverse Engineering functions.<br>
+     • New: Recursive Relations to enable a relation between a table and itself.<br>
+     • Bugfix: Translation.ini was bigger than 64kB causing errors when using Win98.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.11</td>
+    <td>• New: When entering new table columns, the cursor jumps between column name / datatype automatically.<br>
+     • New: Copy selected Objects as Image function copies the image to clipboard for use in Office / Photoshop / ...<br>
+     • New: Export selected Objects as Image function.<br>
+     • New: Export Model as Image now only exports the model area, not the complete model canvas.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.10</td>
+    <td>• Bugfix: When exporting grid-data as SQL INSERTS the tablename could contain the whole SQL Select command. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.9</td>
+    <td>• Bugfix: Disabled Translation function because they might cause Access Violations.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.8</td>
+    <td>• Bugfix: The default table prefix was added to the tablename, causing broken DBSync / Export functions. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.7</td>
+    <td>• New: Schema Filter in the Reverse Engineer Dialog.<br>
+      • Bugfix: When a table prefix was deleted and previously assigned to a table, exporting SQL Scripts causes
+        an Index out of Bounds error. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.6</td>
+    <td>• Bugfix: When using a Linux MySQL Server one could not list a host's databases or create a new one. fixed.<br>
+      • Bugfix: Linux: Column Grid in the Table Editor missed Captions. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.5</td>
+    <td>• New: ESC Key in Editors closes the editor without applying changes.<br>
+      • New: Table Editor now supports improved Datatype editing.<br>
+      • Bugfix: When a Table is renamed the FK Columns were not updated. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.4</td>
+    <td>• New: ERwin 4.1 XML import<br>
+      • New: Constraint Object move when user holds the Shift Key.<br>
+      • New: Center Model function in the Edit Main Menu.<br>
+      • New: New Option to select a different HTML Browser for the HTML Documentation.<br>
+      • New: New Option to enable "back ticks" for table/column/index names<br>
+      • New: New Option to disable reserved words replacement<br>
+      • New: Localisation<br>
+      • Bugfix: DBSyncronize raised an AV when a table with a very long name was synchronized. fixed.<br>
+      • Bugfix: DBSyncronize now treats tinyint(1) as BOOL.<br>
+      • Bugfix: FK Datatype and Options were not updated when the source Key was changed. fixed.<br>
+      • Bugfix: Win98/ME: Open File Dialog raised exception: Drive C: not valid.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.3</td>
+    <td>• Bugfix: Compare/Alter Statisic after Database Synchronisation listing was incorrect. fixed.<br>
+      • Bugfix: Scripts are not executed correctly when using ; as seperator. fixed.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.2</td>
+    <td>• New: New option [Minimize on [Ctrl+Shift+C] Copy Command].<br>
+      • New: Compare/Alter Statisic after Database Synchronisation.<br>
+      • Bugfix: AV when closing About Window.<br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.3.1</td>
+    <td>
+      • New: When executing a query the affected rows and the execution time is displayed.<br>
+      • New: SQL Scripts can now be executed.<br>
+      • New: Reserved words can now be edited in the DBDesigner4 Options dialog.<br>
+      • New: Automatic Index creation on FK Columns.<br>
+      • New: Foreign Key Columns are locked in the table editor.<br>
+      • New: Table Editor can be resized now.<br>
+      • New: New design of the Table Options / DBDesigner4 Options.<br>
+      • New (Windows): The DBDesigner4 Settings directory is now located in the user's Application Data directory.
+        Existing settings are moved from the users Personal Files directory automatically.<br>
+      • New: OK / Cancel Buttons in Editors and Option Dialoges.<br>
+      • Bugfix: Exception when syncronizing Standard Inserts and they were not seperated
+        by a clear line.<br>
+      • Bugfix: When assigning a datatype to a column in the table editor, an additional click
+        on the datatype palette was required before a datatype could be dragged. fixed.
+      • Bugfix: When entering several new columns in the table editor, the only way to quit editing was
+        to press ESC. Now Return in an empty field will chancel the edit mode.
+      • Bugfix: When an object was deleted when opened in an editor, an Access Violation occured. fixed.<br>
+      • Bugfix: Relation Kind was not restored when undo was selected. fixed.<br>
+      • Bugfix: Plugin Parameters where not displayed entirely in the Model Options. fixed.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.96</td>
+    <td>• New: Ctrl+Shift+Tab now works when Palettes are docked.<br>
+      • New: Automatic fix of wrong ENUM/SET definition (see 4.0.2.95 release info)<br>
+      • Bugfix: Datatype's parameters could not be editied on Linux machines<br>
+      • Bugfix: Foreign Key Reference no longer contains MATCH FULL/PARTIAL option<br>
+      • Bugfix: ENUM datatype's parameters could be truncated in table editor
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.95</td>
+    <td>• New: Added ForeignKey Prefix / Postfix options.<br>
+      • New: Added support for ENUM / SET datatypes.<br>
+      • Bugfix: Foreign Key Reference Syntax now works with MySQL 4.0<br>
+      • Bugfix: Foreign Key Reference is now created when using DBSync function.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.94</td>
+    <td>• New: Added Default Table Type and Default ActivateRefDefForNewRelation options.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.93</td>
+    <td>• New: Make DBDesigner4 work with no personal settings for each user with the 
+      -disablePersonalSettings parameter at startup.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.92</td>
+    <td>• New: Use Table Name In Foreign Key Columns option.<br>
+      • New: The Default Values for Snap to Grid and TableNameInRefs can be modified.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.91</td>
+    <td>• Bugfix: When a model was saved after Reverse Engineering an access violation
+      occured. Fixed.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.90</td>
+    <td>• New: Snap to Grid feature.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.89</td>
+    <td>• Bugfix: IDs of Objects could overlap after model was loaded. Fixed.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.88</td>
+    <td>• Bugfix: Plugin - Data was not loaded. Fixed.<br>
+      • New: When using the Database Synchronisation function tables are now renamed if the name was changed in the model. 
+      Previously they had beed dropped and recreated.<br>
+      • New: Index Columns now support the additional lenght parameter for BLOB fields.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.87</td>
+    <td>• Bugfix: Version number was not automatically increased when model was stored in database and option was selected. Fixed.<br>
+      • New: The model's version can now be edited in model option dialog.</td>
+  </tr>
+  <tr>
+    <td valign="top">4.0.2.86</td>
+    <td>• First puplic release. Version history will start from this version.</td>
+  </tr>
+</table>
+
+<h3 class="Heading2">
+Documentation Releases
+</h3>
+<table border=0 cellpadding=0 cellspacing=8 style="border-top: 1 solid #000000" width="100%">
+  <tr>
+    <td width="120px"><b>Version</b></td>
+    <td><b>Changes</b></td>
+  </tr>
+  <tr>
+    <td valign="top">1.0.42</td>
+    <td>• Renamed syncrosation to synchrosation.<br>
+      • Added Plugins Menu</td>
+  </tr>
+  <tr>
+    <td valign="top">1.0.41</td>
+    <td>• New Modelling and Quering Section.</td>
+  </tr>
+  <tr>
+    <td valign="top">1.0.40</td>
+    <td>• Updated Screenshots and listing of new functions.</td>
+  </tr>
+  <tr>
+    <td valign="top">1.0.39</td>
+    <td>• Improved Fundamentals section. Included GNU GPL with the Online and PDF documentation.</td>
+  </tr>
+  <tr>
+    <td valign="top">1.0.38</td>
+    <td>• First puplic release. Version history will start from this version.</td>
+  </tr>
+</table>
+
+
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

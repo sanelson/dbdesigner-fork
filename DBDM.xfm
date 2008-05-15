@@ -1,0 +1,59 @@
+object DMDB: TDMDB
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Left = 407
+  Top = 232
+  Height = 171
+  Width = 434
+  object SQLConn: TSQLConnection
+    DriverName = 'MYSQL'
+    GetDriverFunc = 'getSQLDriverMYSQL'
+    LibraryName = 'dbexpmysql.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'BlobSize=-1'
+      'Database=test'
+      'ErrorResourceFile='
+      'HostName=localhost'
+      'LocaleCode=0000'
+      'Password=root'
+      'User_Name=root')
+    VendorLib = 'LIBMYSQL.dll'
+    Left = 38
+    Top = 20
+  end
+  object OutputDataSrc: TDataSource
+    DataSet = OutputClientDataSet
+    Left = 342
+    Top = 88
+  end
+  object OutputQry: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConn
+    Left = 40
+    Top = 88
+  end
+  object OutputDataSetProvider: TDataSetProvider
+    DataSet = OutputQry
+    Options = [poRetainServerOrder]
+    Left = 132
+    Top = 88
+  end
+  object OutputClientDataSet: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'OutputDataSetProvider'
+    ReadOnly = True
+    Left = 248
+    Top = 88
+  end
+  object SchemaSQLQuery: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConn
+    Left = 132
+    Top = 22
+  end
+end

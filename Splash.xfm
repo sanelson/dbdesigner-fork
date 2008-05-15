@@ -1,0 +1,185 @@
+object SplashForm: TSplashForm
+  Left = 310
+  Top = 257
+  AutoScroll = False
+  BorderStyle = fbsNone
+  Caption = 'DB Designer 4'
+  ClientHeight = 358
+  ClientWidth = 700
+  Color = clBackground
+  FormStyle = fsStayOnTop
+  Position = poDefault
+  Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseUp = FormMouseUp
+  OnPaint = FormPaint
+  PixelsPerInch = 96
+  object InfoLbl1: TLabel
+    Left = 339
+    Top = 185
+    Width = 337
+    Height = 12
+    AutoSize = False
+    Caption = 
+      'Fabulous Force Database Designer 4  for Windows 2k/XP and Linux ' +
+      'KDE/Gnome.'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object VersionLbl: TLabel
+    Left = 650
+    Top = 298
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '4.0.0.0'
+    Masked = True
+    Transparent = True
+    Visible = False
+  end
+  object InfoLbl5: TLabel
+    Left = 339
+    Top = 241
+    Width = 332
+    Height = 12
+    AutoSize = False
+    Caption = 
+      'Distribution includes Edward Benson'#39's LGPL DBExpress driver 2.0.' +
+      '7 for ODBC,'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object InfoLbl2: TLabel
+    Left = 339
+    Top = 197
+    Width = 337
+    Height = 12
+    AutoSize = False
+    Caption = 
+      'Copyright (C) 2003 by Michael G. Zinner. This software is distri' +
+      'buted under the'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object InfoLbl4: TLabel
+    Left = 339
+    Top = 223
+    Width = 337
+    Height = 12
+    AutoSize = False
+    Caption = 'Taxacher, Georg Richter, Jens Oberender.'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object InfoLbl3: TLabel
+    Left = 339
+    Top = 210
+    Width = 337
+    Height = 12
+    AutoSize = False
+    Caption = 
+      'terms of the GNU GPL. Special thanks to Katharina Peter, Ulrich ' +
+      'Bayer, Johannes'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object InfoLbl6: TLabel
+    Left = 339
+    Top = 253
+    Width = 332
+    Height = 12
+    AutoSize = False
+    Caption = 
+      'the SQLite Engine, Marco Wobben'#39's DBExpress driver 2.3.4 for SQL' +
+      'ite and'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object InfoLbl7: TLabel
+    Left = 339
+    Top = 265
+    Width = 332
+    Height = 12
+    AutoSize = False
+    Caption = 'Stefan Heymann'#39's XML Parser.'
+    Font.CharSet = fcsLatin1
+    Font.Color = clBlack
+    Font.Height = 9
+    Font.Name = 'Microsoft Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    Masked = True
+    ParentFont = False
+    Transparent = True
+    Visible = False
+    WordWrap = True
+  end
+  object CloseTimer: TTimer
+    Enabled = False
+    OnTimer = CloseTimerTimer
+    Left = 216
+    Top = 20
+  end
+end

@@ -1,0 +1,12 @@
+DBDesigner4 includes a part of SynEdit.
+
+To get more information about SynEdit, please goto
+http://synedit.sourceforge.net or 
+http://sourceforge.net/projects/synedit/
+
+
+To get the complete SynEdit source, please visit
+http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/synedit/SynEdit/
+
+Mike
+fabFORCE.net

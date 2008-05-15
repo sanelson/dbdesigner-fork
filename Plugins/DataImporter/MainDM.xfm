@@ -1,0 +1,31 @@
+object DMMain: TDMMain
+  OldCreateOrder = False
+  Left = 468
+  Top = 365
+  Height = 177
+  Width = 386
+  object SQLConn: TSQLConnection
+    DriverName = 'MYSQL'
+    GetDriverFunc = 'getSQLDriverMYSQL'
+    LibraryName = 'dbexpmysql.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'BlobSize=-1'
+      'Database=springer'
+      'ErrorResourceFile='
+      'HostName=localhost'
+      'LocaleCode=0000'
+      'Password='
+      'User_Name=root')
+    VendorLib = 'LIBMYSQL.dll'
+    Left = 40
+    Top = 18
+  end
+  object SchemaSQLDataSet: TSQLDataSet
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConn
+    Left = 136
+    Top = 18
+  end
+end

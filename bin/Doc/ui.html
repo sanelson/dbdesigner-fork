@@ -1,0 +1,739 @@
+<html>
+
+<head>
+<title>User Interface</title>
+<link rel="StyleSheet" href="document.css" type="text/css" media="screen" />
+
+<script src="std_js.js" type="text/javascript">
+</script>
+
+</head>
+
+<body>
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+    </td>
+    <td valign="center" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<h2 class="Heading1">
+The User Interface
+</h2>
+<h3 class="Heading2">
+<a name="mainelements">Main Elements</a>
+</h3>
+<h4 class="Heading3">
+<a name="mainmenu">The Main Menu</a>
+</h4>
+<p class="Body">
+Through the main menu you gain access to general functions of the program. There are seven main menu items,
+File, Edit, Display, Database, Options, Windows and Help.
+</p>
+<h4 class="Heading3">
+<a name="filemenu">File Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenufile.gif" width="361" height="343"><br>
+The File Menu
+</p>
+<br>
+<h5 class="Heading4">
+File - New
+</h5>
+<p class="Body">
+File - New creates a new empty model. If you have opened another model before you can switch between
+the new and the other model using the Windows menu.
+</p>
+<h5 class="Heading4">
+File - Open ...
+</h5>
+<p class="Body">
+File-Open ... opens an existing model from your harddisk or mapped network device. DBDesigner creates a new
+empty model every time it is started so you can start modelling immediately. If you open a model and no changes 
+have been applied to the empty model it is closed automatically and replaced with the opened model.
+</p>
+<h5 class="Heading4">
+File - Open from Database ...
+</h5>
+<p class="Body">
+File - Open from Database ... makes it possible to open a model saved in a database. When selected this menu item
+the DB-Connection Dialog pops up and you have to select the database containing the desired model. There can be
+stored more than one model in the database so you have to select the appropriate model then.
+</p>
+<h5 class="Heading4">
+File - Open recent
+</h5>
+<p class="Body">
+File - Open recent displays a list of the last opened models to improve speed opening the most used models. If a
+new model is opened it is added to the list. If there are more than 10 entries in the list the last entry is deleted
+automatically.
+</p>
+<h5 class="Heading4">
+File - Add Model ...
+</h5>
+<p class="Body">
+File - Add Model ... lets you add an existing model to the currently opened model. After the model has been imported
+all new objects are selected so the can be moved to an appropriate position.
+</p>
+<h5 class="Heading4">
+File - Save
+</h5>
+<p class="Body">
+Use File-File-Save ... to save your model to the harddisk or a mapped network device. When you save a model for the
+first time, you are promt to locate the destination folder and enter the name of the model. The model is added
+to the File-Open Recent list automatically.
+</p>
+<h5 class="Heading4">
+File - Save As ...
+</h5>
+<p class="Body">
+File - Save As ... can be used to save your current model with a new name. You are promt to locate the destination folder 
+and enter the new name of the model.
+</p>
+<h5 class="Heading4">
+File - Save in Database ...
+</h5>
+<p class="Body">
+It is possible to store the model directly in the database you work on. A new database table is used to store all models
+in this database. This new table does not interfere with the database synconisation and reverse engineering functions.
+</p>
+<p class="Body">
+When selected the File-Save in Database ... menu item the DB-Connection Dialog pops up and you have to select the database 
+which will containing the model. You have to enter the desired name of the model and the model will be stored.
+</p>
+<h5 class="Heading4">
+File - Close
+</h5>
+<p class="Body">
+File - Close closes the current active model.
+</p>
+<h5 class="Heading4">
+File - Export-SQL Create Script ...
+</h5>
+<p class="Body">
+Use this menu item to export the current active model as a SQL Create script which can be executed against the datbase manually
+to create the nessesary tables.
+You can use the database synchronise function instead which will create and update your database automatically.
+</p>
+<h5 class="Heading4">
+File - Export-SQL Drop Script ...
+</h5>
+<p class="Body">
+Use this menu item to export the current active model as a SQL Drop script which can be executed against the datbase manually to
+drop the desired tables.
+You can use the database synchronise function instead which will create and update your database automatically.
+</p>
+<h5 class="Heading4">
+File - Export-Export Model as Image ...
+</h5>
+<p class="Body">
+Select this function to export the whole model as an image file. The image can be saved in the PNG or BMP file format.
+The PNG Format is recommended. Please note that using the BMP file format will result in very large images, 
+approximatly 20 MB at default size.
+</p>
+<h5 class="Heading4">
+File - Page &amp; Printer Setup ...
+</h5>
+<p class="Body">
+Before printing the model you have to select the appropriate printer and set the page size and orientation as well as
+the scale factor of the model which enables you to print the model distributed on several pages.
+</p>
+<h5 class="Heading4">
+File - Print ...
+</h5>
+<p class="Body">
+File - Print ... lets you select the pages of the model an the number of copies you want to print.
+</p>
+<h5 class="Heading4">
+File - Exit
+</h5>
+<p class="Body">
+File - Exit closes the program.
+</p>
+
+
+<h4 class="Heading3">
+<a name="editmenu">Edit Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenuedit.gif" width="143" height="211"><br>
+The Edit Menu
+<br>
+<br>
+<h5 class="Heading4">
+Edit - Undo
+</h5>
+<p class="Body">
+Use Edit - Undo to take back the last change applied to the model. You can use this command
+several times to take back all changes you made. 
+</p>
+<h5 class="Heading4">
+Edit - Redo
+</h5>
+<p class="Body">
+Edit - Redo applies the last undone action again. This command can also be repeated several times
+when you have undone several actions.
+</p>
+<h5 class="Heading4">
+Edit - Copy selected
+</h5>
+<p class="Body">
+When you have selected on or more objects you can use this command to copy the objects to the
+clipboard. The objects are stored as text in XML format. You can use any other application
+to paste the objects.
+</p>
+<h5 class="Heading4">
+Edit - Cut selected
+</h5>
+<p class="Body">
+This command is similar to Edit-Copy selected but the objects will also be deleted from the model.
+</p>
+<h5 class="Heading4">
+Edit - Paste
+</h5>
+<p class="Body">
+Edit - Paste is used to insert previous copied objects from the clipboard. Relation are only inserted
+if both tables have been copied because when the objects are inserted, new object-identifiers are
+assigned.
+</p>
+<h5 class="Heading4">
+Edit - Delete selected
+</h5>
+<p class="Body">
+Edit - Delete selected removes all selected objects from the model. When this happens unintended
+you can use the undo command.
+</p>
+<h5 class="Heading4">
+Edit - Select All
+</h5>
+<p class="Body">
+Use Edit - Select All to select all objects from the model.
+</p>
+
+<h4 class="Heading3">
+<a name="displaymenu">Display Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenudisplay.gif" width="330" height="236"><br>
+The Display Menu
+</p>
+<h5 class="Heading4">
+Display - Design Mode
+</h5>
+<p class="Body">
+Select this menu item to change to Design Mode.
+A checkmark will be drawn left to the menu item when Design Mode is selected.
+</p>
+<h5 class="Heading4">
+Display - Query Mode
+</h5>
+<p class="Body">
+Select this menu item to change to Query Mode.
+A checkmark will be drawn left to the menu item when Query Mode is selected.
+</p>
+
+
+<h5 class="Heading4">
+Display - Notation
+</h5>
+<p class="Body">
+Display - Notation specifies the notation used to display the model. When a
+notation is selected a checkmark will be drawn left to the menu item.
+</p>
+<h5 class="Heading4">
+Display - Notation - EER
+</h5>
+<p class="Body">
+Display - Notation - EER will set the notation to the common EER notation.
+</p>
+<h5 class="Heading4">
+Display - Notation - EER [1,n]
+</h5>
+<p class="Body">
+Display - Notation - EER [1,n] will set the notation to another EER notation, displaying intervals.
+</p>
+<h5 class="Heading4">
+Display - Notation - Traditional
+</h5>
+<p class="Body">
+Display - Notation - Traditional will change to a notation which will be 
+familia to Erwin© users.
+</p>
+
+
+<h5 class="Heading4">
+Display - Table Columns-Entity Level
+</h5>
+<p class="Body">
+Display - Table Columns will specify how tables are displayed on the model.
+Use Display - Table Columns-Entity Level to hide all column information.
+</p>
+<h5 class="Heading4">
+Display - Table Columns-Primary Key Level
+</h5>
+<p class="Body">
+When Display - Table Columns-Primary Key Level is selected, only primary key columns are displayed.
+</p>
+<h5 class="Heading4">
+Display - Table Columns-Attribute Level
+</h5>
+<p class="Body">
+Use Display - Table Columns-Attribute Level to display all columns of the tables.
+</p>
+<h5 class="Heading4">
+Display - Table Columns-Physical Schema Level
+</h5>
+<p class="Body">
+Select Display - Table Columns-Physical Schema Level to display the datatypes of the columns.
+</p>
+<h5 class="Heading4">
+Display - Table Columns-Show Foreign Keys
+</h5>
+<p class="Body">
+If Display-Table Columns-Show Foreign Keys is select foreign keys are shown as columns in the
+appropriate tables.
+</p>
+
+
+<h5 class="Heading4">
+Display - Table Indices
+</h5>
+<p class="Body">
+This menu item is used to display each table's indices on the model.
+</p>
+<h5 class="Heading4">
+Display - List Table Indices
+</h5>
+<p class="Body">
+A checkmark will be drawn left to the menu item when table indices are displayed.
+</p>
+
+
+<h5 class="Heading4">
+Display - Display Relation Names
+</h5>
+<p class="Body">
+Display - Display Relation Names can be selected to display the names of relations.
+</p>
+<h5 class="Heading4">
+Display - Display Page Grid
+</h5>
+<p class="Body">
+Select Display - Display Page Grid to show the partitioning of printable pages. You can use 
+the Page &amp; Printer Setup Dialog to change the initial page size.
+</p>
+
+
+<h4 class="Heading3">
+<a name="databasemenu">Database Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenudatabase.gif" width="201" height="107"><br>
+The Database Menu
+</p>
+<br>
+<h5 class="Heading4">
+Database - Database Synchronisation
+</h5>
+<p class="Body">
+Use this function to synchronise your model with a database. This function can also
+be used with a clear database to create all the tables.
+</p>
+<h5 class="Heading4">
+Database - Reverse Engineering
+</h5>
+<p class="Body">
+Use this function to create a model based on an existing database.
+</p>
+
+
+
+<h4 class="Heading3">
+<a name="pluginsmenu">Plugins Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenuplugins.gif" width="147" height="107"><br>
+The Plugins Menu
+</p>
+<br>
+<p class="Body">
+The Plugins Menu lists a number of DBDesigner 4 plugins available
+in the program's directory.
+</p>
+
+
+<h4 class="Heading3">
+<a name="optionsmenu">Options Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenuoptions.gif" width="165" height="106"><br>
+The Options Menu
+</p>
+<br>
+<h5 class="Heading4">
+Options - Model Options
+</h5>
+<p class="Body">
+Options - Model Options will call the Model Options Dialog where several options can be set
+for the model like the default datatype or the display font.
+</p>
+<h5 class="Heading4">
+Options - DBDesigner Options
+</h5>
+<p class="Body">
+Options - Model Options will call the Model DBDesigner Options Dialog where several general 
+options can be set.
+</p>
+
+
+<h4 class="Heading3">
+<a name="windowsmenu">Windows Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenuwindows.gif" width="264" height="292"><br>
+The Windows Menu
+</p>
+<br>
+<h5 class="Heading4">
+Windows - Cascade
+</h5>
+<p class="Body">
+Use this command if you have opened several models and want to arrange the windows
+in a overlapping style.
+</p>
+<h5 class="Heading4">
+Windows - Tile
+</h5>
+<p class="Body">
+Use this command if you have opened several models and want to arrange the windows
+beside each other.
+</p>
+<h5 class="Heading4">
+Windows - Style - Standard
+</h5>
+<p class="Body">
+The Windows-Style menu items can be used to change the overall appearance of the program.
+</p>
+<p class="Body">
+Select Windows - Style - Standard to set the style to Windows default.
+</p>
+<h5 class="Heading4">
+Windows - Style - Motif
+</h5>
+<p class="Body">
+Select Windows - Style - Motif to set the style to the Motif style.
+</p>
+<h5 class="Heading4">
+Windows - Style - SGI
+</h5>
+<p class="Body">
+Select Windows - Style - Motif to set the style to the SGI style.
+</p>
+<h5 class="Heading4">
+Windows - Style - Platinum
+</h5>
+<p class="Body">
+Select Windows - Style - Platinum to set the style to the Platinum style. This is the default
+window style.
+</p>
+
+<h5 class="Heading4">
+Windows - Toolbar
+</h5>
+<p class="Body">
+Checked this menu item to display the Toolbar which is docked to the left of the main window.</p>
+<h5 class="Heading4">
+Windows - Tools (MS Windows only)
+</h5>
+<p class="Body">
+If this menu item is checked the Tool-Palette becomes visible. It can be used instead of the
+Toolbar.</p>
+<h5 class="Heading4">
+Windows - Navigator &amp; Info Palette
+</h5>
+<p class="Body">
+If this menu item is checked the Navigator &amp; Info-Palette becomes visible. 
+If it is unchecked the Navigator &amp; Info-Palette is hidden.
+</p>
+<h5 class="Heading4">
+Windows - Datatypes Palette
+</h5>
+<p class="Body">
+If this menu item is checked the Datatypes-Palette becomes visible. If it is unchecked the 
+Datatypes - Palette is hidden.
+</p>
+<h5 class="Heading4">
+Windows - DB-Model Palette
+</h5>
+<p class="Body">
+If this menu item is checked the DB-Model-Palette becomes visible. If it is unchecked the 
+DB-Model-Palette is hidden.
+</p>
+<h5 class="Heading4">
+Windows - Reset Palette Positions
+</h5>
+<p class="Body">
+Call this command to reset the palette positions to their initial locations.
+</p>
+<h5 class="Heading4">
+Windows - Dock Palettes
+</h5>
+<p class="Body">
+Use this menu item to dock or undock the palettes to the right of the main window.
+</p>
+<p class="Body">
+Below this menu item a list of all opened models is displayed. Select a menu item
+to bring the appropriate menu to the front.
+</p>
+
+
+<h4 class="Heading3">
+<a name="helpmenu">Help Menu</a>
+</h4>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/mainmenuhelp.gif" width="182" height="150"><br>
+The Help Menu
+</p>
+<br>
+<h5 class="Heading4">
+Help - About
+</h5>
+<p class="Body">
+Displays the splash screen.
+</p>
+<h5 class="Heading4">
+Help - Online Documentation
+</h5>
+<p class="Body">
+Lauches an explorer with this documents.
+</p>
+<h5 class="Heading4">
+Help - Visit fabFORCE.net
+</h5>
+<p class="Body">
+Lauches an explorer and navigates to http://www.fabFORCE.net.
+</p>
+<h5 class="Heading4">
+Help - Check for New Versions
+</h5>
+<p class="Body">
+Lauches an explorer, navigates to http://www.fabFORCE.net/downloads.
+</p>
+
+<h3 class="Heading2">
+<a name="palettes">Palettes</a>
+</h3>
+<p class="Body">
+Palettes are floating windows which always stay on top and provide fast access to important
+functions.
+</p>
+<h4 class="Heading3">
+<a name="palettetools">The Toolbar / Tools Palette</a>
+</h4>
+<p class="Body">
+The Toolbar (and the Tools Palette) provides quick access to the most important work tools.
+(On a Linux system the Tools Palette is disable because of a limitation in the window system.)
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/palettetoolsdocked.gif" width="527" height="524"><br>
+The Toolbar
+</p>
+<br>
+<p class="Body">
+To view the Tools Palette select select [Windows]->[Tools] from the main menu.
+Deselect [Windows]->[Tools docked] to hide the docked palette.
+By default the Tools Palette can be found on the upper left corner of the screen.<br>
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/palettetools.gif" width="450" height="340"><br>
+The Tools Palette
+</p>
+<br>
+<p class="Body">
+Click on the icon to activate the appropriate tool. The mouse cursor will change.
+Take a look at the Modelling Section to see how to use the single tools.
+</p>
+<p class="Body">
+Clicking on the buttons will call the assigned functions. Use the mode button to
+switch between the Design- and Query-Mode. In Design-Mode tables can be moved with
+the selection tool, too. In Query-Mode you have to use the Move-Tool.
+</p>
+<h4 class="Heading3">
+<a name="palettenav">The Navigator Palette</a>
+</h4>
+<p class="Body">
+The Navigator Palette (top right) shows the current visible region of the model
+and can be used to navigate on the model.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/palettenav.gif" width="229" height="200"><br>
+The Navigator Palette
+</p>
+<br>
+<h5 class="Heading4">
+<a name="palettenavpage">Navigator Page</a>
+</h5>
+<p class="Body">
+The current visible region is marked by a blue rectangle. When the model is scrolled or
+moved with the panning tool the marker is moved to the new position automatically.
+Click on the white area to move the marker and scroll the model to the appropriate position.
+Depending on the speed of your machine and the size of the model you can also drag the marker.
+</p>
+<p class="Body">
+To change to Zoom-Factor you can use the trackbar or click on the small and large table 
+symbol left and right to the trackbar. To enter the zoom factor manually click on the
+zoom edit, type in the desired value (without percent charater) and press enter.
+</p>
+<p class="Body">
+Click on the upper right icon to display the palette's popup menu. Select a menu
+item to set the zoom factor to the displayed value.
+</p>
+<h5 class="Heading4">
+<a name="paletteinfopage">Info Page</a>
+</h5>
+<p class="Body">
+Click on the Info-Tab to switch to the info page. On this page you can change the name
+and position of the selected object. When two or more objects are selected it is not
+possible to a value. When an image is selected the size can also be changed.
+</p>
+<h4 class="Heading3">
+<a name="palettedatatypes">The Datatypes Palette</a>
+</h4>
+<p class="Body">
+The Datatypes-Palette (middle right) shows the existing datatypes which can be used 
+to build the database-tables.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/palettedatatypes.gif" width="229" height="255"><br>
+The Datatypes Palette
+</p>
+<br>
+<h5 class="Heading4">
+<a name="palettedatatypescommon">Common Datatypes Page</a>
+</h5>
+<p class="Body">
+On the Common-Tab the most used Datatypes are visible and are ready to be dragged onto
+table columns. To add a new User Defined Datatype click the upper right icon to display 
+the palette's popup menu. Select Create New Datatype and the Datatype-Dialog will be displayed
+showing the new created datatype. To remove a Datatype from the Common-Tab select Del from
+Common Datatypes from the palette's popup menu.
+</p>
+<h5 class="Heading4">
+<a name="palettedatatypesall">All Datatypes-Page</a>
+</h5>
+<p class="Body">
+Click on the All types-Tab to display all available datatypes. The datatypes are split into
+five categries. Numeric Types, Date and Time Types, String Types, Blob and Text Types and
+User defined Types. Doubleclick on a category to show all assigned datatypes. New created
+datatypes will always be assigned to the User defined Types. Doubleclick on a datatype to 
+call the Datatype Editor. Select and right click on a datatype and select 
+Add to Common Datatypes to add a Datatype to the Common-Tab.
+</p>
+<h5 class="Heading4">
+<a name="palettedatatypesreplace">Replace Datatypes in Tables</a>
+</h5>
+<p class="Body">
+If you want to replace a datatype or change a parameter in several tables then you can use
+the Replace Datatypes in Tables function from the palette's popup menu. It works just like
+the Search and Replace function in Word©.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/replacedatatype.gif" width="401" height="252"><br>
+The Replace Datatype Dialog
+</p>
+<br>
+<p class="Body">
+Select the datatype you want to replace. Then select the datatype which should be inserted.
+To change only the parametes of a datatype select the same datatype in both dropdowns and
+check the Mach Params flag and enter the parameter you want to replace and the parameter
+which should be inserted.
+</p>
+<p class="Body">
+Select the Region of the function and press Execute to replace the datatype.
+</p>
+<h5 class="Heading4">
+<a name="palettedatatypesreinitialise">Reinitialise Datatypes</a>
+</h5>
+<p class="Body">
+To reset the datatypes to their initial state select Reinitialise Datatypes from the
+palette's popup menu. The inital settings will be loaded from the ini-files.
+Manually created datatypes will be replaced by the standard datatype of the model.
+</p>
+<h4 class="Heading3">
+<a name="palettedbmodel">The DB-Model-Palette</a>
+</h4>
+<p class="Body">
+The DB-Model-Palette displays all existing tables in the model and their columns 
+and relations.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/palettemodel.gif" width="229" height="418"><br>
+The Model Palette
+</p>
+<br>
+<p class="Body">
+Click on the plus symbols to display the columns and relations of a table. Doubleclick
+on a table to call the Table Editor or select Edit Object from the table's popup menu.
+</p>
+
+
+<h4 class="Heading3">
+<a name="statusbar">The Staturbar</a>
+</h4>
+<p class="Body">
+The Statusbar displays information about the currently selected Tool an can be used
+to read and set the zoom factor to a predefined value, fast.
+</p>
+<br>
+<p align="center" class="ImageSubTitle">
+<img src="images/docs/ui/statusbar.gif" width="344" height="194"><br>
+The Statusbar
+</p>
+<br>
+<p class="Body">
+Click on the Zoom Factor Edit left on the Statusbar. A list of zoom factors pops up.
+Select the desired zoom factor or press ESC to close the list.
+</p>
+<p class="Body">
+If the database model is modified the indicator left to the Zoom Factor Edit is painted red.
+Click on the Disc Icon to save to model to disk. Click on the Database Icon to save the model
+in a Database.
+</p>
+
+
+<br><br>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+  <tr>
+    <td height="1px" bgcolor="#cccccc" colspan=2><img src="images/1ptrans.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td style="FONT-SIZE: 10px"><img src="images/fabforce.gif" width="154" height="23"><br>
+      Copyright 2003 fabFORCE.net. All rights reserved.
+    </td>
+    <td valign="top" align="right"><img src="images/dbtools.gif" width="167" height="23"></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

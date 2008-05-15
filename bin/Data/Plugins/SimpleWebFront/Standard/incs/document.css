@@ -1,0 +1,39 @@
+/* Links defaults */
+
+a {color:#000000; text-decoration: none;}
+a:hover { text-decoration: none; color: #ff0000; text-decoration: underline}
+
+/* Scrollers */
+body, textarea {
+  scrollbar-base-color:#eeeeee;
+  scrollbar-3dlight-color:#62708A;
+  scrollbar-arrow-color:#62708A;
+  scrollbar-darkshadow-color:#000000;
+  scrollbar-face-color:#eeeeee;
+  scrollbar-highlight-color:#ffffff;
+  scrollbar-shadow-color:#aaaaaa;
+  scrollbar-track-color:#eeeeee;}
+
+/* NoMargins */
+body { margin:0px; background-image:url('../images/winbg.png');  }
+
+
+/* General Font */
+div, p, td {font-family: Trebuchet MS, Arial, Tahoma, Verdana, MS Sans Serif; color: #000000; font-size: 15px; font-weight: 700}
+input, textarea  {font-family: Trebuchet MS, Arial; color: black; font-size: 16px; font-weight: 700; background-color: rgb(235,235,235); border: thin groove}
+select {font-family: Trebuchet MS, Arial; color: black; font-size: 16px; font-weight: 700; background-color: rgb(235,235,235);}
+legend {font-family: Trebuchet MS, Arial; color: black; font-size: 16px; font-weight: 700;}
+/* Fonts */
+.fontBig {font-family: Arial; font-size: 20px; font-weight: 700}
+.font1 {font-family: Trebuchet MS, Arial, Tahoma, Verdana, MS Sans Serif; color: #000000; font-size: 15px; font-weight: 700}
+.fontN {font-family: Tahoma; font-size: 11px}
+  .fontNM {font-family: Tahoma; font-size: 9px; color: rgb(126,167,216);}
+.fontNT {font-family: Trebuchet MS, Arial, Tahoma, Verdana, MS Sans Serif; color: #000000; font-size: 14px; font-weight: 700}
+.fontNTs {font-family: Tahoma, Verdana, MS Sans Serif; color: #000000; font-size: 12px; font-weight: 700}
+.fontS {font-family: tahoma; font-size: 10px; font-weight: 500}
+  .fontSM {font-family: tahoma; font-size: 9px; font-weight: 500; color: rgb(126,167,216);}
+.fontSb {font-family: verdana; font-size: 10px; font-weight: 700}
+.fontWinTitlebar {font-family: Trebuchet MS; font-size: 13; font-weight: 700}
+
+img {border-style:none;}
+input[readonly] {background-color: rgb(197,197,197);}
