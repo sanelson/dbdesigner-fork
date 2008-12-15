@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------------------------------------------------
 //
-// This file is part of fabFORCE DBDesigner4.
+// This file is part of fabFORCE DBDesigner4.x
 // Copyright (C) 2002 Michael G. Zinner, www.fabFORCE.net
 //
 // DBDesigner4 is free software; you can redistribute it and/or modify
