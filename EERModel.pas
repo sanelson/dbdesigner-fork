@@ -663,7 +663,7 @@ type
                                        DefaultBeforeNotNull : boolean = false; // Defalut tag should appear before NOT NULL
                                        DatabaseType: string = 'My SQL' //database type
                                        ): string;
-    function GetSQLDropCode: string;
+    function GetSQLDropCode(IfExists:boolean = false): string;
     function GetSQLInsertCode: string;
 
     //Get an set the XML code of the Table
@@ -9311,7 +9311,7 @@ begin
   GetSQLColumnCreateDefCode:=s;
 end;
 
-function TEERTable.GetSQLDropCode: string;
+function TEERTable.GetSQLDropCode(IfExists:boolean = false): string;
 var DBQuote: string;
 begin
   if(DMEER.EncloseNames)then
@@ -9320,9 +9320,14 @@ begin
     DBQuote:='';
 
   if(TablePrefix=0)then
-    GetSQLDropCode:='DROP TABLE '+DBQuote+ObjName+DBQuote+';'
+    GetSQLDropCode:=
+      'DROP TABLE '+
+      IfThen(IfExists,'IF EXISTS ','')+
+      DBQuote+ObjName+DBQuote+';'
   else
-    GetSQLDropCode:='DROP TABLE '+DBQuote+ParentEERModel.TablePrefix[TablePrefix]+DBQuote+'.'+DBQuote+ObjName+DBQuote+';';
+    GetSQLDropCode:='DROP TABLE '+
+      IfThen(IfExists,'IF EXISTS ','')+
+      DBQuote+ParentEERModel.TablePrefix[TablePrefix]+DBQuote+'.'+DBQuote+ObjName+DBQuote+';';
 end;
 
 function TEERTable.GetSQLInsertCode: string;

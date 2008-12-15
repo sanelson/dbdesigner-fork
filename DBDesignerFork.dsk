@@ -1,44 +1,26 @@
 [Closed Files]
-File_0=SourceModule,'C:\Arquivos de programas\Borland\Delphi7\Source\Vcl\Graphics.pas',0,1,59,1,73,0,0
-File_1=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EERModel.pas',0,1,8172,20,8183,0,0
-File_2=SourceModule,'c:\arquivos de programas\borland\delphi7\source\clx\QGraphics.pas',0,1,56,1,70,0,0
-File_3=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\Main.pas',0,1,356,38,367,0,0
-File_4=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\DBDM.pas',0,1,119,1,132,0,0
-File_5=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\SynEdit\SynEdit.pas',0,1,5978,1,5993,0,0
-File_6=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EERReverseEngineering.pas',0,1,22,70,25,1,0
-File_7=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EditorRelation.pas',0,1,33,19,38,1,0
-File_8=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EditorTable.pas',0,1,25,3,50,1,0
+File_0=SourceModule,'c:\arquivos de programas\borland\delphi7\source\clx\QControls.pas',0,1,1,32,614,0,0
+File_1=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\ZoomSel.pas',0,1,77,17,88,0,0
+File_2=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EERDM.pas',0,1,222,1,233,0,0
+File_3=SourceModule,'c:\arquivos de programas\borland\delphi7\source\clx\Qt.pas',0,1,6092,1,6103,0,0
+File_4=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EER.pas',0,1,211,35,211,0,0
+File_5=SourceModule,'C:\Arquivos de programas\Borland\Delphi7\Source\Vcl\Graphics.pas',0,1,59,1,73,0,0
+File_6=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\EERModel.pas',0,1,8172,20,8183,0,0
+File_7=SourceModule,'c:\arquivos de programas\borland\delphi7\source\clx\QGraphics.pas',0,1,56,1,70,0,0
+File_8=SourceModule,'C:\Usuarios\JP\dbdesigner-fork\Main.pas',0,1,356,38,367,0,0
 
 [Modules]
-Module0=C:\Usuarios\JP\dbdesigner-fork\EER.pas
-Module1=C:\Usuarios\JP\dbdesigner-fork\ZoomSel.pas
-Module2=C:\Usuarios\JP\dbdesigner-fork\EERDM.pas
-Module3=c:\arquivos de programas\borland\delphi7\source\clx\Qt.pas
-Module4=c:\arquivos de programas\borland\delphi7\source\clx\QControls.pas
-Count=5
+Module0=C:\Usuarios\JP\d7\dbdesigner-fork\EERModel.pas
+Module1=C:\Usuarios\JP\d7\dbdesigner-fork\EERExportSQLScript.pas
+Count=2
 EditWindowCount=1
 
-[C:\Usuarios\JP\dbdesigner-fork\EER.pas]
+[C:\Usuarios\JP\d7\dbdesigner-fork\EERModel.pas]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Usuarios\JP\dbdesigner-fork\ZoomSel.pas]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Usuarios\JP\dbdesigner-fork\EERDM.pas]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[c:\arquivos de programas\borland\delphi7\source\clx\Qt.pas]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[c:\arquivos de programas\borland\delphi7\source\clx\QControls.pas]
+[C:\Usuarios\JP\d7\dbdesigner-fork\EERExportSQLScript.pas]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -47,18 +29,15 @@ FormOnTop=0
 FormState=0
 FormOnTop=0
 
-[C:\Usuarios\JP\dbdesigner-fork\DBDesignerFork.dpr]
+[C:\Usuarios\JP\d7\dbdesigner-fork\DBDesignerFork.dpr]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=5
-CurrentView=2
+ViewCount=2
+CurrentView=0
 View0=0
 View1=1
-View2=2
-View3=3
-View4=4
 CodeExplorer=CodeExplorer@EditWindow0
 MessageView=MessageView@EditWindow0
 Create=1
@@ -76,43 +55,22 @@ LeftPanelSize=140
 LeftPanelClients=CodeExplorer@EditWindow0
 LeftPanelData=000004000000000000000000000000000000000000000000000100000000000000000C000000436F64654578706C6F726572FFFFFFFF
 RightPanelSize=0
-BottomPanelSize=191
+BottomPanelSize=160
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400000000003D0400000000000002BF000000000000000100000000000000000000000001000000003D0400000B0000004D65737361676556696577FFFFFFFF
+BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=c:\arquivos de programas\borland\delphi7\source\clx\QControls.pas
-CursorX=32
-CursorY=614
-TopLine=1
+Module=C:\Usuarios\JP\d7\dbdesigner-fork\EERModel.pas
+CursorX=5
+CursorY=9328
+TopLine=9316
 LeftCol=1
 
 [View1]
-Module=c:\arquivos de programas\borland\delphi7\source\clx\Qt.pas
-CursorX=1
-CursorY=6103
-TopLine=6092
-LeftCol=1
-
-[View2]
-Module=C:\Usuarios\JP\dbdesigner-fork\EER.pas
-CursorX=47
-CursorY=137
-TopLine=126
-LeftCol=1
-
-[View3]
-Module=C:\Usuarios\JP\dbdesigner-fork\EERDM.pas
-CursorX=1
-CursorY=233
-TopLine=222
-LeftCol=1
-
-[View4]
-Module=C:\Usuarios\JP\dbdesigner-fork\ZoomSel.pas
-CursorX=17
-CursorY=88
-TopLine=77
+Module=C:\Usuarios\JP\d7\dbdesigner-fork\EERExportSQLScript.pas
+CursorX=44
+CursorY=196
+TopLine=184
 LeftCol=1
 
 [Watches]
@@ -508,11 +466,11 @@ State=0
 Left=0
 Top=12
 Width=140
-Height=459
+Height=490
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=140
-ClientHeight=459
+ClientHeight=490
 TBDockHeight=305
 LRDockWidth=140
 Dockable=1
@@ -524,12 +482,12 @@ State=0
 Left=12
 Top=0
 Width=1073
-Height=191
+Height=160
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1073
-ClientHeight=191
-TBDockHeight=191
+ClientHeight=160
+TBDockHeight=160
 LRDockWidth=443
 Dockable=1
 

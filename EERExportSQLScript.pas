@@ -183,11 +183,24 @@ end;
 
 
 function TEERExportSQLScriptFrom.GetSQLScript: string;
-var s: string;
+var
+  s: string;
   i: integer;
   Tables: TList;
   theEERTbl: TEERTable;
+  TargetDatabase: string;
+  DropIfExists: boolean;
 begin
+  TargetDatabase := CBTargetDataBase.Items[CBTargetDataBase.ItemIndex];
+
+  if TargetDatabase = 'My SQL' then
+  begin
+    DropIfExists := true;
+  end else
+  begin
+    DropIfExists := false;
+  end;
+
   Tables:=TList.Create;
   try
     GetSQLScript:='';
@@ -245,9 +258,9 @@ begin
     begin
       s :=
         s +
-        GetSqlGeneratorOrSequence(CBTargetDataBase.Items[CBTargetDataBase.ItemIndex])+
+        GetSqlGeneratorOrSequence(TargetDatabase)+
         #13#10#13#10;
-    end;             
+    end;
 
     //do for all tables
     if DropTablesCBox.Checked and (ScriptMode=0) then
@@ -255,7 +268,7 @@ begin
       for i:=Tables.Count-1 downto 0 do
       begin
         theEERTbl:=Tables[i];
-        s:=s+theEERTbl.GetSQLDropCode+#13#10#13#10
+        s:=s+theEERTbl.GetSQLDropCode(DropIfExists)+#13#10#13#10
       end;
     end;
 
@@ -264,7 +277,7 @@ begin
     if CBLastDelete.Checked then
     begin
       s := s + GetDtExclusionSqlTableDef(
-                                          CBTargetDataBase.Items[CBTargetDataBase.ItemIndex],
+                                          TargetDatabase,
                                           EdLastDeleteTbName.Text,
                                           EdLastDeleteColName.Text);
       s := s + sLineBreak;
@@ -287,7 +300,7 @@ begin
           CommitCB.Checked,
           IndiceFK.Checked,
           CBDefaultBeforeNotNull.Checked,
-          CBTargetDataBase.Items[CBTargetDataBase.ItemIndex],
+          TargetDatabase,
           EdAutoIncrementSeqName.Text,
           EdAutoIncrementPrefix.Text,
           CBAutoIncrement.Checked,
@@ -302,7 +315,7 @@ begin
           )
           +#13#10#13#10
       else if(ScriptMode=1)then
-        s:=s+theEERTbl.GetSQLDropCode+#13#10#13#10
+        s:=s+theEERTbl.GetSQLDropCode(DropIfExists)+#13#10#13#10
       else if(ScriptMode=2)then
         s:=s+'OPTIMIZE TABLE '+theEERTbl.GetSQLTableName+';'+#13#10#13#10
       else if(ScriptMode=3)then
