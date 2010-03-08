@@ -660,9 +660,7 @@ begin
     CBAutoIncrement.Checked := false;
     CBLastDelete.Checked := false;
     CBLastChange.Checked := false;
-
   end;
-
 
   if CBTargetDataBase.Text = 'SQL Server' then
   begin
@@ -703,6 +701,21 @@ begin
 {    EdAutoIncrementSeqName.Text := ifThen(CBAutoIncrement.Checked,
                                           EdAutoIncrementSeqName.Text,
                                           'GlobalGenerator');}
+  end;
+
+  if CBTargetDataBase.Text = 'SQLite' then
+  begin
+    NullCBox.Checked := true;
+    IndiceFK.Checked := false;
+    PortableIndicesCBox.Checked := true;
+    HideOnDeleteUpdateNoActionCBox.Checked := false;
+    GOCB.Checked := false;
+    CommitCB.Checked := false;
+    CBDefaultBeforeNotNull.Checked := false;
+
+    CBAutoIncrement.Enabled := false;
+    CBLastDelete.Enabled := false;
+    CBLastChange.Enabled := false;
   end;
 
 end;

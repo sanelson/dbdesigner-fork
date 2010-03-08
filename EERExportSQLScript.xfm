@@ -1,6 +1,6 @@
 object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
-  Left = 170
-  Top = 143
+  Left = 311
+  Top = 113
   ActiveControl = ExportSelTablesCBox
   AutoScroll = False
   BorderStyle = fbsDialog
@@ -340,7 +340,7 @@ object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
     object LabelTargetDB: TLabel
       Left = 128
       Top = 24
-      Width = 87
+      Width = 88
       Height = 13
       Caption = 'Target Data Base:'
     end
@@ -355,7 +355,8 @@ object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
         'My SQL'
         'Oracle'
         'PostgreSQL'
-        'SQL Server')
+        'SQL Server'
+        'SQLite')
       ItemIndex = 2
       TabOrder = 5
       Text = 'Oracle'
@@ -440,14 +441,14 @@ object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
     object LbAutoIncrementPrefix: TLabel
       Left = 24
       Top = 223
-      Width = 67
+      Width = 72
       Height = 13
       Caption = 'Trigger prefix: '
     end
     object LbAutoIncrementSeqName: TLabel
       Left = 24
       Top = 248
-      Width = 81
+      Width = 80
       Height = 13
       Caption = 'Sequence name:'
     end
@@ -463,7 +464,7 @@ object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
     object LbLastChangeTriggerPrefix: TLabel
       Left = 293
       Top = 226
-      Width = 64
+      Width = 69
       Height = 13
       Caption = 'Trigger prefix:'
     end
@@ -479,7 +480,7 @@ object EERExportSQLScriptFrom: TEERExportSQLScriptFrom
     object LbLastDeleteTriggerPrefix: TLabel
       Left = 295
       Top = 129
-      Width = 64
+      Width = 69
       Height = 13
       Caption = 'Trigger prefix:'
     end
