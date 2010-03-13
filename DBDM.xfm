@@ -2,8 +2,8 @@ object DMDB: TDMDB
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Left = 407
-  Top = 232
+  Left = 534
+  Top = 291
   Height = 171
   Width = 434
   object SQLConn: TSQLConnection

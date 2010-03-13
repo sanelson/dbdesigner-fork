@@ -28,6 +28,8 @@ unit DBDM;
 //   Contains general functions which are used to work with databases
 //
 // Changes:
+//   Version Fork 1.5, 13.10.2010, JP: Better error message for MySQL.
+//   Version Fork 1.5, 13.10.2010, JP: Better integration with ODBC.   (MySQLReverseEngineer for ODBC now works)
 //   Version 1.0, 13.01.2003, Mike
 //     initial version
 //
@@ -460,7 +462,10 @@ begin
 end;
 
 procedure TDMDB.GetDBConnButtonClick(Sender: TObject; defDBConn: string = '');
-var SelDBConn: TDBConn;
+var
+  SelDBConn: TDBConn;
+  ErrMsg,DriverName: string;
+
 begin
   if(Sender.ClassNameIs('TSpeedButton'))then
     DMDB.DisconnectFromDB;
@@ -478,11 +483,25 @@ begin
     begin
       //Try to connect to the DB
       try
+        DriverName := SelDBConn.DriverName;
         DMDB.ConnectToDB(SelDBConn);
       except
         on x: Exception do
         begin
-          MessageDlg(DMMain.GetTranslatedMessage('Connection to database failed.'+#13#10#13#10+'%s', 121,
+          ErrMsg := 'Connection to database '+DriverName+' failed.'+#13#10;
+
+          if DriverName = 'MySQL' then
+          begin
+            ErrMsg := ErrMsg + 'Possible causes:'+#13#10;
+            ErrMsg := ErrMsg + '* User has no grants to connect from this machine.'+#13#10;
+            ErrMsg := ErrMsg + '* DB Designer Fork does not connect to MySQL 5.* with password.'+#13#10;
+            ErrMsg := ErrMsg + '  You may try connecting with a user that does not require password.'+#13#10;
+            ErrMsg := ErrMsg + '  You may try connecting thru ODBC.'+#13#10;
+          end;
+
+          ErrMsg := ErrMsg + #13#10;
+
+          MessageDlg(ErrMsg+DMMain.GetTranslatedMessage('%s', 121,
             x.Message), mtError, [mbOK], 0);
 
           continue;
@@ -498,6 +517,9 @@ end;
 
 
 function TDMDB.GetDBTables(var tablelist: TStringList; theSQLConn: TSQLConnection = nil; theDBConn: TDBConn = nil): Boolean;
+var
+  TableName: string;
+  ResultCnt: integer;
 begin
   if(SchemaSQLQuery.Active)then
     SchemaSQLQuery.Close;
@@ -600,6 +622,19 @@ begin
   finally
     SchemaSQLQuery.SQLConnection:=SQLConn;
   end;
+
+  // remove special chars from output
+  if tablelist.Count>0 then
+  begin
+    for ResultCnt := 0 to tablelist.Count-1 do
+    begin
+      TableName := tablelist[ResultCnt];
+      TableName := SysUtils.StringReplace(TableName,'"','',[SysUtils.rfReplaceAll]);
+      TableName := SysUtils.StringReplace(TableName,'`','',[SysUtils.rfReplaceAll]);
+      tablelist[ResultCnt] := TableName;
+    end;
+  end;
+
 end;
 
 procedure TDMDB.ExecSQL(s: string);

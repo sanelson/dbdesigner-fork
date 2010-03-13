@@ -205,7 +205,15 @@ begin
       //13: COLUMN_NULLABLE
 
       DMDB.SchemaSQLQuery.SetSchemaInfo(stColumns, TEERTable(DbTables[i]).ObjName, '');
-      DMDB.SchemaSQLQuery.Open;
+
+      try
+        DMDB.SchemaSQLQuery.Open;
+      except
+        if DMDB.SchemaSQLQuery.RecordCount=0 then
+        begin
+          raise;
+        end;
+      end;
 
       while(Not(DMDB.SchemaSQLQuery.EOF))do
       begin
@@ -214,6 +222,9 @@ begin
         TEERTable(DbTables[i]).Columns.Add(theColumn);
 
         DatatypeName:=DMDB.SchemaSQLQuery.Fields[8].AsString;
+
+        // JP: MySQL ODBC returns varcha
+        if(CompareText(DatatypeName, 'varcha')=0) then DatatypeName := 'varchar';
 
         theColumn.ColName:=DMDB.SchemaSQLQuery.Fields[4].AsString;
         theColumn.Obj_id:=DMMain.GetNextGlobalID;
@@ -227,8 +238,7 @@ begin
         theColumn.AutoInc:=False;
         theColumn.IsForeignKey:=False;
 
-        if(CompareText(DMDB.SchemaSQLQuery.Fields[8].AsString,
-          'varchar')=0)then
+        if(CompareText(DatatypeName, 'varchar')=0)then
           //The openodbc Driver returns Columns Params at Pos 10
           if(DMDB.CurrentDBConn.DriverName='openodbc')then
             theColumn.DatatypeParams:='('+DMDB.SchemaSQLQuery.Fields[10].AsString+')'
@@ -262,6 +272,7 @@ begin
 
       DMDB.SchemaSQLQuery.SetSchemaInfo(stIndexes, TEERTable(DbTables[i]).ObjName, '');
       DMDB.SchemaSQLQuery.Open;
+      DMDB.SchemaSQLQuery.First;
 
       {s:='';
       for j:=0 to DMMain.SchemaSQLQuery.FieldCount-1 do
@@ -298,8 +309,14 @@ begin
             then
             begin
               theIndex.IndexKind:=ik_PRIMARY;
-              TEERTable(DbTables[i]).Indices.Add(theIndex);
-              theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+              theColumn := TEERTable(DbTables[i]).GetColumnByName(fldColumnName.AsString);
+              // JP: only add an index that has columns
+              if Assigned(theColumn) then
+              begin
+                TEERTable(DbTables[i]).Indices.Add(theIndex);
+                theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+                prevIndex:=indexname;
+              end;
             end
             else
             // JP: is FireBird FK?
@@ -309,8 +326,14 @@ begin
             end else
             begin
               theIndex.IndexKind:=ik_INDEX;
-              TEERTable(DbTables[i]).Indices.Add(theIndex);
-              theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+              theColumn := TEERTable(DbTables[i]).GetColumnByName(fldColumnName.AsString);
+              // JP: only add an index that has columns
+              if Assigned(theColumn) then
+              begin
+                TEERTable(DbTables[i]).Indices.Add(theIndex);
+                theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+                prevIndex:=indexname;
+              end;
             end;
 
           end;
@@ -322,15 +345,21 @@ begin
             theColumn:=TEERTable(DbTables[i]).GetColumnByName(DMDB.SchemaSQLQuery.Fields[5].AsString);}
 
           // Addition by Vadim
-          theColumn:=TEERTable(DbTables[i]).GetColumnByName(fldColumnName.AsString);
+          theColumn := TEERTable(DbTables[i]).GetColumnByName(fldColumnName.AsString);
 
-          if
-            (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0) then
-            theColumn.PrimaryKey:=True;
+          // JP: only add a column that exists
+          if Assigned(theColumn) and Assigned(theIndex) then
+          begin
+            if
+              (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0) then
+              theColumn.PrimaryKey:=True;
 
-          theIndex.Columns.Add(IntToStr(theColumn.Obj_id));
+            // JP: does not make sense add an index for FK in Firebird
+            if
+              (CompareText(index11, 'RDB$FOREIGN')<>0) then
+              theIndex.Columns.Add(IntToStr(theColumn.Obj_id));
+          end;
 
-          prevIndex:=indexname;
           DMDB.SchemaSQLQuery.Next;
         end;
         DMDB.SchemaSQLQuery.Close;
