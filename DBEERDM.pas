@@ -153,6 +153,8 @@ begin
     while(Not(DMDB.SchemaSQLQuery.EOF))do
     begin
       tablename:=DMDB.SchemaSQLQuery.Fields[3].AsString;
+      tablename := SysUtils.StringReplace(tablename,'"','',[SysUtils.rfReplaceAll]);
+      tablename := SysUtils.StringReplace(tablename,'`','',[SysUtils.rfReplaceAll]);
 
       //get only selected tables
       if(theTables.IndexOf(tablename)<>-1)then
