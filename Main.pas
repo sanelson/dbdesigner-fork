@@ -1644,7 +1644,7 @@ begin
   //Workaround Code because of Delphi BUG END
   //-----------------------------------------
 
-  SplashForm.Close;
+  //SplashForm.Close;
 
   Cursor:=crArrow;
 end;

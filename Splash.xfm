@@ -3,13 +3,14 @@ object SplashForm: TSplashForm
   Top = 257
   AutoScroll = False
   BorderStyle = fbsNone
-  Caption = 'DB Designer 4'
+  Caption = 'DB Designer Fork'
   ClientHeight = 358
   ClientWidth = 700
   Color = clBackground
   FormStyle = fsStayOnTop
-  Position = poDefault
+  Position = poMainFormCenter
   Scaled = False
+  OnClick = FormClick
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -177,7 +178,7 @@ object SplashForm: TSplashForm
     WordWrap = True
   end
   object CloseTimer: TTimer
-    Enabled = False
+    Interval = 5000
     OnTimer = CloseTimerTimer
     Left = 216
     Top = 20

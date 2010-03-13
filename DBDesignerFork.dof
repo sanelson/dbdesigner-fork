@@ -134,24 +134,6 @@ OriginalFilename=
 ProductName=DBDesigner Fork
 ProductVersion=1.0.0.0
 Comments=
-[Excluded Packages]
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSPrVwAdvD7.bpl=ExpressPrinting System Advanced Preview Window by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSTLLnkD7.bpl=ExpressPrinting System ReportLink for ExpressQuantumTreeList by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxDBTLLnkD7.bpl=ExpressPrinting System ReportLink for ExpressQuantumDBTreeList by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxDBGrLnkD7.bpl=ExpressPrinting System ReportLink for ExpressQuantumGrid by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxDBTVLnkD7.bpl=ExpressPrinting System ReportLink for ExpressDBTree by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxInsLnkD7.bpl=ExpressPrinting System ReportLink for ExpressInspector by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxOILnkD7.bpl=ExpressPrinting System ReportLink for ExpressRTTIInspector by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxMVLnkD7.bpl=ExpressPrinting System ReportLink for ExpressMasterView by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxOCLnkD7.bpl=ExpressPrinting System ReportLinks for ExpressOrgChart by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxDBOCLnkD7.bpl=ExpressPrinting System ReportLinks for ExpressDBOrgChart by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxFCLnkD7.bpl=ExpressPrinting System ReportLinks for ExpressFlowChart by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPSdxLCLnkD7.bpl=ExpressPrinting System ReportLink for ExpressLayoutControl by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPScxSSLnkD7.bpl=ExpressPrinting System ReportLink for ExpressSpreadSheet by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPscxTLLnkD7.bpl=ExpressPrinting System ReportLink for ExpressQuantumTreeList 4 by Developer Express Inc.
-C:\Arquivos de programas\Developer Express Inc\ExpressPrinting System\Delphi 7\Lib\dxPScxVGridLnkD7.bpl=ExpressPrinting System ReportLink for ExpressVerticalGrid by Developer Express Inc.
-C:\Arquivos de programas\BoldSoft\BfDR40D7Arch\Bin\Bold40D7ComGUI.bpl=Bold for Delphi 4.0 (COM GUI controls)
-C:\Arquivos de programas\BoldSoft\BfDR40D7Arch\Bin\Bold40D7OLLE.bpl=Bold for Delphi 4.0 Object Lending Library Extension (OLLE)
 [HistoryLists\hlUnitAliases]
 Count=1
 Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;

@@ -22,6 +22,7 @@ program DBDesignerFork;
 //
 // Unit DBDesignerFork.dpr
 // --------------------
+// Version Fork 1.5, 13.10.2010, JP
 // Version Fork 1.0, 18.09.2006, JP
 // Version 1.0, 13.03.2003, Mike
 // Description
@@ -30,6 +31,7 @@ program DBDesignerFork;
 //   The Version Number is set in this file
 //
 // Changes:
+//   Version Fork 1.5, 13.10.2010, JP: changes in the splash screen.
 //   Version Fork 1.0, 18.09.2006, JP
 //   Version 1.0, 13.03.2003, Mike
 //     initial version
@@ -183,19 +185,20 @@ begin
 
   //Show Splash Form
   SplashForm:=TSplashForm.Create(Application);
-  SplashForm.VersionLbl.Caption:='4.0.5.6 Beta';
+  SplashForm.VersionLbl.Caption:='1.5';
 {$IFDEF MSWINDOWS}
   SplashForm.FormStyle:=fsNormal;
 {$ENDIF}
-//  SplashForm.Show;
-//  SplashForm.Update;
+  SplashForm.Show;
+  SplashForm.Update;
 
   Application.ShowMainForm := False;
   Application.CreateForm(TMainForm, MainForm);
-  {$IFDEF MSWINDOWS}
+{$IFDEF MSWINDOWS}
   //Bring Splash Screen back to top again...
-//  SplashForm.BringToFront;
-//  SplashForm.FormStyle:=fsStayOnTop;
+  SplashForm.BringToFront;
+  SplashForm.FormStyle:=fsStayOnTop;
+
 {$ENDIF}
   Application.Run;
 end.

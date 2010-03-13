@@ -23,13 +23,15 @@ unit Splash;
 //
 // Unit Splash.pas
 // ---------------
+// Version Fork 1.5, 13.10.2010, JP
 // Version 1.0, 13.013.2003, Mike
 // Description
 //   Contains the splash form class
 //
 // Changes:
-//   Version 1.0, 13.03.2003, Mike
+//   Version 1.1, 13.03.2003, Mike
 //     initial version
+// Version Fork 1.5, 13.10.2010, JP: changes in the splash screen.
 //
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -59,6 +61,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure FormClick(Sender: TObject);
   private
     { Private declarations }
     SplashImg: TBitmap;
@@ -114,8 +117,6 @@ begin
   Action:=caFree;
 end;
 
-
-
 procedure TSplashForm.OKSBtnClick(Sender: TObject);
 begin
   ModalResult:=mrOK;
@@ -148,14 +149,14 @@ begin
     Canvas.Font.Height:=9;
 {$ENDIF}
 
-    for i:=1 to 7 do
-    begin
-      theLbl:=TLabel(FindComponent('InfoLbl'+IntToStr(i)));
-      if(theLbl<>nil)then
-      begin
-        Canvas.TextOut(theLbl.Left, theLbl.Top, theLbl.Caption);
-      end;
-    end;
+//    for i:=1 to 7 do
+//    begin
+//      theLbl:=TLabel(FindComponent('InfoLbl'+IntToStr(i)));
+//      if(theLbl<>nil)then
+//      begin
+//        Canvas.TextOut(theLbl.Left, theLbl.Top, theLbl.Caption);
+//      end;
+//    end;
 
     Canvas.TextOut(VersionLbl.Left, VersionLbl.Top, VersionLbl.Caption);
   end;
@@ -165,6 +166,11 @@ procedure TSplashForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   ModalResult:=mrAbort;
+end;
+
+procedure TSplashForm.FormClick(Sender: TObject);
+begin
+  Close;
 end;
 
 end.
