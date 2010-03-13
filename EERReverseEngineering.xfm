@@ -1,6 +1,6 @@
 object EERReverseEngineeringForm: TEERReverseEngineeringForm
-  Left = 356
-  Top = 204
+  Left = 355
+  Top = 61
   ActiveControl = BuildRelPrimKeyRBtn
   AutoScroll = False
   BorderStyle = fbsSizeToolWin
@@ -347,6 +347,8 @@ object EERReverseEngineeringForm: TEERReverseEngineeringForm
       Width = 95
       Height = 13
       Caption = 'Build Relations'
+      Checked = True
+      State = cbChecked
       TabOrder = 2
       OnClick = BuildRelationsCBoxClick
     end

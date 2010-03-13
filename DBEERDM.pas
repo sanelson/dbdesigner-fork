@@ -28,6 +28,7 @@ unit DBEERDM;
 //   Contains the reverse engineering and database syncronisation functions
 //
 // Changes:
+//   Version Fork 1.5, 13.10.2010, JP: Better support for FireBird reverse engineering using ODBC.
 //   Version 2.1, 03.05.2003, Mike
 //     introduced GetidDatatype
 //   Version 2.0, 18.04.2003, Mike
@@ -118,6 +119,7 @@ var DbTables: TList;
   tblAtPos: Boolean;
   fldColumnName :TField; // Addition by Vadim
   //s: string;
+  index11: string;
   theQuoteChar: String;
 begin
   EERModel:=theModel;
@@ -274,6 +276,15 @@ begin
         while(Not(DMDB.SchemaSQLQuery.EOF))do
         begin
           indexname:=DMDB.SchemaSQLQuery.Fields[4].AsString;
+          index11 := Copy(indexname, 1, 11);
+
+          if
+            (CompareText(index11, 'RDB$PRIMARY')=0) or        // JP: is FireBird PK?
+            (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0) // JP: is PK?
+          then
+          begin
+            indexname := 'PRIMARY';
+          end;
 
           //Don't add the same Index a second time
           if(prevIndex<>indexname)then
@@ -282,12 +293,25 @@ begin
             theIndex:=TEERIndex.Create(TEERTable(DbTables[i]));
             theIndex.Obj_id:=DMMain.GetNextGlobalID;
             theIndex.IndexName:=indexname;
-            if(CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0)then
-              theIndex.IndexKind:=ik_PRIMARY
+            if
+              (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0)
+            then
+            begin
+              theIndex.IndexKind:=ik_PRIMARY;
+              TEERTable(DbTables[i]).Indices.Add(theIndex);
+              theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+            end
             else
+            // JP: is FireBird FK?
+            if (CompareText(index11, 'RDB$FOREIGN')=0) then
+            begin
+              // JP: nothing can be done here
+            end else
+            begin
               theIndex.IndexKind:=ik_INDEX;
-            TEERTable(DbTables[i]).Indices.Add(theIndex);
-            theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+              TEERTable(DbTables[i]).Indices.Add(theIndex);
+              theIndex.Pos:=TEERTable(DbTables[i]).Indices.Count-1;
+            end;
 
           end;
 
@@ -300,11 +324,11 @@ begin
           // Addition by Vadim
           theColumn:=TEERTable(DbTables[i]).GetColumnByName(fldColumnName.AsString);
 
-          if(CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0)then
+          if
+            (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0) then
             theColumn.PrimaryKey:=True;
 
           theIndex.Columns.Add(IntToStr(theColumn.Obj_id));
-
 
           prevIndex:=indexname;
           DMDB.SchemaSQLQuery.Next;

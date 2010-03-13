@@ -28,6 +28,7 @@ unit EERReverseEngineering;
 //   Contains a graphical user interface for the reverse engineering functions
 //
 // Changes:
+//   Version Fork 1.5, 13.10.2010, JP: Better support for FireBird using ODBC
 //   Version 1.0, 13.03.2003, Mike
 //     initial version
 //
@@ -188,7 +189,7 @@ end;
 
 procedure TEERReverseEngineeringForm.GetDBConnSBtnClick(Sender: TObject);
 var SelDBConn: TDBConn;
-  SelDBConnName, s: string;
+  SelDBConnName, s, s4: string;
   theTables: TStringList;
   i: integer;
 begin
@@ -256,6 +257,8 @@ begin
 
         if(Copy(s, 1, 3)<>'SYS')and
           (Copy(s, 1, 6)<>'CTXSYS')and
+          (Copy(s, 1, 4)<>'RDB$')and
+          (Copy(s, 1, 4)<>'MON$')and
           (Copy(s, 1, 5)<>'MDSYS')and
           (Copy(s, 1, 3)<>'ODM')and
           (Copy(s, 1, 7)<>'OLAPSYS')and
@@ -266,15 +269,22 @@ begin
             SchemaCBox.Items.Add(Copy(TablesLBox.Items[i], 1, Pos('.', TablesLBox.Items[i])-1));
       end;
       SchemaCBox.ItemIndex:=0;
-      
 
       SelAllTablesSBtnClick(self);
 
       //Do for Access, unselect all tables starting with MSys
       for i:=0 to TablesLBox.Items.Count-1 do
-        if(Copy(TablesLBox.Items[i], 2, 4)='MSys')then
+      begin
+        s := TablesLBox.Items[i];
+        s := SysUtils.StringReplace(s,'"','',[SysUtils.rfReplaceAll]);
+        s4 := Copy(s, 1, 4);
+        if
+          (Copy(TablesLBox.Items[i], 2, 4)='MSys') or
+          (s4 ='RDB$')or
+          (s4 ='MON$')
+        then
           TablesLBox.Checked[i]:=False;
-
+      end;
       break;
     end
     else
@@ -326,6 +336,7 @@ begin
     //Do the reverse engineering
     case RevEngTypeCBox.ItemIndex of
       0:
+        //ODBC
         DMDBEER.EERReverseEngineer(EERModel, DMDB.CurrentDBConn, theTables, xcount, BuildRelationsCBox.Checked, BuildRelPrimKeyRBtn.Checked, theSubst, StatusLbl, CreateStdInsertsCBox.Checked, i);
       1:
         DMDBEER.EERMySQLReverseEngineer(EERModel, DMDB.CurrentDBConn, theTables, xcount, BuildRelationsCBox.Checked, BuildRelPrimKeyRBtn.Checked, theSubst, StatusLbl, CreateStdInsertsCBox.Checked, i);
