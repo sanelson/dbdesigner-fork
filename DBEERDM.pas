@@ -28,6 +28,7 @@ unit DBEERDM;
 //   Contains the reverse engineering and database syncronisation functions
 //
 // Changes:
+//   Version Fork 1.5, 15.10.2010, JP: Better support for SQLite reverse engineering using ODBC.
 //   Version Fork 1.5, 13.10.2010, JP: Better support for FireBird reverse engineering using ODBC.
 //   Version 2.1, 03.05.2003, Mike
 //     introduced GetidDatatype
@@ -168,8 +169,6 @@ begin
           theTable.ObjName:=DMMain.ReplaceText(tablename, theQuoteChar, '')
         else
           theTable.ObjName:=tablename;
-
-
         //theTable.RefreshObj;
 
         DbTables.Add(theTable);
@@ -293,6 +292,7 @@ begin
 
           if
             (CompareText(index11, 'RDB$PRIMARY')=0) or        // JP: is FireBird PK?
+            (CompareText(index11, 'sqlite_auto')=0) or        // JP: is SQLite PK?
             (CompareText(Copy(indexname, 1, 7), 'PRIMARY')=0) // JP: is PK?
           then
           begin
@@ -2932,6 +2932,8 @@ begin
       s:=Copy(s, 1, Pos('//', s))+Copy(s, Pos(#13, s), Length(s))
     else
       s:=Copy(s, 1, Pos('//', s));
+
+  result := s;
 end;
 
 function TDMDBEER.GetColumnCountFromSQLCmd(cmd: string): integer;

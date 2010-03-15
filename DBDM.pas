@@ -126,6 +126,9 @@ type
     CurrentDBConn: TDBConn;
   end;
 
+// JP: better error messages when connecting
+function GetConnectErrorMessage(DriverName: string):string;
+
 const
   QEventType_SetQueryStatusLbl = QEventType(Integer(QEventType_ClxUser) + 200);
   QEventType_CloseAllClientDatasets = QEventType(Integer(QEventType_ClxUser) + 201);
@@ -461,6 +464,39 @@ begin
   end;
 end;
 
+// JP: better error messages when connecting
+function GetConnectErrorMessage(DriverName: string):string;
+var
+  ErrMsg: string;
+begin
+
+  ErrMsg := 'Connection to database '+DriverName+' has failed.'+#13#10;
+
+  if DriverName = 'MySQL' then
+  begin
+    ErrMsg := ErrMsg + 'Possible causes are:'+#13#10;
+    ErrMsg := ErrMsg + '* User has no grants to connect from this machine.'+#13#10;
+    ErrMsg := ErrMsg + '* DB Designer Fork does not connect to MySQL 5.* with password.'+#13#10;
+    ErrMsg := ErrMsg + '  You may try connecting with a user that does not require password.'+#13#10;
+    ErrMsg := ErrMsg + '  You may try connecting thru ODBC.'+#13#10;
+    ErrMsg := ErrMsg + '  When reverse engineering, MySQL specific functions are recommended.'+#13#10;
+  end else
+  if DriverName = 'SQLite' then
+  begin
+    ErrMsg := ErrMsg + 'Possible causes are:'+#13#10;
+    ErrMsg := ErrMsg + '* The database file is corrupted.'+#13#10;
+    ErrMsg := ErrMsg + '* DB Designer Fork does not connect to SQLite 3.* directly.'+#13#10;
+    ErrMsg := ErrMsg + '  You may try connecting thru ODBC.'+#13#10;
+    ErrMsg := ErrMsg + '  DB Designer Fork is able to connect thru ODBC to SQLite 3.*, MySQL 5.* and Firebird 2.*.'+#13#10;
+    ErrMsg := ErrMsg + '  When reverse engineering, ODBC functions are recommended.'+#13#10;
+  end;
+
+  ErrMsg := ErrMsg + #13#10;
+
+  result := ErrMsg;
+
+end;
+
 procedure TDMDB.GetDBConnButtonClick(Sender: TObject; defDBConn: string = '');
 var
   SelDBConn: TDBConn;
@@ -488,18 +524,8 @@ begin
       except
         on x: Exception do
         begin
-          ErrMsg := 'Connection to database '+DriverName+' failed.'+#13#10;
 
-          if DriverName = 'MySQL' then
-          begin
-            ErrMsg := ErrMsg + 'Possible causes:'+#13#10;
-            ErrMsg := ErrMsg + '* User has no grants to connect from this machine.'+#13#10;
-            ErrMsg := ErrMsg + '* DB Designer Fork does not connect to MySQL 5.* with password.'+#13#10;
-            ErrMsg := ErrMsg + '  You may try connecting with a user that does not require password.'+#13#10;
-            ErrMsg := ErrMsg + '  You may try connecting thru ODBC.'+#13#10;
-          end;
-
-          ErrMsg := ErrMsg + #13#10;
+          ErrMsg := GetConnectErrorMessage(DriverName);
 
           MessageDlg(ErrMsg+DMMain.GetTranslatedMessage('%s', 121,
             x.Message), mtError, [mbOK], 0);

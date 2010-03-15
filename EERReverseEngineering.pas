@@ -192,6 +192,7 @@ var SelDBConn: TDBConn;
   SelDBConnName, s, s4: string;
   theTables: TStringList;
   i: integer;
+  ErrMsg,DriverName: string;
 begin
   SelDBConnName:='';
 
@@ -213,11 +214,13 @@ begin
 
       //Try to connect to the DB
       try
+        DriverName := SelDBConn.DriverName;
         DMDB.ConnectToDB(SelDBConn);
       except
         on x: Exception do
         begin
-          MessageDlg(DMMain.GetTranslatedMessage('Connection to database failed.'+#13#10#13#10+'%s', 121,
+          ErrMsg := GetConnectErrorMessage(DriverName);
+          MessageDlg(ErrMsg+DMMain.GetTranslatedMessage('%s', 121,
             x.Message), mtError, [mbOK], 0);
 
           continue;

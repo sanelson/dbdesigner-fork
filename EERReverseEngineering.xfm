@@ -266,7 +266,7 @@ object EERReverseEngineeringForm: TEERReverseEngineeringForm
           'Use general functions (ODBC)'
           'Use MySQL specific functions'
           'Use Oracle specific functions'
-          'Use SQLite specific functions')
+          'Use SQLite specific functions (under development)')
         ItemIndex = 0
         TabOrder = 1
         Text = 'Use general functions (ODBC)'
