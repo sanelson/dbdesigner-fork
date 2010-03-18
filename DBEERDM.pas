@@ -227,24 +227,41 @@ begin
         // JP: MySQL ODBC returns varcha
         if(CompareText(DatatypeName, 'varcha')=0) then DatatypeName := 'varchar';
 
-        theColumn.ColName:=DMDB.SchemaSQLQuery.Fields[4].AsString;
-        theColumn.Obj_id:=DMMain.GetNextGlobalID;
-        theColumn.Pos:=TEERTable(DbTables[i]).Columns.Count;
-        theColumn.idDatatype:=TEERDatatype(EERModel.GetDataTypeByNameSubst(DatatypeName, DatatypeSubst)).id;
         theColumn.DatatypeParams:='';
-        theColumn.Width:=DMDB.SchemaSQLQuery.Fields[10].AsInteger;
-        theColumn.Prec:=DMDB.SchemaSQLQuery.Fields[11].AsInteger;
-        theColumn.PrimaryKey:=False;
-        theColumn.NotNull:=(DMDB.SchemaSQLQuery.Fields[13].AsString='1');
-        theColumn.AutoInc:=False;
-        theColumn.IsForeignKey:=False;
-
-        if(CompareText(DatatypeName, 'varchar')=0)then
+        if(CompareText(DatatypeName, 'varchar')=0) then
+        begin
           //The openodbc Driver returns Columns Params at Pos 10
           if(DMDB.CurrentDBConn.DriverName='openodbc')then
             theColumn.DatatypeParams:='('+DMDB.SchemaSQLQuery.Fields[10].AsString+')'
           else
             theColumn.DatatypeParams:='('+DMDB.SchemaSQLQuery.Fields[11].AsString+')';
+        end;
+
+        // is a varchar that contains length (like SQLite result set)
+        if (CompareText(Copy(DatatypeName, 1, 8), 'VARCHAR(')=0) then
+        begin
+          theColumn.DatatypeParams := Copy(DatatypeName, 8, length(DatatypeName)-7);
+          DatatypeName := 'varchar';
+          try
+            theColumn.Width := strtoint( Copy(theColumn.DatatypeParams,2,length(theColumn.DatatypeParams)-2) );
+          except
+            //nothing can be done
+          end;
+        end else
+        begin
+          theColumn.Width:=DMDB.SchemaSQLQuery.Fields[10].AsInteger;
+        end;
+
+        theColumn.ColName:=DMDB.SchemaSQLQuery.Fields[4].AsString;
+        theColumn.Obj_id:=DMMain.GetNextGlobalID;
+        theColumn.Pos:=TEERTable(DbTables[i]).Columns.Count;
+        theColumn.idDatatype:=TEERDatatype(EERModel.GetDataTypeByNameSubst(DatatypeName, DatatypeSubst)).id;
+
+        theColumn.Prec:=DMDB.SchemaSQLQuery.Fields[11].AsInteger;
+        theColumn.PrimaryKey:=False;
+        theColumn.NotNull:=(DMDB.SchemaSQLQuery.Fields[13].AsString='1');
+        theColumn.AutoInc:=False;
+        theColumn.IsForeignKey:=False;
 
         {if(CompareText(SchemaSQLQuery.Fields[8].AsString,
           'float')=0)then
