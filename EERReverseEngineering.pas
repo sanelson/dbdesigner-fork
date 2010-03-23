@@ -283,8 +283,13 @@ begin
         s4 := Copy(s, 1, 4);
         if
           (Copy(TablesLBox.Items[i], 2, 4)='MSys') or
-          (s4 ='RDB$')or
-          (s4 ='MON$')
+          (s4 ='RDB$')or  //Firebird
+          (s4 ='MON$')or  //Firebird
+          (s4 ='SYS.')or               //ORACLE
+          (Copy(s, 1, 6)='MDSYS.') or  //ORACLE
+          (Copy(s, 1, 6)='FLOWS_') or  //ORACLE
+          (Copy(s, 1, 7)='CTXSYS.') or //ORACLE
+          (Copy(s, 1, 7)='SYSTEM.')    //ORACLE
         then
           TablesLBox.Checked[i]:=False;
       end;

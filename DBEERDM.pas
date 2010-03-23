@@ -28,8 +28,9 @@ unit DBEERDM;
 //   Contains the reverse engineering and database syncronisation functions
 //
 // Changes:
-//   Version Fork 1.5, 15.10.2010, JP: Better support for SQLite reverse engineering using ODBC.
-//   Version Fork 1.5, 13.10.2010, JP: Better support for FireBird reverse engineering using ODBC.
+//   Version Fork 1.5, 23.3.2010, JP: Better support for ORACLE reverse engineering using ORACLE connection/functions.
+//   Version Fork 1.5, 15.3.2010, JP: Better support for SQLite reverse engineering using ODBC.
+//   Version Fork 1.5, 13.3.2010, JP: Better support for FireBird reverse engineering using ODBC.
 //   Version 2.1, 03.05.2003, Mike
 //     introduced GetidDatatype
 //   Version 2.0, 18.04.2003, Mike
@@ -789,14 +790,16 @@ begin
 
       DMDB.SchemaSQLQuery.SQL.Text:='SELECT DATA_TYPE, COLUMN_NAME, '+
         ' DATA_LENGTH, DATA_PRECISION, NULLABLE, DATA_DEFAULT '+
-        'FROM DBA_TAB_COLUMNS '+
+        'FROM ALL_TAB_COLUMNS '+
         'WHERE OWNER='''+TEERTable(DbTables[i]).GetTablePrefix+''' AND '+
         ' TABLE_NAME='''+TEERTable(DbTables[i]).ObjName+'''';
       DMDB.SchemaSQLQuery.Open;
       while(Not(DMDB.SchemaSQLQuery.EOF))do
       begin
         //Get Datatype
-        theDatatype:=EERModel.GetDataTypeByNameSubst(DMDB.SchemaSQLQuery.FieldByName('DATA_TYPE').AsString, DatatypeSubst);
+        DatatypeName:=DMDB.SchemaSQLQuery.FieldByName('DATA_TYPE').AsString;
+        if(CompareText(DatatypeName, 'VARCHAR2')=0) then DatatypeName := 'VARCHAR';
+        theDatatype:=EERModel.GetDataTypeByNameSubst(DatatypeName, DatatypeSubst);
         DatatypeName:=theDatatype.GetPhysicalTypeName;
         DatatypeParams:='';
 
@@ -943,8 +946,8 @@ begin
       DMDB.SchemaSQLQuery.Close;
 
       //PK Columns
-      DMDB.SchemaSQLQuery.SQL.Text:='SELECT i.COLUMN_NAME FROM DBA_CONSTRAINTS c, '+
-        'DBA_IND_COLUMNS i '+
+      DMDB.SchemaSQLQuery.SQL.Text:='SELECT i.COLUMN_NAME FROM ALL_CONSTRAINTS c, '+
+        'ALL_IND_COLUMNS i '+
         'WHERE c.OWNER='''+TEERTable(DbTables[i]).GetTablePrefix+''' AND '+
         ' c.TABLE_NAME='''+TEERTable(DbTables[i]).ObjName+''' AND '+
         ' c.CONSTRAINT_TYPE=''P'' AND '+
@@ -985,7 +988,7 @@ begin
       //ORCL 8:
       DMDB.SchemaSQLQuery.SQL.Text:='SELECT i.INDEX_NAME, '+
         'i.UNIQUENESS, ic.COLUMN_NAME, ic.COLUMN_LENGTH '+
-        'FROM ALL_INDEXES i, DBA_IND_COLUMNS ic, DBA_CONSTRAINTS c '+
+        'FROM ALL_INDEXES i, ALL_IND_COLUMNS ic, ALL_CONSTRAINTS c '+
         'WHERE i.TABLE_OWNER='''+TEERTable(DbTables[i]).GetTablePrefix+''' AND '+
         'ic.TABLE_OWNER=i.TABLE_OWNER AND '+
         'i.TABLE_NAME='''+TEERTable(DbTables[i]).ObjName+''' AND '+
@@ -1091,10 +1094,10 @@ begin
           'c.TABLE_NAME as dest_table_name, '+
           'cc.COLUMN_NAME as dest_column_name, '+
           'cc.POSITION '+
-          'from dba_constraints c, '+
-          'dba_constraints r, '+
-          'dba_cons_columns cc, '+
-          'dba_cons_columns rc '+
+          'from all_constraints c, '+
+          'all_constraints r, '+
+          'all_cons_columns cc, '+
+          'all_cons_columns rc '+
           'where 	c.CONSTRAINT_TYPE = ''R'' '+
           'and c.OWNER='''+TEERModel(theModel).TablePrefix[i]+''' '+
           'and c.R_OWNER = r.OWNER '+
