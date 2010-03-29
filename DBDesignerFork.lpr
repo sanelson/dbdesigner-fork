@@ -39,9 +39,10 @@ program DBDesignerFork;
 //----------------------------------------------------------------------------------------------------------------------
 
 {$I DBDesigner4.inc}
+{$mode delphi}{$H+}
 
 uses
-  QForms,
+  QForms, Interfaces,
 
 //-------------------------------------------------------------
 // Include all units
@@ -167,8 +168,6 @@ uses
   EERPlaceModel in 'EERPlaceModel.pas',
   RegExpr in 'RegExpr.pas',
   GlobalSysFunctions in 'GlobalSysFunctions.pas';
-
-{$R *.res}
 
 begin
 {$IFDEF LINUX}
