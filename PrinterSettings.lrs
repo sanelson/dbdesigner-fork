@@ -1,0 +1,15 @@
+LazarusResources.Add('TPrinterSettingsForm','FORMDATA',[
+  'TPF0'#20'TPrinterSettingsForm'#19'PrinterSettingsForm'#4'Left'#3#212#1#3'Top'
+  +#3'5'#1#5'Width'#3'q'#1#6'Height'#3#16#1#19'VertScrollBar.Range'#2'u'#19'Hor'
+  +'zScrollBar.Range'#3#208#0#11'BorderStyle'#7#9'fbsDialog'#7'Caption'#6#16'Pr'
+  +'inter Settings'#5'Color'#7#12'clBackground'#9'FormStyle'#7#11'fsStayOnTop'#8
+  +'Position'#7#14'poScreenCenter'#8'OnCreate'#7#10'FormCreate'#13'PixelsPerInc'
+  +'h'#2'`'#10'TextHeight'#2#13#9'TextWidth'#2#6#0#9'TComboBox'#12'PrintersCBox'
+  +#4'Left'#2'D'#3'Top'#2#20#5'Width'#3#140#0#6'Height'#2#21#5'Style'#7#14'csDr'
+  +'opDownList'#10'ItemHeight'#2#15#8'TabOrder'#2#0#9'OnCloseUp'#7#19'PrintersC'
+  +'BoxCloseUp'#0#0#6'TLabel'#6'Label1'#4'Left'#2#30#3'Top'#2#24#5'Width'#2'!'#6
+  +'Height'#2#13#7'Caption'#6#8'Printer:'#0#0#5'TEdit'#7'XSizeEd'#4'Left'#2'\'#3
+  +'Top'#2'F'#5'Width'#2'e'#6'Height'#2#21#8'TabOrder'#2#2#0#0#5'TEdit'#7'YSize'
+  +'Ed'#4'Left'#2'\'#3'Top'#2'`'#5'Width'#2'e'#6'Height'#2#21#8'TabOrder'#2#3#0
+  +#0#0
+]);

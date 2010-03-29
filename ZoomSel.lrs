@@ -1,0 +1,14 @@
+LazarusResources.Add('TZoomSelForm','FORMDATA',[
+  'TPF0'#12'TZoomSelForm'#11'ZoomSelForm'#4'Left'#3'3'#2#3'Top'#3'G'#1#13'Activ'
+  +'eControl'#7#8'ZoomLBox'#10'AutoScroll'#8#11'BorderStyle'#7#7'fbsNone'#7'Cap'
+  +'tion'#6#11'ZoomSelForm'#12'ClientHeight'#3#229#0#11'ClientWidth'#3#162#0#5
+  +'Color'#7#12'clBackground'#10'KeyPreview'#9#6'Scaled'#8#8'OnCreate'#7#10'For'
+  +'mCreate'#9'OnKeyDown'#7#11'FormKeyDown'#13'PixelsPerInch'#2'`'#0#6'TPanel'#7
+  +'ZoomPnl'#4'Left'#2#0#3'Top'#2#0#5'Width'#2'W'#6'Height'#3#165#0#10'BevelOut'
+  +'er'#7#9'bvLowered'#5'Color'#7#8'clButton'#8'TabOrder'#2#0#0#8'TListBox'#8'Z'
+  +'oomLBox'#4'Left'#2#2#3'Top'#2#2#5'Width'#2'S'#6'Height'#3#161#0#11'BorderSt'
+  +'yle'#7#6'bsNone'#13'Items.Strings'#1#6#7'23,73 %'#6#7'31,64 %'#6#7'42,19 %'
+  +#6#7'56,26 %'#6#4'75 %'#6#5'100 %'#6#5'150 %'#6#5'200 %'#6#5'300 %'#6#5'400 '
+  +'%'#0#4'Rows'#2#10#8'TabOrder'#2#0#7'OnClick'#7#16'ZoomLBoxDblClick'#10'OnDb'
+  +'lClick'#7#16'ZoomLBoxDblClick'#0#0#0#0
+]);

@@ -1,0 +1,19 @@
+LazarusResources.Add('TDMDB','FORMDATA',[
+  'TPF0'#5'TDMDB'#4'DMDB'#14'OldCreateOrder'#8#8'OnCreate'#7#16'DataModuleCreat'
+  +'e'#9'OnDestroy'#7#17'DataModuleDestroy'#4'Left'#3#22#2#3'Top'#3'#'#1#6'Heig'
+  +'ht'#3#171#0#5'Width'#3#178#1#0#14'TSQLConnection'#7'SQLConn'#10'DriverName'
+  +#6#5'MYSQL'#13'GetDriverFunc'#6#17'getSQLDriverMYSQL'#11'LibraryName'#6#14'd'
+  +'bexpmysql.dll'#11'LoginPrompt'#8#14'Params.Strings'#1#6#11'BlobSize=-1'#6#13
+  +'Database=test'#6#18'ErrorResourceFile='#6#18'HostName=localhost'#6#15'Local'
+  +'eCode=0000'#6#13'Password=root'#6#14'User_Name=root'#0#9'VendorLib'#6#12'LI'
+  +'BMYSQL.dll'#4'Left'#2'&'#3'Top'#2#20#0#0#11'TDataSource'#13'OutputDataSrc'#7
+  +'DataSet'#7#19'OutputClientDataSet'#4'Left'#3'V'#1#3'Top'#2'X'#0#0#9'TSQLQue'
+  +'ry'#9'OutputQry'#11'MaxBlobSize'#2#255#6'Params'#14#0#13'SQLConnection'#7#7
+  +'SQLConn'#4'Left'#2'('#3'Top'#2'X'#0#0#16'TDataSetProvider'#21'OutputDataSet'
+  +'Provider'#7'DataSet'#7#9'OutputQry'#7'Options'#11#19'poRetainServerOrder'#0
+  +#4'Left'#3#132#0#3'Top'#2'X'#0#0#14'TClientDataSet'#19'OutputClientDataSet'
+  +#10'Aggregates'#14#0#6'Params'#14#0#12'ProviderName'#6#21'OutputDataSetProvi'
+  +'der'#8'ReadOnly'#9#4'Left'#3#248#0#3'Top'#2'X'#0#0#9'TSQLQuery'#14'SchemaSQ'
+  +'LQuery'#11'MaxBlobSize'#2#255#6'Params'#14#0#13'SQLConnection'#7#7'SQLConn'
+  +#4'Left'#3#132#0#3'Top'#2#22#0#0#0
+]);

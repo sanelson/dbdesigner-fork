@@ -1,0 +1,17 @@
+LazarusResources.Add('TEditorTableFieldParamForm','FORMDATA',[
+  'TPF0'#26'TEditorTableFieldParamForm'#25'EditorTableFieldParamForm'#4'Left'#3
+  +':'#2#3'Top'#3#203#1#13'ActiveControl'#7#13'ParamMaskEdit'#10'AutoScroll'#8
+  +#11'BorderStyle'#7#7'fbsNone'#7'Caption'#6#20'Edit Datatype Params'#12'Clien'
+  +'tHeight'#2'E'#11'ClientWidth'#3#149#0#5'Color'#7#12'clBackground'#9'FormSty'
+  +'le'#7#11'fsStayOnTop'#10'KeyPreview'#9#8'Position'#7#9'poDefault'#6'Scaled'
+  +#8#7'OnClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#12'OnDeactivate'#7
+  +#14'FormDeactivate'#9'OnDestroy'#7#11'FormDestroy'#9'OnKeyDown'#7#11'FormKey'
+  +'Down'#6'OnShow'#7#8'FormShow'#13'PixelsPerInch'#2'`'#0#6'TPanel'#7'MainPnl'
+  +#4'Left'#2#0#3'Top'#2#0#5'Width'#3#129#0#6'Height'#2#31#8'TabOrder'#2#0#0#6
+  +'TPanel'#6'Panel2'#4'Left'#2'8'#3'Top'#2#1#5'Width'#2'H'#6'Height'#2#29#5'Al'
+  +'ign'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#8'TabOrder'#2#0#0#9'TMaskEdit'
+  +#13'ParamMaskEdit'#4'Left'#2#4#3'Top'#2#4#5'Width'#2'5'#6'Height'#2#21#8'Tab'
+  +'Order'#2#0#0#0#6'TLabel'#6'Label1'#4'Left'#2'='#3'Top'#2#6#5'Width'#2#3#6'H'
+  +'eight'#2#13#7'Caption'#6#1')'#0#0#0#6'TLabel'#11'DatatypeLbl'#4'Left'#2#4#3
+  +'Top'#2#8#5'Width'#2'3'#6'Height'#2#13#7'Caption'#6#8'INTEGER('#0#0#0#0
+]);

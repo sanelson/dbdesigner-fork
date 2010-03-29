@@ -1,0 +1,11 @@
+LazarusResources.Add('TDMMain','FORMDATA',[
+  'TPF0'#7'TDMMain'#6'DMMain'#14'OldCreateOrder'#8#4'Left'#3#212#1#3'Top'#3'm'#1
+  +#6'Height'#3#177#0#5'Width'#3#130#1#0#14'TSQLConnection'#7'SQLConn'#10'Drive'
+  +'rName'#6#5'MYSQL'#13'GetDriverFunc'#6#17'getSQLDriverMYSQL'#11'LibraryName'
+  +#6#14'dbexpmysql.dll'#11'LoginPrompt'#8#14'Params.Strings'#1#6#11'BlobSize=-'
+  +'1'#6#17'Database=springer'#6#18'ErrorResourceFile='#6#18'HostName=localhost'
+  +#6#15'LocaleCode=0000'#6#9'Password='#6#14'User_Name=root'#0#9'VendorLib'#6
+  +#12'LIBMYSQL.dll'#4'Left'#2'('#3'Top'#2#18#0#0#11'TSQLDataSet'#16'SchemaSQLD'
+  +'ataSet'#11'MaxBlobSize'#2#255#6'Params'#14#0#13'SQLConnection'#7#7'SQLConn'
+  +#4'Left'#3#136#0#3'Top'#2#18#0#0#0
+]);

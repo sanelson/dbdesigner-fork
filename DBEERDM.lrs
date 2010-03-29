@@ -1,0 +1,5 @@
+LazarusResources.Add('TDMDBEER','FORMDATA',[
+  'TPF0'#8'TDMDBEER'#7'DMDBEER'#14'OldCreateOrder'#8#8'OnCreate'#7#16'DataModul'
+  +'eCreate'#9'OnDestroy'#7#17'DataModuleDestroy'#4'Left'#3#165#1#3'Top'#3#4#1#6
+  +'Height'#3#150#0#5'Width'#3#215#0#0#0
+]);

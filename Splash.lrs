@@ -1,0 +1,54 @@
+LazarusResources.Add('TSplashForm','FORMDATA',[
+  'TPF0'#11'TSplashForm'#10'SplashForm'#4'Left'#3'6'#1#3'Top'#3#1#1#10'AutoScro'
+  +'ll'#8#11'BorderStyle'#7#7'fbsNone'#7'Caption'#6#16'DB Designer Fork'#12'Cli'
+  +'entHeight'#3'f'#1#11'ClientWidth'#3#188#2#5'Color'#7#12'clBackground'#9'For'
+  +'mStyle'#7#11'fsStayOnTop'#8'Position'#7#16'poMainFormCenter'#6'Scaled'#8#7
+  +'OnClick'#7#9'FormClick'#7'OnClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCrea'
+  +'te'#9'OnDestroy'#7#11'FormDestroy'#9'OnMouseUp'#7#11'FormMouseUp'#7'OnPaint'
+  +#7#9'FormPaint'#13'PixelsPerInch'#2'`'#0#6'TLabel'#8'InfoLbl1'#4'Left'#3'S'#1
+  +#3'Top'#3#185#0#5'Width'#3'Q'#1#6'Height'#2#12#8'AutoSize'#8#7'Caption'#6'JF'
+  +'abulous Force Database Designer 4  for Windows 2k/XP and Linux KDE/Gnome.'
+  +#12'Font.CharSet'#7#9'fcsLatin1'#10'Font.Color'#7#7'clBlack'#11'Font.Height'
+  +#2#9#9'Font.Name'#6#20'Microsoft Sans Serif'#10'Font.Pitch'#7#10'fpVariable'
+  +#10'Font.Style'#11#0#11'Font.Weight'#2'('#6'Masked'#9#10'ParentFont'#8#11'Tr'
+  +'ansparent'#9#7'Visible'#8#0#0#6'TLabel'#10'VersionLbl'#4'Left'#3#138#2#3'To'
+  +'p'#3'*'#1#5'Width'#2'!'#6'Height'#2#13#9'Alignment'#7#14'taRightJustify'#7
+  +'Caption'#6#7'4.0.0.0'#6'Masked'#9#11'Transparent'#9#7'Visible'#8#0#0#6'TLab'
+  +'el'#8'InfoLbl5'#4'Left'#3'S'#1#3'Top'#3#241#0#5'Width'#3'L'#1#6'Height'#2#12
+  +#8'AutoSize'#8#7'Caption'#6'KDistribution includes Edward Benson''s LGPL DBE'
+  +'xpress driver 2.0.7 for ODBC,'#12'Font.CharSet'#7#9'fcsLatin1'#10'Font.Colo'
+  +'r'#7#7'clBlack'#11'Font.Height'#2#9#9'Font.Name'#6#20'Microsoft Sans Serif'
+  +#10'Font.Pitch'#7#10'fpVariable'#10'Font.Style'#11#0#11'Font.Weight'#2'('#6
+  +'Masked'#9#10'ParentFont'#8#11'Transparent'#9#7'Visible'#8#8'WordWrap'#9#0#0
+  +#6'TLabel'#8'InfoLbl2'#4'Left'#3'S'#1#3'Top'#3#197#0#5'Width'#3'Q'#1#6'Heigh'
+  +'t'#2#12#8'AutoSize'#8#7'Caption'#6'OCopyright (C) 2003 by Michael G. Zinner'
+  +'. This software is distributed under the'#12'Font.CharSet'#7#9'fcsLatin1'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#9#9'Font.Name'#6#20'Microsoft Sa'
+  +'ns Serif'#10'Font.Pitch'#7#10'fpVariable'#10'Font.Style'#11#0#11'Font.Weigh'
+  +'t'#2'('#6'Masked'#9#10'ParentFont'#8#11'Transparent'#9#7'Visible'#8#8'WordW'
+  +'rap'#9#0#0#6'TLabel'#8'InfoLbl4'#4'Left'#3'S'#1#3'Top'#3#223#0#5'Width'#3'Q'
+  +#1#6'Height'#2#12#8'AutoSize'#8#7'Caption'#6'(Taxacher, Georg Richter, Jens '
+  +'Oberender.'#12'Font.CharSet'#7#9'fcsLatin1'#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#9#9'Font.Name'#6#20'Microsoft Sans Serif'#10'Font.Pitch'#7#10
+  +'fpVariable'#10'Font.Style'#11#0#11'Font.Weight'#2'('#6'Masked'#9#10'ParentF'
+  +'ont'#8#11'Transparent'#9#7'Visible'#8#8'WordWrap'#9#0#0#6'TLabel'#8'InfoLbl'
+  +'3'#4'Left'#3'S'#1#3'Top'#3#210#0#5'Width'#3'Q'#1#6'Height'#2#12#8'AutoSize'
+  +#8#7'Caption'#6'Oterms of the GNU GPL. Special thanks to Katharina Peter, Ul'
+  +'rich Bayer, Johannes'#12'Font.CharSet'#7#9'fcsLatin1'#10'Font.Color'#7#7'cl'
+  +'Black'#11'Font.Height'#2#9#9'Font.Name'#6#20'Microsoft Sans Serif'#10'Font.'
+  +'Pitch'#7#10'fpVariable'#10'Font.Style'#11#0#11'Font.Weight'#2'('#6'Masked'#9
+  +#10'ParentFont'#8#11'Transparent'#9#7'Visible'#8#8'WordWrap'#9#0#0#6'TLabel'
+  +#8'InfoLbl6'#4'Left'#3'S'#1#3'Top'#3#253#0#5'Width'#3'L'#1#6'Height'#2#12#8
+  +'AutoSize'#8#7'Caption'#6'Gthe SQLite Engine, Marco Wobben''s DBExpress driv'
+  +'er 2.3.4 for SQLite and'#12'Font.CharSet'#7#9'fcsLatin1'#10'Font.Color'#7#7
+  +'clBlack'#11'Font.Height'#2#9#9'Font.Name'#6#20'Microsoft Sans Serif'#10'Fon'
+  +'t.Pitch'#7#10'fpVariable'#10'Font.Style'#11#0#11'Font.Weight'#2'('#6'Masked'
+  +#9#10'ParentFont'#8#11'Transparent'#9#7'Visible'#8#8'WordWrap'#9#0#0#6'TLabe'
+  +'l'#8'InfoLbl7'#4'Left'#3'S'#1#3'Top'#3#9#1#5'Width'#3'L'#1#6'Height'#2#12#8
+  +'AutoSize'#8#7'Caption'#6#28'Stefan Heymann''s XML Parser.'#12'Font.CharSet'
+  +#7#9'fcsLatin1'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#9#9'Font.Name'
+  +#6#20'Microsoft Sans Serif'#10'Font.Pitch'#7#10'fpVariable'#10'Font.Style'#11
+  +#0#11'Font.Weight'#2'('#6'Masked'#9#10'ParentFont'#8#11'Transparent'#9#7'Vis'
+  +'ible'#8#8'WordWrap'#9#0#0#6'TTimer'#10'CloseTimer'#8'Interval'#3#136#19#7'O'
+  +'nTimer'#7#15'CloseTimerTimer'#4'Left'#3#216#0#3'Top'#2#20#0#0#0
+]);

@@ -1,0 +1,23 @@
+LazarusResources.Add('TDialogBugsForm','FORMDATA',[
+  'TPF0'#15'TDialogBugsForm'#14'DialogBugsForm'#4'Left'#3#200#0#3'Top'#3#146#0
+  +#10'AutoScroll'#8#11'BorderStyle'#7#7'fbsNone'#7'Caption'#6#7'Contact'#12'Cl'
+  +'ientHeight'#3#136#0#11'ClientWidth'#3#139#1#5'Color'#7#12'clBackground'#9'F'
+  +'ormStyle'#7#11'fsStayOnTop'#8'Position'#7#9'poDefault'#8'OnCreate'#7#10'For'
+  +'mCreate'#13'PixelsPerInch'#2'`'#10'TextHeight'#2#13#9'TextWidth'#2#6#0#6'TI'
+  +'mage'#5'BugBg'#4'Left'#2#0#3'Top'#2#0#5'Width'#3#139#1#6'Height'#3#136#0#5
+  +'Align'#7#8'alClient'#7'OnClick'#7#10'BugBgClick'#0#0#6'TLabel'#6'Label1'#4
+  +'Left'#2'('#3'Top'#2'*'#5'Width'#3#151#0#6'Height'#2#13#7'Caption'#6#30'http'
+  +'://www.fabforce.net/forum/'#5'Color'#7#6'clNone'#11'ParentColor'#8#7'OnClic'
+  +'k'#7#11'Label5Click'#0#0#6'TLabel'#6'Label2'#4'Left'#2#16#3'Top'#2#16#5'Wid'
+  +'th'#3'h'#1#6'Height'#2#13#7'Caption'#6'RPlease direct all sort of bug repor'
+  +'ts, feature requests,... to the fabforce forum:'#5'Color'#7#6'clNone'#11'Pa'
+  +'rentColor'#8#7'OnClick'#7#11'Label5Click'#0#0#6'TLabel'#6'Label3'#4'Left'#2
+  +'('#3'Top'#2'<'#5'Width'#2'~'#6'Height'#2#13#7'Caption'#6#24'Category: Simpl'
+  +'eWebFront'#5'Color'#7#6'clNone'#11'ParentColor'#8#7'OnClick'#7#11'Label5Cli'
+  +'ck'#0#0#6'TLabel'#6'Label4'#4'Left'#2#16#3'Top'#2'X'#5'Width'#3#189#0#6'Hei'
+  +'ght'#2#13#7'Caption'#6')If you prefer email, you can reach me at:'#5'Color'
+  +#7#6'clNone'#11'ParentColor'#8#7'OnClick'#7#11'Label5Click'#0#0#6'TLabel'#6
+  +'Label5'#4'Left'#2'('#3'Top'#2'k'#5'Width'#2'P'#6'Height'#2#13#7'Caption'#6
+  +#17'ulli@fabforce.net'#5'Color'#7#6'clNone'#11'ParentColor'#8#7'OnClick'#7#11
+  +'Label5Click'#0#0#0
+]);
