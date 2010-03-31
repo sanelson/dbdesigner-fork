@@ -23,6 +23,8 @@ unit Main;
 // Unit Main.pas
 // -------------
 // Version Fork 1.5, 31.03.2010, JP
+// Description
+//   BUGFIX: exception when deleting tables was fixed!!!!
 // Version Fork 1.4, 14.05.2007, JP
 // Description
 //   EditorTableForm and EditorRelationForm are now modal.
