@@ -28,6 +28,8 @@ unit EERModel;
 //   Contains all classes for the EERModel
 //
 // Changes:
+//   Version Fork 1.5, 31.03.2010, JP.
+//     added Outputs commets for MYSQL.
 //   Version Fork 1.0, 22.09.2006, Carlos
 //     added option to create auto increment by trigger to Oracle/FireBird
 //     added option to create a special column to save date of record created/changed
@@ -661,7 +663,8 @@ type
                                        var TableFieldGen: string;
                                        HideNullField:boolean = false; // indicate that things like "col1 char(1) null," will not apear. What will apear is "col1 char(1),"
                                        DefaultBeforeNotNull : boolean = false; // Defalut tag should appear before NOT NULL
-                                       DatabaseType: string = 'My SQL' //database type
+                                       DatabaseType: string = 'My SQL'; //database type
+                                       OutputComments: boolean = false
                                        ): string;
     function GetSQLDropCode(IfExists:boolean = false): string;
     function GetSQLInsertCode: string;
@@ -8832,6 +8835,12 @@ begin
   GetSQLTableName:=s;
 end;
 
+procedure RemoveCRFromString(var s:string);
+begin
+  s := StringReplace (s,#13,' ',[rfReplaceAll]);
+  s := StringReplace (s,#10,' ',[rfReplaceAll]);
+end;
+
 function TEERTable.GetSQLCreateCode(DefinePK: Boolean = True;
   CreateIndices: Boolean = True; DefineFK: Boolean = False;
   TblOptions: Boolean = True; StdInserts: Boolean = False;
@@ -8876,6 +8885,7 @@ var s, s1: string;
   GoStatementstr : string;
   CommitStatementstr : string;
   TableName : string;
+  LocalComment : string;
 begin
   FKIndexes := '';
   TableName := GetSQLTableName;
@@ -8954,7 +8964,7 @@ begin
       s:=s+#13#10;
     end;
 
-    s:=s+'  '+GetSQLColumnCreateDefCode(i,FieldOnGeneratorOrSequence,HideNullField, DefaultBeforeNotNull, DatabaseType);
+    s:=s+'  '+GetSQLColumnCreateDefCode(i,FieldOnGeneratorOrSequence,HideNullField, DefaultBeforeNotNull, DatabaseType, OutputComments);
 
   end;
 
@@ -9117,6 +9127,15 @@ begin
     end;
   end;
 
+  LocalComment := trim(Comments);
+  RemoveCRFromString(LocalComment);
+
+  if (DatabaseType = 'My SQL') and OutputComments  and (length(LocalComment)>0)then
+  begin
+    LocalComment := StringReplace (LocalComment, '''', '''''', [rfReplaceAll]);
+    s:=s+#13#10+'COMMENT = '''+LocalComment+''' ';
+  end;
+
   //Options
   if(TblOptions) and (DatabaseType = 'My SQL') then
   begin
@@ -9158,7 +9177,6 @@ begin
         ' RAID_CHUNKSIZE = '+TableOptions.Values['ChunkSize'];
     end;
 
-
     if(TableOptions.Values['TblDataDir']<>'')then
       s:=s+#13#10+'DATA DIRECTORY = "'+TableOptions.Values['TblDataDir']+'"';
     if(TableOptions.Values['TblIndexDir']<>'')then
@@ -9199,7 +9217,6 @@ begin
                                   lastExclusionTriggerPrefix, DatabaseType);
   end;
 
-
   // Should output comments?
   if OutputComments then
   begin
@@ -9222,13 +9239,15 @@ function TEERTable.GetSQLColumnCreateDefCode(i: integer;
                                              var TableFieldGen: string;
                                              HideNullField:boolean = false;
                                              DefaultBeforeNotNull : boolean = false; // Defalut tag should appear before NOT NULL
-                                             DatabaseType: string = 'My SQL'
+                                             DatabaseType: string = 'My SQL';
+                                             OutputComments: boolean = false
                                              ): string;
 var s: string;
   j: integer;
   theDatatype: TEERDatatype;
   defaultTag:string;
   NullTag:string;
+  ColComment:string;
 begin
   defaultTag:='';
   NullTag:='';
@@ -9307,6 +9326,16 @@ begin
 
   {if(TEERColumn(Columns[i]).PrimaryKey)then
     s:=s+' PRIMARY KEY';}
+  ColComment := trim(TEERColumn(Columns[i]).Comments);
+  ColComment := StringReplace (ColComment, '''', '''''', [rfReplaceAll]);
+  if OutputComments and (Length(ColComment)>0) then
+  begin
+
+    if DatabaseType = 'My SQL' then
+    begin
+      s := s+' COMMENT '''+ColComment+''' ';
+    end;
+  end;
 
   GetSQLColumnCreateDefCode:=s;
 end;
@@ -13988,13 +14017,6 @@ begin
   IDLinkedModel:=TEERModel(AOwner).GetNextIDPlacedModel;
 
   inherited Create;
-end;
-
-
-procedure RemoveCRFromString(var s:string);
-begin
-  s := StringReplace (s,#13,' ',[rfReplaceAll]);
-  s := StringReplace (s,#10,' ',[rfReplaceAll]);
 end;
 
 function TEERTable.getSqlTableComment(TableName, Comment,
