@@ -22,6 +22,7 @@ unit Main;
 //
 // Unit Main.pas
 // -------------
+// Version Fork 1.5, 31.03.2010, JP
 // Version Fork 1.4, 14.05.2007, JP
 // Description
 //   EditorTableForm and EditorRelationForm are now modal.
@@ -1931,6 +1932,11 @@ begin
     if(ActiveMDIChild<>nil)then
       if(ActiveMDIChild.Classname='TEERForm')then
       begin
+        PaletteModelFrom.RefreshTablesTreeView(TEERForm(ActiveMDIChild).EERModel);
+        PaletteDataTypesForm.DisplayDataTypes(TEERForm(ActiveMDIChild).EERModel);
+        PaletteNavForm.SetModelImg(TEERForm(ActiveMDIChild).EERModel);
+        TEditorQueryForm(DockedEditorQueryForm).RefreshStoredSQLTreeView(TEERForm(ActiveMDIChild).EERModel);
+        TEditorQueryForm(DockedEditorQueryForm).RefreshTempSQLStoreBtns(TEERForm(ActiveMDIChild).EERModel);
         if(TEERForm(ActiveMDIChild).EERModel.IsChanged)then
           EnableSaveImgs
         else
