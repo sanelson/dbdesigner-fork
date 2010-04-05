@@ -30,6 +30,7 @@ unit EERModel;
 // Changes:
 //   Version Fork 1.5, 31.03.2010, JP.
 //     added Outputs commets for MYSQL.
+//     added support for PostgreSQL "SERIAL" type.
 //   Version Fork 1.0, 22.09.2006, Carlos
 //     added option to create auto increment by trigger to Oracle/FireBird
 //     added option to create a special column to save date of record created/changed
@@ -9258,15 +9259,23 @@ begin
   else
     s:=TEERColumn(Columns[i]).ColName+' ';
 
-  //Datatype
-  theDatatype:=ParentEERModel.GetDataType(TEERColumn(Columns[i]).idDatatype);
-  //Datatype name (INTEGER)
-  s:=s+theDatatype.GetPhysicalTypeName;
+  if
+    (TEERColumn(Columns[i]).AutoInc)
+    and (DatabaseType = 'PostgreSQL') then
+  begin
+    s := s + 'SERIAL';
+  end else
+  begin
+    //Datatype
+    theDatatype:=ParentEERModel.GetDataType(TEERColumn(Columns[i]).idDatatype);
+    //Datatype name (INTEGER)
+    s:=s+theDatatype.GetPhysicalTypeName;
 
-  //Datatype parameters (10, 2)
-  if(TEERColumn(Columns[i]).DatatypeParams<>'')then
-    s:=s+TEERColumn(Columns[i]).DatatypeParams;
-  s:=s+' ';
+    //Datatype parameters (10, 2)
+    if(TEERColumn(Columns[i]).DatatypeParams<>'')then
+      s:=s+TEERColumn(Columns[i]).DatatypeParams;
+    s:=s+' ';
+  end;
 
   //Datatype options ([UNSIGNED] [ZEROFILL])
   if DatabaseType = 'My SQL' then
