@@ -28,6 +28,7 @@ unit DBEERDM;
 //   Contains the reverse engineering and database syncronisation functions
 //
 // Changes:
+//   Version Fork 1.5, 05.4.2010, JP: "NOT Null" is reversed engineered in MySQL 5.
 //   Version Fork 1.5, 23.3.2010, JP: Better support for ORACLE reverse engineering using ORACLE connection/functions.
 //   Version Fork 1.5, 15.3.2010, JP: Better support for SQLite reverse engineering using ODBC.
 //   Version Fork 1.5, 13.3.2010, JP: Better support for FireBird reverse engineering using ODBC.
@@ -550,7 +551,9 @@ begin
         {theColumn.Width:=SchemaSQLQuery.Fields[10].AsInteger;
         theColumn.Prec:=SchemaSQLQuery.Fields[11].AsInteger;}
         theColumn.PrimaryKey:=(DMDB.SchemaSQLQuery.Fields[3].AsString='PRI');
-        theColumn.NotNull:=(DMDB.SchemaSQLQuery.Fields[2].AsString<>'Y');
+        theColumn.NotNull:=
+          (DMDB.SchemaSQLQuery.Fields[2].AsString<>'Y') and
+          (DMDB.SchemaSQLQuery.Fields[2].AsString<>'YES');
         theColumn.AutoInc:=False;
         theColumn.IsForeignKey:=False;
         if(DMDB.SchemaSQLQuery.Fields[4].AsString<>'0')then
