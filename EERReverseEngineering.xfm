@@ -242,9 +242,9 @@ object EERReverseEngineeringForm: TEERReverseEngineeringForm
     end
     object GroupBox1: TGroupBox
       Left = 20
-      Top = 14
+      Top = 16
       Width = 277
-      Height = 169
+      Height = 167
       Caption = 'General Options'
       TabOrder = 0
       object TblCountEd: TEdit
@@ -580,7 +580,7 @@ object EERReverseEngineeringForm: TEERReverseEngineeringForm
         Left = 18
         Top = 36
         Width = 237
-        Height = 101
+        Height = 93
         Caption = 'Important'
         Font.Color = clGray
         Font.Height = 11
@@ -610,6 +610,24 @@ object EERReverseEngineeringForm: TEERReverseEngineeringForm
           ParentFont = False
           WordWrap = True
         end
+      end
+      object ButSelectAll: TButton
+        Left = 24
+        Top = 136
+        Width = 97
+        Height = 25
+        Caption = 'Select All Tables'
+        TabOrder = 2
+        OnClick = ButSelectAllClick
+      end
+      object ButDeselect: TButton
+        Left = 136
+        Top = 136
+        Width = 113
+        Height = 25
+        Caption = 'Unselect All Tables'
+        TabOrder = 3
+        OnClick = ButDeselectClick
       end
     end
   end

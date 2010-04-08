@@ -28,7 +28,8 @@ unit EERReverseEngineering;
 //   Contains a graphical user interface for the reverse engineering functions
 //
 // Changes:
-//   Version Fork 1.5, 13.10.2010, JP: Better support for FireBird using ODBC
+//   Version Fork 1.5, 08.04.2010, JP: Select / Deselect all tables.
+//   Version Fork 1.5, 13.03.2010, JP: Better support for FireBird using ODBC
 //   Version 1.0, 13.03.2003, Mike
 //     initial version
 //
@@ -86,6 +87,8 @@ type
     GroupBox2: TGroupBox;
     Label3: TLabel;
     PutDefValsInQuotesCBox: TCheckBox;
+    ButSelectAll: TButton;
+    ButDeselect: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -111,6 +114,8 @@ type
     procedure CreateStdInsertsCBoxClick(Sender: TObject);
     procedure BuildRelationsCBoxClick(Sender: TObject);
     procedure RevEngTypeCBoxCloseUp(Sender: TObject);
+    procedure ButSelectAllClick(Sender: TObject);
+    procedure ButDeselectClick(Sender: TObject);
   private
     { Private-Deklarationen }
     //Use flag because of InvisibleForm error
@@ -568,6 +573,20 @@ begin
         SubstCBox.ItemIndex:=2;
       end;
 
+end;
+
+procedure TEERReverseEngineeringForm.ButSelectAllClick(Sender: TObject);
+  var i:integer;
+begin
+  for i:=0 to TablesLBox.Items.Count-1 do
+    TablesLBox.State[i]:=cbChecked;
+end;
+
+procedure TEERReverseEngineeringForm.ButDeselectClick(Sender: TObject);
+  var i:integer;
+begin
+  for i:=0 to TablesLBox.Items.Count-1 do
+    TablesLBox.State[i]:=cbUnchecked;
 end;
 
 end.
