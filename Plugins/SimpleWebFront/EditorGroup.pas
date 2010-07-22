@@ -24,8 +24,8 @@ unit EditorGroup;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QButtons, QExtCtrls, Weboutput;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, Buttons, ExtCtrls, Weboutput;
 
 type
   TEditorGroupForm = class(TForm)
@@ -57,7 +57,7 @@ var
   EditorGroupForm: TEditorGroupForm;
 implementation
 
-uses MainDM, Main, StringConstants, Qt;
+uses MainDM, Main, StringConstants;
 
 {$R *.xfm}
 

@@ -42,7 +42,7 @@ program DBDplugin_Demo;
 {$ENDIF}
 
 uses
-  QForms,
+  Forms,
   Main in 'Main.pas' {MainForm},
 {$IFDEF MSWINDOWS}
   EERModel in '..\..\EERModel.pas',

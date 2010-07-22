@@ -49,9 +49,9 @@ unit OptionsModel;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, EERModel, QComCtrls, QButtons, QCheckLst, QGrids,
-  Qt, EERDM;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, EERModel, ComCtrls, Buttons, CheckLst, Grids,
+   EERDM;
 
 type
   TOptionsModelForm = class(TForm)

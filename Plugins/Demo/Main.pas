@@ -37,8 +37,8 @@ unit Main;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, Qt, QExtCtrls, QCheckLst, QButtons, QMenus,
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls,  ExtCtrls, CheckLst, Buttons, Menus,
   EERModel; // The EERModel module has to be added to the uses clause
 
 type

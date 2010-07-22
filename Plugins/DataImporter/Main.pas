@@ -3,8 +3,8 @@ unit Main;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QExtCtrls;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, ExtCtrls;
 
 type
   TMainForm = class(TForm)

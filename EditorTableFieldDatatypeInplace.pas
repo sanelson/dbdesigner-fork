@@ -36,8 +36,8 @@ unit EditorTableFieldDatatypeInplace;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, QMask, QExtCtrls, Qt;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel, Mask, ExtCtrls;
 
 type
   TEditorTableFieldDatatypeInplaceEditor = class(TPanel)

@@ -47,8 +47,8 @@ unit EERDM;
 interface
 
 uses
-  SysUtils, Classes, LResources, QTypes, QForms, Qt, QControls,
-  IniFiles, QDialogs, QExtCtrls, QMenus, Types, EERModel;
+  SysUtils, Classes, LResources, Types, Forms,  Controls,
+  IniFiles, Dialogs, ExtCtrls, Menus, Types, EERModel;
 
 type
   TDMEER = class(TDataModule)

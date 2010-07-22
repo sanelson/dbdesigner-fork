@@ -45,7 +45,7 @@ interface
 
 uses
 {$IFDEF SYN_CLX}
-  QMenus,
+  Menus,
 {$ELSE}
   Menus,
 {$ENDIF}
@@ -294,7 +294,7 @@ uses
 {$IFDEF SYN_CLX}
   kTextDrawer,
   Types,
-  Qt,
+  
   QSynEditKeyConst,
   QSynEditStrConst;
 {$ELSE}
@@ -513,7 +513,7 @@ end;
 function TSynEditKeyStroke.GetShortCut: TShortCut;
 begin
 {$IFDEF SYN_CLX}
-  Result := QMenus.ShortCut(Key, Shift);
+  Result := Menus.ShortCut(Key, Shift);
 {$ELSE}
   Result := Menus.ShortCut(Key, Shift);
 {$ENDIF}
@@ -555,7 +555,7 @@ begin
   end;
 
 {$IFDEF SYN_CLX}  //js 06-04-2002 use qmenus, not menus in clx
-  QMenus.ShortCutToKey(Value, NewKey, NewShift);
+  Menus.ShortCutToKey(Value, NewKey, NewShift);
 {$ELSE}
   Menus.ShortCutToKey(Value, NewKey, NewShift);
 {$ENDIF}
@@ -595,7 +595,7 @@ begin
   end;
 
 {$IFDEF SYN_CLX}
-  QMenus.ShortCutToKey(Value, NewKey, NewShift);
+  Menus.ShortCutToKey(Value, NewKey, NewShift);
 {$ELSE}
   Menus.ShortCutToKey(Value, NewKey, NewShift);
 {$ENDIF}
@@ -609,7 +609,7 @@ end;
 function TSynEditKeyStroke.GetShortCut2: TShortCut;
 begin
 {$IFDEF SYN_CLX}
-  Result := QMenus.ShortCut(Key2, Shift2);
+  Result := Menus.ShortCut(Key2, Shift2);
 {$ELSE}
   Result := Menus.ShortCut(Key2, Shift2);
 {$ENDIF}

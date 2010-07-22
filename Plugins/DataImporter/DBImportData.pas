@@ -3,9 +3,9 @@ unit DBImportData;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms,
-  QDialogs, QStdCtrls, QCheckLst, QButtons, QGrids, QComCtrls, QExtCtrls,
-  Qt, IniFiles, SqlExpr, DBXpress, FMTBcd, DB, MainDM, DBDM;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, CheckLst, Buttons, Grids, ComCtrls, ExtCtrls,
+   IniFiles, SqlExpr, DBXpress, FMTBcd, DB, MainDM, DBDM;
 
 type
   PTableImportOptions = ^TTableImportOptions;

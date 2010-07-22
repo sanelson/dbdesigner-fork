@@ -46,9 +46,9 @@ interface
 uses
 {$IFDEF SYN_CLX}
   Types,
-  QGraphics,
-  QControls,
-  QForms,
+  Graphics,
+  Controls,
+  Forms,
   QSynEditTypes,
 {$ELSE}
   Windows,

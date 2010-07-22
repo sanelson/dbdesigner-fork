@@ -3,9 +3,9 @@ unit EERPlaceModel;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QCheckLst, QExtCtrls, QButtons, EERModel, QMenus,
-  QComCtrls, QImgList;
+  SysUtils, Types, Classes, LResources, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, CheckLst, ExtCtrls, Buttons, EERModel, Menus,
+  ComCtrls, ImgList;
 
 type
   TEERPlaceModelForm = class(TForm)

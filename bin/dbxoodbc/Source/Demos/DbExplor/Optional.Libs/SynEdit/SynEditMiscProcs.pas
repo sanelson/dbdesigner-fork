@@ -47,7 +47,7 @@ uses
 {$IFDEF SYN_CLX}
   Types,
   kTextDrawer,
-  QGraphics,
+  Graphics,
   QSynEditTypes,
   QSynEditHighlighter,
 {$ELSE}

@@ -38,9 +38,9 @@ unit EERReverseEngineering;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QButtons, QExtCtrls, QComCtrls, EERModel, QCheckLst, Qt, IniFiles,
-  QMenus, QTypes;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, ExtCtrls, ComCtrls, EERModel, CheckLst,  IniFiles,
+  Menus, Types;
 
 type
   TEERReverseEngineeringForm = class(TForm)

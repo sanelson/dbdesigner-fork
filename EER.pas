@@ -38,8 +38,8 @@ unit EER;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QImgList, QMenus, QTypes, EERModel, Qt, IniFiles;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, ImgList, Menus, Types, EERModel,  IniFiles;
 
 type
   TEERForm = class(TForm)

@@ -39,9 +39,9 @@ unit DBConnSelect;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QImgList, QComCtrls, DBDM, QGrids, QButtons, SqlExpr,
-  QExtCtrls, IniFiles, QMenus, QTypes, StrUtils, Contnrs;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ImgList, ComCtrls, DBDM, Grids, Buttons, SqlExpr,
+  ExtCtrls, IniFiles, Menus, Types, StrUtils, Contnrs;
 
 type
   TDBConnSelectForm = class(TForm)

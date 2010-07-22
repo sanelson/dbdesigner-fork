@@ -3,8 +3,8 @@ unit Progress;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QComCtrls, QExtCtrls;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls;
 
 type
   TProgressForm = class(TForm)

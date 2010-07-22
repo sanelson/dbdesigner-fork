@@ -3,8 +3,8 @@ unit Tips;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QButtons, QExtCtrls, IniFiles;
+  SysUtils, Types, Classes, LResources, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, Buttons, ExtCtrls, IniFiles;
 
 type
   TTipsForm = class(TForm)

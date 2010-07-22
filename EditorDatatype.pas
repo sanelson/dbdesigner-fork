@@ -36,8 +36,8 @@ unit EditorDatatype;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, QExtCtrls, QCheckLst, QButtons;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel, ExtCtrls, CheckLst, Buttons;
 
 type
   TEditorDatatypeForm = class(TForm)

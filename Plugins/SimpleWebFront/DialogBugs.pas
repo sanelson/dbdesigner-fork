@@ -3,8 +3,8 @@ unit DialogBugs;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QExtCtrls;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, ExtCtrls;
 
 type
   TDialogBugsForm = class(TForm)

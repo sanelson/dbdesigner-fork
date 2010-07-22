@@ -37,8 +37,8 @@ unit EditorQueryDragTarget;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QExtCtrls, Main, EERModel;
+  SysUtils, Types, Classes, LResources, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, ExtCtrls, Main, EERModel;
 
 type
   TEditorQueryDragTargetForm = class(TForm)

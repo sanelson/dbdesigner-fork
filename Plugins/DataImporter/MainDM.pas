@@ -5,7 +5,7 @@ interface
 uses
   {$IFDEF MSWINDOWS}Windows, {$ENDIF}
   SysUtils, Classes, DBXpress, FMTBcd, DB, SqlExpr, Controls,
-  QDialogs, QForms;
+  Dialogs, Forms;
 
 type
   PDBConn = ^TDBConn;     // Pointer for DBConn Data

@@ -54,12 +54,12 @@ uses
   ActiveX, ShellAPI, ShlObj, // for SHGetSpecialFolderLocation() und SHGetPathFromIDList()
   {$ENDIF}
   SysUtils, Classes, LResources, DBXpress, DB, SqlExpr, FMTBcd, Provider, DBClient,
-  DBLocal, QDialogs, QComCtrls, IniFiles, QForms, Qt,
-  QButtons, QControls, QMenus,
+  DBLocal, Dialogs, ComCtrls, IniFiles, Forms, 
+  Buttons, Controls, Menus,
   {$IFDEF USE_IXMLDBMODELType}
   xmldom, XMLIntf, XMLDoc,
   {$ENDIF}
-  QTypes, QExtCtrls, Types, Math, QStdCtrls, QGraphics,
+  Types, ExtCtrls, Types, Math, StdCtrls, Graphics,
   GlobalSysFunctions;
 
 type

@@ -259,7 +259,7 @@ implementation
 
 uses
 {$IFDEF SYN_CLX}
-  QGraphics,
+  Graphics,
   QSynEditMiscProcs,
   QSynRegExpr,
   QSynEditStrConst,

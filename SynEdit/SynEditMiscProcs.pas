@@ -49,7 +49,7 @@ uses
   kTextDrawer,
   QSynEditTypes,
   {$IFDEF SYN_CLX}
-  QGraphics,
+  Graphics,
   {$ENDIF}
 {$ELSE}
   Windows,

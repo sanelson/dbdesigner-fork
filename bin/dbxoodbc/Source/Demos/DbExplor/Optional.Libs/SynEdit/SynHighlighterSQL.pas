@@ -57,7 +57,7 @@ interface
 uses
 {$IFDEF SYN_CLX}
   Types,
-  QGraphics,
+  Graphics,
   QSynEditTypes,
   QSynEditHighlighter,
   QSynHighlighterHashEntries,

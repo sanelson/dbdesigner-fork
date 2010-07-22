@@ -36,8 +36,8 @@ unit ZoomSel;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QT;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls;
 
 type
   TZoomSelForm = class(TForm)

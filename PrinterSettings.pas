@@ -3,8 +3,8 @@ unit PrinterSettings;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QPrinters;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Printers;
 
 type
   TPrinterSettingsForm = class(TForm)

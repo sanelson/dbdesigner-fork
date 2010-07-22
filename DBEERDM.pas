@@ -54,7 +54,7 @@ unit DBEERDM;
 interface
 
 uses
-  SysUtils, Classes, LResources, QTypes, SqlExpr, DB, QForms, QStdCtrls, QDialogs,
+  SysUtils, Classes, LResources, Types, SqlExpr, DB, Forms, StdCtrls, Dialogs,
   EERModel, DBXpress, RegExpr;
 
 type

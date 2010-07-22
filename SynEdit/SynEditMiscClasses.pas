@@ -46,12 +46,12 @@ interface
 uses
 {$IFDEF SYN_CLX}
   Types,
-  Qt,
-  QGraphics,
-  QControls,
-  QImgList,
-  QStdCtrls,
-  QMenus,
+  
+  Graphics,
+  Controls,
+  ImgList,
+  StdCtrls,
+  Menus,
   kTextDrawer,
 //<<<<<<< SynEditMiscClasses.pas
 {$IFDEF SYN_WIN32}
@@ -904,7 +904,7 @@ end;
 function TSynHotKey.GetHotKey: TShortcut;
 begin
 {$IFDEF SYN_CLX}
-  Result := QMenus.TextToShortCut(Text);
+  Result := Menus.TextToShortCut(Text);
 {$ELSE}
   Result := Menus.TextToShortCut(Text);
 {$ENDIF}
@@ -913,7 +913,7 @@ end;
 procedure TSynHotKey.KeyDown(var Key: Word; Shift: TShiftState);
 const
 {$IFDEF SYN_CLX}
-  ShortCutToText: function (aKey: TShortCut): WideString = QMenus.ShortCutToText;
+  ShortCutToText: function (aKey: TShortCut): WideString = Menus.ShortCutToText;
   VK_CONTROL = Key_Control;
   VK_MENU = Key_Alt;
   VK_SHIFT = Key_Shift;
@@ -936,7 +936,7 @@ begin
     //Nothing, the Shift state takes care of it
   end else begin
     {$IFDEF SYN_CLX}
-      TmpString := TmpString + QMenus.ShortCutToText(Key);
+      TmpString := TmpString + Menus.ShortCutToText(Key);
     {$ELSE}
       TmpString := TmpString + Menus.ShortCutToText(Key);
     {$ENDIF}
@@ -970,7 +970,7 @@ begin
     Text := 'None'
   else
 {$IFDEF SYN_CLX}
-    Text := QMenus.ShortCutToText(Value);
+    Text := Menus.ShortCutToText(Value);
 {$ELSE}
     Text := Menus.ShortCutToText(Value);
 {$ENDIF}

@@ -36,8 +36,8 @@ unit EditorRelation;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, QGrids, QComCtrls, QExtCtrls, QButtons;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel, Grids, ComCtrls, ExtCtrls, Buttons;
 
 type
   TEditorRelationForm = class(TForm)

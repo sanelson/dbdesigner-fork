@@ -38,8 +38,8 @@ unit EditorImage;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QButtons, EERModel, QExtCtrls;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, EERModel, ExtCtrls;
 
 type
   TEditorImageForm = class(TForm)

@@ -24,8 +24,8 @@ unit DialogDirectorySelect;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QButtons, QComCtrls, QFileCtrls, QExtCtrls;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, Buttons, ComCtrls, QFileCtrls, ExtCtrls;
 
 type
   TDialogDirectorySelectForm = class(TForm)

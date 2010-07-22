@@ -39,8 +39,8 @@ unit DBConnEditor;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QGrids, QButtons, DBDM, SqlExpr, IniFiles, QExtCtrls, QComCtrls, StrUtils;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Grids, Buttons, DBDM, SqlExpr, IniFiles, ExtCtrls, ComCtrls, StrUtils;
 
 type
   TDBConnEditorForm = class(TForm)

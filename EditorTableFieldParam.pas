@@ -36,8 +36,8 @@ unit EditorTableFieldParam;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, QMask, QExtCtrls, Qt, EERDM;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel, Mask, ExtCtrls,  EERDM;
 
 type
   TEditorTableFieldParamForm = class(TForm)

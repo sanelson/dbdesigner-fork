@@ -69,10 +69,10 @@ unit Main;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QMenus, QTypes, QComCtrls, QGrids, QDBGrids,
-  DBXpress, DB, SqlExpr, QImgList, QButtons, QDBCtrls, QT, QPrinters,
-  QClipbrd, QStyle,
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, Menus, Types, ComCtrls, Grids, DBGrids,
+  DBXpress, DB, SqlExpr, ImgList, Buttons, DBCtrls,  Printers,
+  Clipbrd, Style,
 {$IFDEF USE_QTheming}QThemed,{$ENDIF}
   EERModel;
 

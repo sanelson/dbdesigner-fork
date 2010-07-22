@@ -25,7 +25,7 @@ program DBDplugin_SimpleWebFront;
 
 {$IFDEF MSWINDOWS}
 uses
-  QForms,
+  Forms,
   Main in 'Main.pas' {MainForm},
   EERModel in '..\..\EERModel.pas',
   EERDM in '..\..\EERDM.pas' {DMEER: TDataModule},
@@ -48,7 +48,7 @@ uses
   GlobalSysFunctions in '..\..\GlobalSysFunctions.pas';
 {$ELSE}
 uses
-  QForms,
+  Forms,
   Main in 'Main.pas' {MainForm},
   EERModel in '../../EERModel.pas',
   EERDM in '../../EERDM.pas' {DMEER: TDataModule},

@@ -36,9 +36,9 @@ unit PaletteModel;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QComCtrls, QImgList, QButtons, EERModel, QMenus,
-  QTypes, Qt;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, ComCtrls, ImgList, Buttons, EERModel, Menus,
+  Types;
 
 type
   TPaletteModelFrom = class(TForm)

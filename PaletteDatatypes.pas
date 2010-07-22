@@ -36,9 +36,9 @@ unit PaletteDatatypes;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QComCtrls, QImgList, EERModel, StrUtils, QButtons,
-  QMenus, QTypes, Qt, EERDM;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, ComCtrls, ImgList, EERModel, StrUtils, Buttons,
+  Menus, Types,  EERDM;
 
 type
   TPaletteDataTypesForm = class(TForm)

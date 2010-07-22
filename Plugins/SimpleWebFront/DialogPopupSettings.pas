@@ -24,8 +24,8 @@ unit DialogPopupSettings;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QButtons, QExtCtrls, Weboutput;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, Buttons, ExtCtrls, Weboutput;
 
 type
   TDialogPopupSettingsForm = class(TForm)

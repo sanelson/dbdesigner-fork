@@ -44,8 +44,8 @@ unit Options;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QComCtrls, QExtCtrls, QButtons, IniFiles, Qt;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ComCtrls, ExtCtrls, Buttons, IniFiles;
 
 type
   TOptionsForm = class(TForm)

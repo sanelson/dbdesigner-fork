@@ -36,9 +36,9 @@ unit PaletteNav;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QComCtrls, QButtons, EERModel, Qt, StrUtils, QTypes,
-  QMenus, EERDM;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, ComCtrls, Buttons, EERModel,  StrUtils, Types,
+  Menus, EERDM;
 
 type
   TPaletteNavForm = class(TForm)

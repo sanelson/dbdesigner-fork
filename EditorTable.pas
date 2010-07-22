@@ -41,10 +41,10 @@ unit EditorTable;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QImgList, QComCtrls, QGrids, Qt, EERModel, QExtCtrls,
-  QCheckLst, QButtons, Math, QMenus, QTypes, StrUtils, QClipbrd,
-  EditorTableFieldDatatypeInplace, QMask;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ImgList, ComCtrls, Grids,  EERModel, ExtCtrls,
+  CheckLst, Buttons, Math, Menus, Types, StrUtils, Clipbrd,
+  EditorTableFieldDatatypeInplace, Mask;
 
 type
   TEditorTableForm = class(TForm)

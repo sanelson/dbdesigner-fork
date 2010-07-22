@@ -36,8 +36,8 @@ unit EditorNote;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, Qt, QButtons, QExtCtrls;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel,  Buttons, ExtCtrls;
 
 type
   TEditorNoteForm = class(TForm)

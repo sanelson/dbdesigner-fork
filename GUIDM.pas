@@ -38,8 +38,8 @@ unit GUIDM;
 interface
 
 uses
-  SysUtils, Classes, LResources, QTypes, IniFiles, QForms, QStyle, QMenus, QExtCtrls,
-  Qt, QGraphics;
+  SysUtils, Classes, LResources, Types, IniFiles, Forms, Style, Menus, ExtCtrls,
+   Graphics;
 
 type
   TDMGUI = class(TDataModule)

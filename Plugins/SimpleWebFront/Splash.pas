@@ -36,8 +36,8 @@ unit Splash;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QButtons, QTypes;
+  SysUtils, Types, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, Buttons, Types;
 
 type
   TSplashForm = class(TForm)

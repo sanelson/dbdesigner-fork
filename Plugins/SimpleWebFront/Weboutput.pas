@@ -22,7 +22,7 @@
 unit Weboutput;
 
 interface
-uses Classes,Contnrs, Layer, QGraphics, SWF_XML_Binding, SysUtils;
+uses Classes,Contnrs, Layer, Graphics, SWF_XML_Binding, SysUtils;
 
 type
 
@@ -244,7 +244,7 @@ type
 
 
 implementation
-uses QForms,Main, MainDM, StrUtils, QDialogs, IniFiles, SplitFns, StringConstants, QControls;
+uses Forms,Main, MainDM, StrUtils, Dialogs, IniFiles, SplitFns, StringConstants, Controls;
 
 //The tokens denote character sequences that will be expanded in the php-code.
 const SELECT_TOKEN = '/*[[SELECT]]*/';

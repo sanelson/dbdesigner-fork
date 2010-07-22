@@ -39,9 +39,9 @@ unit EERStoreInDatabase;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QButtons, QExtCtrls, EERModel, SqlExpr, QImgList, QComCtrls,
-  DB, QMenus, QTypes, DBDM;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, ExtCtrls, EERModel, SqlExpr, ImgList, ComCtrls,
+  DB, Menus, Types, DBDM;
 
 type
   TEERStoreInDatabaseForm = class(TForm)

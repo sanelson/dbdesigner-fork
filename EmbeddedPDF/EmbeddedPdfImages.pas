@@ -40,7 +40,7 @@ interface
 {$I EmbeddedPdfConf.inc}
 
 uses
-  SysUtils, {$IFNDEF USE_CLX}Windows, Graphics, {$ELSE}QGraphics, Qt, {$ENDIF}
+  SysUtils, {$IFNDEF USE_CLX}Windows, Graphics, {$ELSE}Graphics,  {$ENDIF}
   Classes, EmbeddedPdfTypes, EmbeddedPdfDoc;
 
 type

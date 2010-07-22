@@ -1,7 +1,7 @@
 program DBDplugin_DataImporter;
 
 uses
-  QForms,
+  Forms,
   Main in 'Main.pas' {MainForm},
   DBImportData in 'DBImportData.pas' {DBImportDataForm},
   Progress in 'Progress.pas' {ProgressForm},

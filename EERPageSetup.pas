@@ -37,9 +37,9 @@ unit EERPageSetup;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QPrinters, QExtCtrls, QButtons, EERModel, QComCtrls,
-  Math, Qt;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Printers, ExtCtrls, Buttons, EERModel, ComCtrls,
+  Math;
 
 type
   TEERPageSetupForm = class(TForm)

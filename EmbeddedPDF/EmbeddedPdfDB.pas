@@ -42,7 +42,7 @@ interface
 uses
   SysUtils, Classes, {$IFDEF LINUX}Types, {$ELSE}Windows, {$ENDIF}
   EmbeddedPdfTypes, EmbeddedPdfDoc,
-  {$IFNDEF USE_CLX}DBGrids, {$ELSE}QDBGrids, {$ENDIF}DB;
+  {$IFNDEF USE_CLX}DBGrids, {$ELSE}DBGrids, {$ENDIF}DB;
 
 
 procedure MakePDFFromDBGrid(theGrid: TDBGrid; fname, title: string; margin_left: Single=20; margin_right: Single=20; margin_top: Single=20; margin_bottom: Single=20);

@@ -36,8 +36,8 @@ unit EditorString;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QButtons, QExtCtrls, Qt;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, ExtCtrls;
 
 type
   TEditorStringForm = class(TForm)

@@ -48,9 +48,9 @@ uses
   DbTables,
 {$ENDIF}
 {$IFDEF SYN_CLX}
-  Qt,
-  QControls,
-  QDBCtrls,
+  
+  Controls,
+  DBCtrls,
   QSynEdit,
   QSynEditKeyCmds,
 {$ELSE}

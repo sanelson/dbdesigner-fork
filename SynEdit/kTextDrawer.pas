@@ -42,12 +42,12 @@ interface
 
 uses
   Types,
-  Qt,
-  QGraphics,
-  QForms,
-  QControls,
+  
+  Graphics,
+  Forms,
+  Controls,
   Classes,
-  QStdCtrls;
+  StdCtrls;
 
 const
   ETO_OPAQUE = 1;
@@ -170,7 +170,7 @@ uses
 {$IFDEF SYN_KYLIX}
   libc,
 {$ENDIF}
-  QExtCtrls;
+  ExtCtrls;
 
 type
   TCaretManager = class

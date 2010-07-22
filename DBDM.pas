@@ -38,8 +38,8 @@ unit DBDM;
 interface
 
 uses
-  SysUtils, Classes, LResources, QTypes, DBXpress, FMTBcd, DBClient, Provider, SqlExpr,
-  DB, IniFiles, QForms, QControls, Qt, QDialogs, Contnrs;
+  SysUtils, Classes, LResources, Types, DBXpress, FMTBcd, DBClient, Provider, SqlExpr,
+  DB, IniFiles, Forms, Controls,  Dialogs, Contnrs;
 
 type
   // Class storing a Database-Connection

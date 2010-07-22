@@ -58,13 +58,13 @@ uses
   {$IFDEF SYN_LINUX}
   Xlib,
   {$ENDIF}
-  Qt,
+  
   Types,
-  QControls,
-  QGraphics,
-  QForms,
-  QStdCtrls,
-  QExtCtrls,
+  Controls,
+  Graphics,
+  Forms,
+  StdCtrls,
+  ExtCtrls,
 {$ELSE}
   Controls,
   Graphics,
@@ -1044,7 +1044,7 @@ implementation
 uses
 {$IFDEF SYN_CLX}
   QStdActns,
-  QClipbrd,
+  Clipbrd,
   QSynEditWordWrap,
   QSynEditStrConst;
 {$ELSE}

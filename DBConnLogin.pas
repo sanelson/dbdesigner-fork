@@ -38,8 +38,8 @@ unit DBConnLogin;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QButtons;
+  SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons;
 
 type
   TDBConnLoginForm = class(TForm)

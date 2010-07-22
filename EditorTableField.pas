@@ -36,8 +36,8 @@ unit EditorTableField;
 interface
 
 uses
-  {$IFDEF MSWINDOWS}Windows, {$ENDIF}SysUtils, LResources, Types, Classes, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, EERModel, QMask, QExtCtrls, Qt, QTypes, StrUtils, EditorTable;
+  {$IFDEF MSWINDOWS}Windows, {$ENDIF}SysUtils, LResources, Types, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, EERModel, Mask, ExtCtrls,  Types, StrUtils, EditorTable;
 
 type
   TEditorTableFieldEdit = class(TEdit)

@@ -42,7 +42,7 @@ program DBDesignerFork;
 {$mode delphi}{$H+}
 
 uses
-  QForms, Interfaces,
+  Forms, Interfaces,
 
 //-------------------------------------------------------------
 // Include all units

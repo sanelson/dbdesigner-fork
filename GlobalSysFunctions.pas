@@ -36,14 +36,14 @@ unit GlobalSysFunctions;
 
 interface
 
-uses QForms,
+uses Forms,
   IniFiles,
   SysUtils,
   {$IFDEF MSWINDOWS}
   Windows, Messages,
   ActiveX, ShellAPI, ShlObj, // for SHGetSpecialFolderLocation() und SHGetPathFromIDList()
   {$ENDIF}
-  QGraphics,
+  Graphics,
   LResources;
 
 procedure LoadApplicationFont;

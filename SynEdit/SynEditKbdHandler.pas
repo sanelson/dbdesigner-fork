@@ -45,9 +45,9 @@ interface
 
 uses
 {$IFDEF SYN_CLX}
-  QGraphics,
-  QControls,
-  QForms,
+  Graphics,
+  Controls,
+  Forms,
 {$ELSE}
   Windows,
   Messages,

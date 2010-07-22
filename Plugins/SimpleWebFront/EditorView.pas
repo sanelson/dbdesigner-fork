@@ -32,9 +32,9 @@ unit EditorView;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QButtons, QCheckLst, QGrids, QDBGrids, QExtCtrls,
-  QComCtrls, Layer, Contnrs, QFileCtrls, Weboutput;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, Buttons, CheckLst, Grids, DBGrids, ExtCtrls,
+  ComCtrls, Layer, Contnrs, QFileCtrls, Weboutput;
 
 type
 
@@ -105,7 +105,7 @@ var
 
 implementation
 
-uses Main, StrUtils,Qt, SplitFns, DialogImageSelection, MainDM, StringConstants;
+uses Main, StrUtils, SplitFns, DialogImageSelection, MainDM, StringConstants;
 
 {$R *.xfm}
 

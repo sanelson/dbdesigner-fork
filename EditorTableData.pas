@@ -36,9 +36,9 @@ unit EditorTableData;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, QButtons,
-  QExtCtrls, QDBCtrls, QGrids, QDBGrids, QComCtrls, EERModel, IniFiles;
+  SysUtils, Types, Classes, LResources, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, Buttons,
+  ExtCtrls, DBCtrls, Grids, DBGrids, ComCtrls, EERModel, IniFiles;
 
 type
   TEditorTableDataForm = class(TForm)

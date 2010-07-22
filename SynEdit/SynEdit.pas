@@ -49,13 +49,13 @@ interface
 
 uses
 {$IFDEF SYN_CLX}
-  Qt,
+  
   Types,
-  QControls,
-  QGraphics,
-  QForms,
-  QStdCtrls,
-  QExtCtrls,
+  Controls,
+  Graphics,
+  Forms,
+  StdCtrls,
+  ExtCtrls,
 {$ELSE}
   Controls,
   Graphics,
@@ -1013,7 +1013,7 @@ implementation
 uses
 {$IFDEF SYN_CLX}
   QStdActns,
-  QClipbrd,
+  Clipbrd,
   QSynEditStrConst;
 {$ELSE}
   {$IFDEF SYN_COMPILER_4_UP}

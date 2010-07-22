@@ -38,7 +38,7 @@ unit EERExportImportDM;
 interface
 
 uses
-  SysUtils, Classes, LResources, QTypes, IniFiles, QDialogs, EERModel;
+  SysUtils, Classes, LResources, Types, IniFiles, Dialogs, EERModel;
 
 type
   TDMEERExportImport = class(TDataModule)

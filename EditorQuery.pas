@@ -40,12 +40,12 @@ unit EditorQuery;
 interface
 
 uses
-  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms,
-  QDialogs, QStdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, QButtons,
-  QExtCtrls, QDBCtrls, QGrids, QDBGrids, QComCtrls, EERModel, IniFiles,
-  QMenus, QClipbrd, {$IFDEF USE_SYNEDIT}QSynEdit, QSynHighlighterSQL, {$ENDIF}
+  SysUtils, Types, Classes, LResources, Variants, Types, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, Buttons,
+  ExtCtrls, DBCtrls, Grids, DBGrids, ComCtrls, EERModel, IniFiles,
+  Menus, Clipbrd, {$IFDEF USE_SYNEDIT}QSynEdit, QSynHighlighterSQL, {$ENDIF}
   {$IFDEF MSWINDOWS}Windows, ShellAPI, {$ENDIF}
-  Qt, QImgList, EmbeddedPdfDB;
+   ImgList, EmbeddedPdfDB;
 
 type
   TEditorQueryForm = class(TForm)

@@ -24,8 +24,8 @@ unit DialogImageSelection;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
-  QDialogs, QStdCtrls, QExtCtrls, QButtons, QComCtrls, QFileCtrls, QGrids;
+  SysUtils, Types, Classes, Variants, Types, Graphics, Controls, Forms, 
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, QFileCtrls, Grids;
 
 type
   TImageSelectionForm = class(TForm)

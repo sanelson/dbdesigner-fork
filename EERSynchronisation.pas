@@ -39,8 +39,8 @@ unit EERSynchronisation;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
-  QStdCtrls, QExtCtrls, QButtons, EERModel, QComCtrls;
+   SysUtils, Types, Classes, LResources, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, Buttons, EERModel, ComCtrls;
 
 type
   TEERSynchronisationForm = class(TForm)
