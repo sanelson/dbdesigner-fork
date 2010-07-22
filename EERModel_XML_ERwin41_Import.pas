@@ -35,7 +35,7 @@ unit EERModel_XML_ERwin41_Import;
 
 interface
 
-uses xmldom, XMLDoc, XMLIntf;
+uses xmldom, XMLDoc, XMLIntf, LResources;
 
 type
 
@@ -6329,4 +6329,8 @@ begin
   Result := List[Index].NodeValue;
 end;
 
+end.
+
+initialization
+{$I EERModel_XML_ERwin41_Import.lrs}
 end.

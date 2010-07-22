@@ -36,7 +36,7 @@ unit EditorTableField;
 interface
 
 uses
-  {$IFDEF MSWINDOWS}Windows, {$ENDIF}SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  {$IFDEF MSWINDOWS}Windows, {$ENDIF}SysUtils, LResources, Types, Classes, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QMask, QExtCtrls, Qt, QTypes, StrUtils, EditorTable;
 
 type
@@ -350,4 +350,8 @@ begin
 
 end;
 
+end.
+
+initialization
+{$I EditorTableField.lrs}
 end.

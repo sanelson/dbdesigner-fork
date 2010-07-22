@@ -37,7 +37,7 @@ unit EditorQueryDragTarget;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
+  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
   QDialogs, QStdCtrls, QExtCtrls, Main, EERModel;
 
 type
@@ -106,7 +106,8 @@ implementation
 uses EditorQuery, EERDM;
 
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorQueryDragTargetForm.FormCreate(Sender: TObject);
 begin
@@ -373,4 +374,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I EditorQueryDragTarget.lrs}
 end.

@@ -49,7 +49,7 @@ unit OptionsModel;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, EERModel, QComCtrls, QButtons, QCheckLst, QGrids,
   Qt, EERDM;
 
@@ -166,7 +166,8 @@ implementation
 
 uses MainDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TOptionsModelForm.FormCreate(Sender: TObject);
 begin
@@ -521,4 +522,8 @@ begin
 
 end;
 
+end.
+
+initialization
+{$I OptionsModel.pas}
 end.

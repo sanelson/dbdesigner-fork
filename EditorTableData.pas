@@ -36,7 +36,7 @@ unit EditorTableData;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
+  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
   QDialogs, QStdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, QButtons,
   QExtCtrls, QDBCtrls, QGrids, QDBGrids, QComCtrls, EERModel, IniFiles;
 
@@ -149,7 +149,8 @@ implementation
 
 uses DBDM, MainDM, GUIDM, EER;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorTableDataForm.FormCreate(Sender: TObject);
 begin
@@ -802,4 +803,8 @@ begin
     DMDB.GetDBConnButtonClick(Sender);
 end;
 
+end.
+
+initialization
+{$I EditorTableData.lrs}
 end.

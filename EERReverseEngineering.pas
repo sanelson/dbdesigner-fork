@@ -38,7 +38,7 @@ unit EERReverseEngineering;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QButtons, QExtCtrls, QComCtrls, EERModel, QCheckLst, Qt, IniFiles,
   QMenus, QTypes;
 
@@ -134,7 +134,8 @@ implementation
 
 uses MainDM, EERDM, DBDM, DBEERDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEERReverseEngineeringForm.FormCreate(Sender: TObject);
 begin
@@ -589,4 +590,8 @@ begin
     TablesLBox.State[i]:=cbUnchecked;
 end;
 
+end.
+
+initialization
+{$I EERReverseEngineering.lrs}
 end.

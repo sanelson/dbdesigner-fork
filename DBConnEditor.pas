@@ -39,7 +39,7 @@ unit DBConnEditor;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QGrids, QButtons, DBDM, SqlExpr, IniFiles, QExtCtrls, QComCtrls, StrUtils;
 
 type
@@ -113,7 +113,8 @@ implementation
 
 uses MainDM, DBConnSelect;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TDBConnEditorForm.FormCreate(Sender: TObject);
 begin
@@ -559,4 +560,8 @@ begin
     RemoveHostCaption:=Hostname;
 end;
 
+end.
+
+initialization
+{$I DBConnEditor.lrs}
 end.

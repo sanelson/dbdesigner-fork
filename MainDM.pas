@@ -53,7 +53,7 @@ uses
   Windows, Messages,
   ActiveX, ShellAPI, ShlObj, // for SHGetSpecialFolderLocation() und SHGetPathFromIDList()
   {$ENDIF}
-  SysUtils, Classes, DBXpress, DB, SqlExpr, FMTBcd, Provider, DBClient,
+  SysUtils, Classes, LResources, DBXpress, DB, SqlExpr, FMTBcd, Provider, DBClient,
   DBLocal, QDialogs, QComCtrls, IniFiles, QForms, Qt,
   QButtons, QControls, QMenus,
   {$IFDEF USE_IXMLDBMODELType}
@@ -300,7 +300,8 @@ implementation
 uses {$IFDEF LINUX}Libc, {$ENDIF}
   EditorString, StrUtils;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TDMMain.DataModuleCreate(Sender: TObject);
 var i: integer;
@@ -1878,4 +1879,6 @@ end;
 
 end.
 
-
+initialization
+{$I MainDM.lrs}
+end.

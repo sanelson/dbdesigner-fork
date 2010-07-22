@@ -69,7 +69,7 @@ unit Main;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QMenus, QTypes, QComCtrls, QGrids, QDBGrids,
   DBXpress, DB, SqlExpr, QImgList, QButtons, QDBCtrls, QT, QPrinters,
   QClipbrd, QStyle,
@@ -462,7 +462,9 @@ var
 
 implementation
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 uses MainDM, ZoomSel, EER,
   PaletteTools, PaletteModel, PaletteDatatypes, OptionsModel, Options,
@@ -3511,4 +3513,8 @@ begin
     end;
 end;
 
+end.
+
+initialization
+{$I Main.lrs}
 end.

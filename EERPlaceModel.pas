@@ -3,7 +3,7 @@ unit EERPlaceModel;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms, 
+  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms, 
   QDialogs, QStdCtrls, QCheckLst, QExtCtrls, QButtons, EERModel, QMenus,
   QComCtrls, QImgList;
 
@@ -107,7 +107,8 @@ implementation
 
 uses MainDM, GUIDM, DBDM, EERStoreInDatabase;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEERPlaceModelForm.FormCreate(Sender: TObject);
 begin
@@ -1110,4 +1111,8 @@ begin
     'Linked Objects have been refreshed.', 250));
 end;
 
+end.
+
+initialization
+{$I EERPlaceModel.lrs}
 end.

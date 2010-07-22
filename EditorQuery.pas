@@ -40,7 +40,7 @@ unit EditorQuery;
 interface
 
 uses
-  SysUtils, Types, Classes, Variants, QTypes, QGraphics, QControls, QForms,
+  SysUtils, Types, Classes, LResources, Variants, QTypes, QGraphics, QControls, QForms,
   QDialogs, QStdCtrls, FMTBcd, DB, DBClient, Provider, SqlExpr, QButtons,
   QExtCtrls, QDBCtrls, QGrids, QDBGrids, QComCtrls, EERModel, IniFiles,
   QMenus, QClipbrd, {$IFDEF USE_SYNEDIT}QSynEdit, QSynHighlighterSQL, {$ENDIF}
@@ -343,7 +343,8 @@ implementation
 
 uses DBDM, MainDM, GUIDM, EERDM, EER;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorQueryForm.FormCreate(Sender: TObject);
 begin
@@ -3082,4 +3083,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I EditorQuery.lrs}
 end.

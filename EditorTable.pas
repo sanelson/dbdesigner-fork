@@ -41,7 +41,7 @@ unit EditorTable;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QImgList, QComCtrls, QGrids, Qt, EERModel, QExtCtrls,
   QCheckLst, QButtons, Math, QMenus, QTypes, StrUtils, QClipbrd,
   EditorTableFieldDatatypeInplace, QMask;
@@ -243,7 +243,8 @@ implementation
 
 uses MainDM, EERDM, GUIDM, EditorTableField;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorTableForm.FormCreate(Sender: TObject);
 begin
@@ -2038,4 +2039,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I EditorTable.pas}
 end.

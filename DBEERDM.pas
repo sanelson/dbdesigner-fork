@@ -54,7 +54,7 @@ unit DBEERDM;
 interface
 
 uses
-  SysUtils, Classes, QTypes, SqlExpr, DB, QForms, QStdCtrls, QDialogs,
+  SysUtils, Classes, LResources, QTypes, SqlExpr, DB, QForms, QStdCtrls, QDialogs,
   EERModel, DBXpress, RegExpr;
 
 type
@@ -97,8 +97,8 @@ implementation
 
 uses MainDM, DBDM, EERDM;
 
-{$R *.xfm}
-
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 
 procedure TDMDBEER.DataModuleCreate(Sender: TObject);
@@ -3071,4 +3071,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I DBEERDM.lrs}
 end.

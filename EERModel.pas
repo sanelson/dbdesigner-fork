@@ -81,7 +81,7 @@ unit EERModel;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QImgList, QMenus, QTypes, IniFiles, Math, StrUtils,
   QPrinters, QClipbrd, QComCtrls, Qt,
   {$IFDEF USE_IXMLDBMODELType}
@@ -14341,3 +14341,6 @@ end;
 
 end.
 
+initialization
+{$I EERModel.pas}
+end.

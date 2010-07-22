@@ -36,7 +36,7 @@ unit EditorRelation;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QGrids, QComCtrls, QExtCtrls, QButtons;
 
 type
@@ -107,7 +107,9 @@ implementation
 
 uses MainDM, EERDM, GUIDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 procedure TEditorRelationForm.FormCreate(Sender: TObject);
 begin
@@ -342,4 +344,8 @@ begin
   Close;
 end;
 
+end.
+
+initialization
+{$I EditorRelation.pas}
 end.

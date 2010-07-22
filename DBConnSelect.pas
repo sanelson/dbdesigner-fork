@@ -39,7 +39,7 @@ unit DBConnSelect;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QImgList, QComCtrls, DBDM, QGrids, QButtons, SqlExpr,
   QExtCtrls, IniFiles, QMenus, QTypes, StrUtils, Contnrs;
 
@@ -150,7 +150,8 @@ implementation
 
 uses DBConnLogin, DBConnEditor, MainDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TDBConnSelectForm.FormCreate(Sender: TObject);
 begin
@@ -1431,4 +1432,8 @@ begin
   DelConnBtnClick(self);
 end;
 
+end.
+
+initialization
+{$I DBConnSelect.pas}
 end.

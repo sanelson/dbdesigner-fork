@@ -44,7 +44,7 @@ unit Options;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QComCtrls, QExtCtrls, QButtons, IniFiles, Qt;
 
 type
@@ -173,7 +173,8 @@ implementation
 
 uses MainDM, EERDM, DBDM, GUIDM, EER, EditorQuery;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TOptionsForm.FormCreate(Sender: TObject);
 var theIni: TMemIniFile;
@@ -605,4 +606,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I Options.lrs}
 end.

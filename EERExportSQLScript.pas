@@ -40,7 +40,7 @@ unit EERExportSQLScript;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QButtons, EERModel, QClipbrd, QExtCtrls, QComCtrls,
   IniFiles, QCheckLst;
 
@@ -130,7 +130,8 @@ implementation
 
 uses MainDM, EERDM, GUIDM, StrUtils;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEERExportSQLScriptFrom.FormCreate(Sender: TObject);
 begin
@@ -774,4 +775,8 @@ begin
   EdLastDeleteTbName.Enabled        := CBLastDelete.Checked;
 end;
 
+end.
+
+initialization
+{$I EERExportSQLScript.pas}
 end.

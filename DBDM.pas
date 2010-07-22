@@ -38,7 +38,7 @@ unit DBDM;
 interface
 
 uses
-  SysUtils, Classes, QTypes, DBXpress, FMTBcd, DBClient, Provider, SqlExpr,
+  SysUtils, Classes, LResources, QTypes, DBXpress, FMTBcd, DBClient, Provider, SqlExpr,
   DB, IniFiles, QForms, QControls, Qt, QDialogs, Contnrs;
 
 type
@@ -138,7 +138,8 @@ var
 
 implementation
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 uses DBConnSelect, MainDM;
 
@@ -1047,4 +1048,8 @@ begin
   inherited;
 end;
 
+end.
+
+initialization
+{$I DBDM.lrs}
 end.

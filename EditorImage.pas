@@ -38,7 +38,7 @@ unit EditorImage;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QButtons, EERModel, QExtCtrls;
 
 type
@@ -80,7 +80,9 @@ implementation
 
 uses MainDM, EERDM, GUIDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 procedure TEditorImageForm.FormCreate(Sender: TObject);
 begin
@@ -231,4 +233,8 @@ begin
   DMMain.SaveWinPos(self, False);
 end;
 
+end.
+
+initialization
+{$I EditorImage.lrs}
 end.

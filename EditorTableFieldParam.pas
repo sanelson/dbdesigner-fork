@@ -36,7 +36,7 @@ unit EditorTableFieldParam;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QMask, QExtCtrls, Qt, EERDM;
 
 type
@@ -76,7 +76,8 @@ implementation
 
 uses MainDM, EditorTable;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorTableFieldParamForm.FormCreate(Sender: TObject);
 begin
@@ -192,4 +193,8 @@ begin
     sendCLXEvent(Application.MainForm.Handle, QCustomEvent_create(QEventType_RestoreStayOnTopForms, self));
 end;
 
+end.
+
+initialization
+{$I EditorTableFieldParam.lrs}
 end.

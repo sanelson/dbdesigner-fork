@@ -39,7 +39,7 @@ unit EERSynchronisation;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QButtons, EERModel, QComCtrls;
 
 type
@@ -94,7 +94,8 @@ implementation
 
 uses MainDM, EERDM, DBDM, DBEERDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEERSynchronisationForm.FormCreate(Sender: TObject);
 begin
@@ -223,4 +224,8 @@ begin
   ProgressMemo.Height:=ProgressGroupBox.Height-37;
 end;
 
+end.
+
+initialization
+{$I EERSynchronisation.lrs}
 end.

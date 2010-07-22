@@ -42,7 +42,7 @@ unit EERModel_XML;
 
 interface
 
-uses xmldom, XMLDoc, XMLIntf;
+uses xmldom, XMLDoc, XMLIntf, LResources;
 
 type
 
@@ -4827,4 +4827,8 @@ begin
   SetAttribute('User', Value);
 end;
 
+end.
+
+initialization
+{$I EERModel_XML.lrs}
 end.

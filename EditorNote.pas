@@ -36,7 +36,7 @@ unit EditorNote;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, Qt, QButtons, QExtCtrls;
 
 type
@@ -78,7 +78,9 @@ implementation
 
 uses MainDM, EERDM, GUIDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 procedure TEditorNoteForm.FormCreate(Sender: TObject);
 begin
@@ -196,3 +198,8 @@ begin
 end;
 
 end.
+
+initialization
+{$I EditorNote.lrs}
+end.
+

@@ -36,7 +36,7 @@ unit EditorTableFieldDatatypeInplace;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QMask, QExtCtrls, Qt;
 
 type
@@ -266,4 +266,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I EditorTableFieldDatatypeInplace.lrs}
 end.

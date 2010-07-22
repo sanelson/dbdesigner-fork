@@ -38,7 +38,7 @@ unit Splash;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QButtons, QTypes;
 
 type
@@ -76,7 +76,8 @@ implementation
 
 uses Main;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TSplashForm.FormCreate(Sender: TObject);
 begin
@@ -173,4 +174,8 @@ begin
   Close;
 end;
 
+end.
+
+initialization
+{$I Splash.lrs}
 end.

@@ -36,7 +36,7 @@ unit EditorRegion;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QButtons, QExtCtrls;
 
 type
@@ -92,7 +92,9 @@ implementation
 
 uses MainDM, EERDM, GUIDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 procedure TEditorRegionForm.FormCreate(Sender: TObject);
 begin
@@ -247,4 +249,8 @@ begin
   Close;
 end;
 
+end.
+
+initialization
+{$I EditorRegion.pas}
 end.

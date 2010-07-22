@@ -36,7 +36,7 @@ unit EditorString;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QButtons, QExtCtrls, Qt;
 
 type
@@ -67,8 +67,8 @@ implementation
 
 uses MainDM;
 
-{$R *.xfm}
-
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEditorStringForm.FormCreate(Sender: TObject);
 begin
@@ -144,4 +144,8 @@ begin
   end;
 end;
 
+end.
+
+initialization
+{$I EditorString.lrs}
 end.

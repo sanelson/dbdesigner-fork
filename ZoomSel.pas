@@ -36,7 +36,7 @@ unit ZoomSel;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QT;
 
 type
@@ -62,7 +62,8 @@ implementation
 
 uses MainDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TZoomSelForm.FormCreate(Sender: TObject);
 begin
@@ -104,4 +105,8 @@ begin
   ModalResult:=mrOk;
 end;
 
+end.
+
+initialization
+{$I ZoomSel.lrs}
 end.

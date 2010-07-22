@@ -3,7 +3,7 @@ unit PrinterSettings;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QPrinters;
 
 type
@@ -25,7 +25,8 @@ var
 
 implementation
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TPrinterSettingsForm.FormCreate(Sender: TObject);
 begin
@@ -44,4 +45,8 @@ begin
     PChar('WINSPOOL'), PChar(''), GlobalMode);}
 end;
 
+end.
+
+initialization
+{$I PrinterSettings.lrs}
 end.

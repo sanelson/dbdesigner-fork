@@ -36,7 +36,7 @@ unit PaletteNav;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QComCtrls, QButtons, EERModel, Qt, StrUtils, QTypes,
   QMenus, EERDM;
 
@@ -155,7 +155,8 @@ implementation
 
 uses MainDM, Main, EER;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TPaletteNavForm.FormCreate(Sender: TObject);
 begin
@@ -692,4 +693,8 @@ begin
   BottomPnl.Hide;
 end;
 
+end.
+
+initialization
+{$I PaletteNav.lrs}
 end.

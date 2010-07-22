@@ -47,7 +47,7 @@ unit EERDM;
 interface
 
 uses
-  SysUtils, Classes, QTypes, QForms, Qt, QControls,
+  SysUtils, Classes, LResources, QTypes, QForms, Qt, QControls,
   IniFiles, QDialogs, QExtCtrls, QMenus, Types, EERModel;
 
 type
@@ -253,7 +253,8 @@ implementation
 
 uses MainDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TDMEER.DataModuleCreate(Sender: TObject);
 begin
@@ -863,4 +864,8 @@ begin
 end;
 
 
+end.
+
+initialization
+{$I EERDM.lrs}
 end.

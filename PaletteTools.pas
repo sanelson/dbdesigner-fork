@@ -36,7 +36,7 @@ unit PaletteTools;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QExtCtrls, QButtons, Qt;
 
 type
@@ -108,7 +108,8 @@ implementation
 
 uses MainDM, Main, EERDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TPaletteToolsForm.FormCreate(Sender: TObject);
 begin
@@ -275,4 +276,8 @@ begin
       sendCLXEvent(Application.MainForm.Handle, QCustomEvent_create(QEventType_RestoreStayOnTopForms, self));
 end;
 
+end.
+
+initialization
+{$I PaletteTools.lrs}
 end.

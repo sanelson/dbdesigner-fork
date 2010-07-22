@@ -37,7 +37,7 @@ unit EERPageSetup;
 interface
 
 uses
-  SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, QPrinters, QExtCtrls, QButtons, EERModel, QComCtrls,
   Math, Qt;
 
@@ -143,7 +143,8 @@ implementation
 
 uses MainDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
 
 procedure TEERPageSetupForm.FormCreate(Sender: TObject);
 begin
@@ -846,4 +847,8 @@ begin
   FormShow(self);
 end;
 
+end.
+
+initialization
+{$I EERPageSetup.lrs}
 end.

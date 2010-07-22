@@ -43,7 +43,8 @@ uses QForms,
   Windows, Messages,
   ActiveX, ShellAPI, ShlObj, // for SHGetSpecialFolderLocation() und SHGetPathFromIDList()
   {$ENDIF}
-  QGraphics;
+  QGraphics,
+  LResources;
 
 procedure LoadApplicationFont;
 {$IFDEF MSWINDOWS}
@@ -175,4 +176,8 @@ begin
 end;
 
 
+end.
+
+initialization
+{$I GlobalSysFunctions.lrs}
 end.

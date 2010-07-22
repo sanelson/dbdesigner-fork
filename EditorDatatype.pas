@@ -36,7 +36,7 @@ unit EditorDatatype;
 interface
 
 uses
-  Qt, SysUtils, Types, Classes, QGraphics, QControls, QForms, QDialogs,
+  Qt, SysUtils, Types, Classes, LResources, QGraphics, QControls, QForms, QDialogs,
   QStdCtrls, EERModel, QExtCtrls, QCheckLst, QButtons;
 
 type
@@ -99,7 +99,9 @@ implementation
 
 uses MainDM, EERDM, GUIDM;
 
-{$R *.xfm}
+// {$R *.xfm}
+{$mode delphi}{$H+}
+
 
 procedure TEditorDatatypeForm.FormCreate(Sender: TObject);
 begin
@@ -265,4 +267,8 @@ end;
 
 
 
+end.
+
+initialization
+{$I EditorDatatype.lrs}
 end.
